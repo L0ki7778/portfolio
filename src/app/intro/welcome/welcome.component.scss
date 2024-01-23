@@ -3,15 +3,16 @@
     inset: 0;
     bottom:30vh;
     margin: auto;
-    max-width: 770px;
+    width:fit-content;
+    max-width: 100%;
     height: fit-content;
     font-size: 48px;
     font-weight: bold;
     font-family: 'Poppins', sans-serif;
     color:white;
     padding: 10px;
-    white-space: pre;
-    overflow: hidden;
+    text-align:center;
+    white-space: pre-wrap;
 }
 
 #cursor {
@@ -26,4 +27,11 @@
     50% {
         opacity: 1;
     }
+}
+
+@media screen and (max-width: 600px) {
+    .console {
+        font-size: 24px;
+    }
+    
 }
