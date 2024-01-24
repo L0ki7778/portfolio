@@ -1,51 +1,57 @@
 @import "../../../mixin.scss";
 
-*{
+* {
     font-family: 'Poppins', sans-serif;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
+header {
+    width: 100%;
     height: 8vh;
     position: relative;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1;
-    margin: auto;
-    padding: 0 5%;
+    display: flex;
+    justify-content: center;
     background-color: $darkBlue;
 
-    #name {
-        font-size: 5.5rem;
-        color: white;
-        font-weight: bold;
-        transform: translate(39vw, 48vh);
-        animation: name-into-header 0.5s ease forwards 7.8s;
-
-        #e-letter {
-            animation: color-letter 0.5s ease forwards 7.8s;
-        }
-    }
-
-    #header-links {
+    nav {
         display: flex;
-        gap: 2rem;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        max-width: 2400px;
+        height: 100%;
 
-        a {
+        #name {
+            font-size: calc(4vw + 1rem);
             color: white;
-            font-size: 2rem;
-            text-decoration: none;
+            font-weight: bold;
+            transform: translate(39vw, 48vh);
+            // animation: name-into-header 0.5s ease forwards ;
 
-            &:hover {
-                color: $purple
+            #e-letter {
+                // animation: color-letter 0.5s ease forwards 7.8s;
             }
         }
-    }
 
+        #header-links {
+            display: flex;
+            gap: 2rem;
+
+            a {
+                color: white;
+                font-size: 2rem;
+                text-decoration: none;
+
+                &:hover {
+                    color: $purple
+                }
+            }
+        }
+
+    }
 }
 
 @keyframes name-into-header {
@@ -53,20 +59,21 @@ nav {
         transform: translate(0, 0);
         font-size: 2.5rem;
     }
-    
+
 }
 
 @keyframes color-letter {
     from {
-        color:white
+        color: white
     }
+
     to {
-        color:$green;
+        color: $green;
     }
 }
 
 @media screen and (max-width: 1100px) {
-    nav{
+    nav {
         #header-links {
             a {
                 font-size: 1.5rem;

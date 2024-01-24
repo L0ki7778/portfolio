@@ -1,0 +1,12 @@
+@import "../../mixin.scss";
+button{
+    background-color: $green !important;
+            color: white !important;
+            font-weight: bold !important;
+            font-family: 'Poppins', sans-serif !important;
+            transition: all 0.125s ease !important;
+            &:hover {
+                transform: scale(1.05);
+                background-color: $purple;
+            }
+}

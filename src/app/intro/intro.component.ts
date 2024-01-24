@@ -31,9 +31,7 @@ export class IntroComponent {
     if(this.nameSvg){
 
       const gElement = this.nameSvg.nativeElement.querySelectorAll('.letter');
-      for(let i = 0; i < gElement.length; i++){
-        console.log(`Letter ${i} totalLength: ${gElement[i].getTotalLength()}`);
-      }
+
       // gsap.to(gElement, { autoAlpha: 1 , duration:4});
       // gsap.to(gElement, {
       //   scale: 1.5,
