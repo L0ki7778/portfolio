@@ -1,17 +1,18 @@
+@import "./mixin.scss";
+
 app-main-page{
     background-color: #141D2F;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     position: absolute;
     top:0;
     left:0;
-    z-index: -1;
-
 }
 
 app-intro{
     position: absolute;
     top: 0;
+    z-index: 2;
     left: 0;
     width: 100%;
     height: 100vh;
@@ -20,17 +21,35 @@ app-intro{
     align-items: center;
     background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.9) 70%, rgba(0, 0, 0, 0.85) 100%);
     transition: all ease 0.2s;
-    animation: fold-out .5s ease forwards 7s;
+    animation: fold-out 0.5s ease forwards 6.5s;
 }
+
+app-root{
+    height: 100vh;
+    width: 100%;
+    background-color: $darkBlue;
+}
+
+
 
 @keyframes fold-out {
     0%{
         clip-path: ellipse( 100% 60% at 50% 50%);
-    }
 
+    }
 
     100%{
         clip-path: ellipse( 0% 60% at 50% 50%);
+
+    }
+}
+
+
+
+
+@keyframes shorten {
+    100%{
+        height: 0vh;
     }
 }
 
