@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
-import { HeaderComponent } from './selfie/header/header.component';
-import { SelfieComponent } from './selfie/selfie.component';
+import { MainPageStartComponent } from './main-page-start/main-page-start.component';
 
 @Component({
   selector: 'app-main-page',
   standalone: true,
-  imports: [HeaderComponent, SelfieComponent],
+  imports: [MainPageStartComponent],
   templateUrl: './main-page.component.html',
   styleUrl: './main-page.component.scss'
 })

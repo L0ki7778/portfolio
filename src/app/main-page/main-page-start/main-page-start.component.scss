@@ -1,0 +1,9 @@
+@import "../../mixin.scss";
+
+#selfie{
+    position: relative;
+    display: flex;
+    height: 92vh;
+    width:100%;
+    background-color: $gray;
+}

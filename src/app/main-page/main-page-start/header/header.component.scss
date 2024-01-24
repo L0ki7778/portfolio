@@ -10,12 +10,13 @@ nav {
     align-items: center;
     width: 90%;
     height: 8vh;
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1;
     margin: auto;
+    padding: 0 5%;
     background-color: $darkBlue;
 
     #name {

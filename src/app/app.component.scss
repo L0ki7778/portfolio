@@ -1,7 +1,7 @@
 @import "./mixin.scss";
 
 app-main-page{
-    background-color: #141D2F;
+    background-color: $darkBlue;
     width: 100%;
     height: 100vh;
     position: absolute;
@@ -21,14 +21,14 @@ app-intro{
     align-items: center;
     background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.9) 70%, rgba(0, 0, 0, 0.85) 100%);
     transition: all ease 0.2s;
-    animation: fold-out 0.5s ease forwards 6.5s;
+    animation: fold-out 0.5s ease forwards 6.5s, shorten 0.5s ease forwards 8s;
 }
 
-app-root{
-    height: 100vh;
-    width: 100%;
-    background-color: $darkBlue;
-}
+// app-root{
+//     height: 100vh;
+//     width: 100%;
+//     background-color: $darkBlue;
+// }
 
 
 
@@ -43,8 +43,6 @@ app-root{
 
     }
 }
-
-
 
 
 @keyframes shorten {
