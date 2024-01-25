@@ -5,9 +5,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 90%;
+    width: 86%;
     max-width: 2400px;
-    padding: 0 5%;
+    padding: 0 7%;
     height: 70vh;
 
     #left-section {
@@ -21,9 +21,11 @@
     }
 
     #right-section {
-        font-family: 'Poppins', sans-serif;
+        font-family: "Poppins", sans-serif;
         height: 100%;
-        width: 60%;
+        z-index: 2;
+        width: fit-content;
+        max-width: 60%;
         display: flex;
         flex-direction: column;
         align-items: flex-end;
@@ -32,8 +34,19 @@
 }
 
 app-button {
+    align-self: center;
     font: 400 unset !important;
     position: relative;
+    opacity: 0;
+    animation: fade-in 0.5s ease forwards 8s;
+}
+
+app-scroll-down{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    animation: fade-in 2s ease forwards 10s;
 }
 
 #headline {
@@ -47,71 +60,113 @@ app-button {
 
 }
 
+
 #my-name {
-    font-size: 7.5vw;
+    font-size: 6vw;
     font-weight: bold;
     color: white;
+    transform: translate(-16.5vw, 14.5vh);
     margin-bottom: calc(1.5vw * -1 - 0.5rem);
+    animation: name-animation 0.5s ease forwards 8s;
+
 }
 
+
 #profession {
-    font-size: 4vw;
-    color: $purple
+    font-size: 3.23vw;
+    color: $purple;
+    transform: scale(0, 0);
+    transform-origin: center;
+    animation: profession-animation 0.5s ease forwards 8s;
 }
+
 
 #i-am {
     position: absolute;
-    font-size: 5vw;
     color: white;
-    transform: rotate(-90deg) translate(0, -24rem);
     top:0;
     left: 0;
-    bottom: 15px;
+    font-size: 3.9vw;
     margin: auto;
     width: fit-content;
     height: fit-content;
+    animation: i-am-animation 0.5s ease forwards 8s;
 }
 
-app-button {
-    div {
-        button {
-            width: 200px;
-            height: 200px;
-        }
+@keyframes name-animation {
+  
+
+    100%{
+        transform: translate(0, 0);
     }
 }
 
+@keyframes i-am-animation {
+
+
+    100%{
+        transform: rotate(-90deg) translate(0, -7vw);
+    }
+}
+
+@keyframes profession-animation {
+
+    100%{
+        transform: scale(1, 1);
+    }
+    
+}
+
+@keyframes fade-in {
+    to{
+
+        opacity: 1;
+    
+    }
+}
 
 @media screen and (min-width: 600px) {
+    $iAmSize:3.8vw;
+    $myNameSize:6vw;
+    $professionSize:3.23vw;
+
+    #my-name {
+        font-size: $myNameSize;
+    }
+    #profession {
+        font-size: $professionSize;
+    }
+
     #i-am {
-        font-size: 5vw;
-        // transform: rotate(-90deg) translate(0, -1vw);
-        inset: 0;
-        bottom: 15px;
+        font-size: $iAmSize;
+        transform: rotate(0deg) translate(-5vw, 0vw);
+        bottom: -17px;
     }
 }
 
 @media screen and (min-width: 1660px) {
+    $myNameSize:101px;
+    $professionSize:54px;
+    $iAmSize:66px;
+
     #my-name {
-        font-size: 124px;
+        font-size: $myNameSize;
         margin-bottom: -32px;
     }
 
     #profession {
-        font-size: 66px;
+        font-size: 54px;
     }
 
 
     #i-am {
         position: absolute;
-        font-size: 83px;
-        // transform: rotate(-90deg) translate(0, -1vw);
-
+        transform: rotate(0deg) translate(-5vw, 0vw);
+        font-size: $iAmSize;
     }
 }
 
-@media screen and (min-width: 1800px) {
-    #i-am {
-        bottom: 10px;
-    }
-}
+
+
+
+

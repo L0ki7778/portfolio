@@ -20,19 +20,20 @@ header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 90%;
+        width: 86%;
         max-width: 2400px;
         height: 100%;
 
         #name {
-            font-size: calc(4vw + 1rem);
+            font-size: 6vw;
             color: white;
             font-weight: bold;
-            transform: translate(39vw, 48vh);
-            // animation: name-into-header 0.5s ease forwards ;
+            transform: translate(35vw, 48vh);
+            opacity: 0;
+            animation: name-into-header 0.5s ease forwards 8s;
 
             #e-letter {
-                // animation: color-letter 0.5s ease forwards 7.8s;
+                animation: color-letter 0.5s ease forwards 8s;
             }
         }
 
@@ -42,8 +43,10 @@ header {
 
             a {
                 color: white;
-                font-size: 2rem;
+                font-size: 1.5rem;
                 text-decoration: none;
+                opacity: 0;
+                animation: fade-in 0.5s ease forwards 8s;
 
                 &:hover {
                     color: $purple
@@ -58,6 +61,7 @@ header {
     to {
         transform: translate(0, 0);
         font-size: 2.5rem;
+        opacity: 1;
     }
 
 }
@@ -72,6 +76,23 @@ header {
     }
 }
 
+@keyframes fade-in {
+    to {
+        opacity: 1;
+    }
+    
+}
+
+
+
+@media screen and (min-width: 600px) {
+    $myNameSize: 6vw;
+
+    #my-name {
+        font-size: $myNameSize;
+    }
+}
+
 @media screen and (max-width: 1100px) {
     nav {
         #header-links {
@@ -79,6 +100,15 @@ header {
                 font-size: 1.5rem;
             }
         }
+    }
+
+}
+
+@media screen and (min-width: 1660px) {
+    $myNameSize: 101px;
+
+    #my-name {
+        margin-bottom: -32px;
     }
 
 }

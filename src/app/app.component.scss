@@ -1,6 +1,6 @@
 @import "./mixin.scss";
 
-#main-page{
+app-main-page{
     display: flex;
     flex-direction: column;
     background-color: $darkBlue;
@@ -22,12 +22,6 @@ app-intro{
     transition: all ease 0.2s;
     animation: fold-out 0.5s ease forwards 6.5s, shorten 0.5s ease forwards 8s;
 }
-
-// app-root{
-//     height: 100vh;
-//     width: 100%;
-//     background-color: $darkBlue;
-// }
 
 
 
