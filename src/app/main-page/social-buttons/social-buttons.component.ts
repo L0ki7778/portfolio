@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { MatButton, MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -10,7 +11,8 @@ import gsap from 'gsap';
   imports: [
     MatButton,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    HttpClientModule
   ],
   templateUrl: './social-buttons.component.html',
   styleUrl: './social-buttons.component.scss'
@@ -24,7 +26,7 @@ export class SocialButtonsComponent {
       defaults: {
         ease: 'rough',
         duration: 2,
-        delay: 4
+        delay: 9
       }
     })
   };
@@ -34,7 +36,7 @@ export class SocialButtonsComponent {
     if (this.socialButtons) {
       const container = this.socialButtons.nativeElement;
       const buttons = this.socialButtons.nativeElement.querySelectorAll('.social-btn');
-      gsap.to(container, { autoAlpha: 1, delay: 4 });
+      gsap.to(container, { autoAlpha: 1, delay: 9 });
       this.tl.from(buttons, {
         autoAlpha: 0,
         scale: .5,
