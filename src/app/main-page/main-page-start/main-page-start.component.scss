@@ -1,6 +1,6 @@
 @import "../../mixin.scss";
 
-#selfie{
+app-selfie{
     position: relative;
     display: flex;
     height: 92vh;
@@ -9,13 +9,17 @@
     background-color: $darkBlue;
 }
 
+app-social-buttons{
+    position: absolute;
+    z-index: 2;
+    bottom:1rem;
+    left:5rem;
+    
+}
+
 svg{
     position: absolute;
     bottom:0;
     z-index: 1;
 }
 
-path{
-    position: absolute;
-    bottom:0;
-}

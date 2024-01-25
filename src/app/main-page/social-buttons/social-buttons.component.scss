@@ -1,0 +1,19 @@
+#social-buttons {
+    visibility: hidden;
+    overflow: visible;
+    display: flex;
+    height:3rem;
+    align-items: center;
+    gap: 1rem;
+
+    .social-btn {
+        height: 30px;
+        width: 30px;
+
+        &:hover {
+            cursor: pointer;
+            height: 40px;
+            width: 40px;
+        }
+    }
+}

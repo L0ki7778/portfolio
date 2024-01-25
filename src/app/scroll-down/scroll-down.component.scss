@@ -6,6 +6,10 @@
     color: white;
     transform: rotate(90deg) translate(-6rem, 4rem);
     transform-origin: center;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+    
 }
 
 
@@ -18,7 +22,7 @@
         border-right: 2px solid white;
         transform: rotate(45deg);
         margin: -10px;
-        animation: animate 1.5s infinite 11s;
+        animation: animate 1.5s infinite 10s;
     }
 }
 

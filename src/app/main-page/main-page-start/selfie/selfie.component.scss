@@ -44,8 +44,9 @@ app-button {
 app-scroll-down{
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: 3rem;
     z-index: 2;
+    opacity: 0;
     animation: fade-in 2s ease forwards 10s;
 }
 
@@ -165,8 +166,3 @@ app-scroll-down{
         font-size: $iAmSize;
     }
 }
-
-
-
-
-
