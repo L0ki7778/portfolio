@@ -9,40 +9,11 @@ app-selfie{
     background-color: $darkBlue;
 }
 
-#button-container{
-    position: absolute;
-    left:7%;
-    width: 20%;
-    bottom:1rem;
-    z-index: 2;
-    @include dFlex(space-between, center);
-    gap:2rem;
-
-    #purple-line{
-        width: 0%;
-        height: 3px;
-        background-color: $purple;
-        transition:all ease 0.2s;
-        animation: lengthen 0.5s ease forwards 8s;
-
-    }
-
-    app-social-buttons{
-        @include dFlex(center, center);
-        gap:1rem;
-    }
-}
+  
 
 
 svg{
     position: absolute;
     bottom:0;
     z-index: 1;
-}
-
-@keyframes lengthen {
-    to {
-        width: 50%;
-    }
-    
 }

@@ -41,14 +41,7 @@ app-button {
     animation: fade-in 0.5s ease forwards 8s;
 }
 
-app-scroll-down{
-    position: absolute;
-    right: 0;
-    bottom: 3rem;
-    z-index: 2;
-    opacity: 0;
-    animation: fade-in 2s ease forwards 10s;
-}
+
 
 #headline {
     font-family: 'Poppins', sans-serif;
@@ -85,7 +78,7 @@ app-scroll-down{
 #i-am {
     position: absolute;
     color: white;
-    top:0;
+    top: 0;
     left: 0;
     font-size: 3.9vw;
     margin: auto;
@@ -94,10 +87,61 @@ app-scroll-down{
     animation: i-am-animation 0.5s ease forwards 8s;
 }
 
-@keyframes name-animation {
-  
+#start-bottom {
+    width: 100%;
+    max-width: 2400px;
+    height: 30vh;
+    margin: 0 auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
 
-    100%{
+    app-scroll-down {
+        position: absolute;
+        right: 0;
+        bottom: 3rem;
+        z-index: 2;
+        opacity: 0;
+        animation: fade-in 2s ease forwards 10s;
+    }
+
+    #button-container {
+        position: absolute;
+        left: 7%;
+        width: 20%;
+        bottom: 1rem;
+        z-index: 2;
+        @include dFlex(space-between, center);
+        gap: 2rem;
+
+        #purple-line {
+            width: 0%;
+            height: 3px;
+            background-color: $purple;
+            transition: all ease 0.2s;
+            animation: lengthen 0.5s ease forwards 8s;
+
+        }
+
+        app-social-buttons {
+            @include dFlex(center, center);
+            gap: 1rem;
+        }
+    }
+}
+
+@keyframes lengthen {
+    to {
+        width: 50%;
+    }
+
+}
+
+@keyframes name-animation {
+
+
+    100% {
         transform: translate(0, 0);
     }
 }
@@ -105,35 +149,36 @@ app-scroll-down{
 @keyframes i-am-animation {
 
 
-    100%{
+    100% {
         transform: rotate(-90deg) translate(0, -7vw);
     }
 }
 
 @keyframes profession-animation {
 
-    100%{
+    100% {
         transform: scale(1, 1);
     }
-    
+
 }
 
 @keyframes fade-in {
-    to{
+    to {
 
         opacity: 1;
-    
+
     }
 }
 
 @media screen and (min-width: 600px) {
-    $iAmSize:3.8vw;
-    $myNameSize:6vw;
-    $professionSize:3.23vw;
+    $iAmSize: 3.8vw;
+    $myNameSize: 6vw;
+    $professionSize: 3.23vw;
 
     #my-name {
         font-size: $myNameSize;
     }
+
     #profession {
         font-size: $professionSize;
     }
@@ -146,9 +191,9 @@ app-scroll-down{
 }
 
 @media screen and (min-width: 1660px) {
-    $myNameSize:101px;
-    $professionSize:54px;
-    $iAmSize:66px;
+    $myNameSize: 101px;
+    $professionSize: 54px;
+    $iAmSize: 66px;
 
     #my-name {
         font-size: $myNameSize;
@@ -164,5 +209,13 @@ app-scroll-down{
         position: absolute;
         transform: rotate(0deg) translate(-5vw, 0vw);
         font-size: $iAmSize;
+    }
+}
+
+@media screen and (min-width: 2400px) {
+    #start-bottom {
+        #button-container {
+            left:0
+        }
     }
 }

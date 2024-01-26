@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { MainPageStartComponent } from './main-page-start/main-page-start.component';
+import { AboutMeComponent } from './about-me/about-me.component';
 
 @Component({
   selector: 'app-main-page',
   standalone: true,
-  imports: [MainPageStartComponent],
+  imports: [MainPageStartComponent, AboutMeComponent],
   templateUrl: './main-page.component.html',
   styleUrl: './main-page.component.scss'
 })
