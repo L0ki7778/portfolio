@@ -12,7 +12,7 @@ import gsap from 'gsap';
     MatButton,
     MatButtonModule,
     MatIconModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   templateUrl: './social-buttons.component.html',
   styleUrl: './social-buttons.component.scss'
@@ -21,7 +21,9 @@ export class SocialButtonsComponent {
   @ViewChild('socialButtons') socialButtons: ElementRef<HTMLDivElement> | undefined;
   tl: gsap.core.Timeline;
 
+  
   constructor() {
+
     this.tl = gsap.timeline({
       defaults: {
         ease: 'rough',
@@ -40,9 +42,9 @@ export class SocialButtonsComponent {
       this.tl.from(buttons, {
         autoAlpha: 0,
         scale: .5,
-        xPercent: 200,
         yPercent: -200,
-        stagger: 0.1,
+        skewX: 60,
+        stagger: 0.2,
         duration: .5,
         rotation: 360, transformOrigin: "50% 50%"
       })

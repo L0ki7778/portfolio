@@ -32,6 +32,7 @@ export class AppComponent {
     private domSanitizer: DomSanitizer
   ) {
     this.matIconRegistry.addSvgIcon('git',
-    this.domSanitizer.bypassSecurityTrustResourceUrl("/assets/svg/git.svg"))
+    this.domSanitizer.bypassSecurityTrustResourceUrl("/assets/svg/git.svg"));
+    console.log(this.matIconRegistry);
   }
 }

@@ -1,4 +1,8 @@
-
+@mixin dFlex ($jc:center, $al:center) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $al;
+}
 
 $purple : #9747FF;
 $darkBlue: #141D2F;
