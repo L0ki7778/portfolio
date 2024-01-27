@@ -1,4 +1,4 @@
-app-main-page-start{
+app-main-page-start {
     position: relative;
     top: 0;
     left: 0;
@@ -9,12 +9,31 @@ app-main-page-start{
     animation: unfold .5s ease forwards 7.05s;
 }
 
+app-about-me {
+    position: relative;
+    width: 100%;
+    max-width: 2400px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    height: 100vh;
+    top: -1px;
+    background: linear-gradient(
+      147deg,
+      #202C42 0%,
+      #141D2F 100%);
+    margin: auto;
+    padding-top: 6rem;
+    overflow-x: hidden;
+}
+
 
 
 @keyframes unfold {
     0% {
         clip-path: ellipse(0% 60% at 50% 50%);
     }
+
     100% {
         clip-path: ellipse(100% 60% at 50% 50%);
     }

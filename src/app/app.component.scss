@@ -24,7 +24,9 @@ app-intro{
     animation: fold-out 0.5s ease forwards 6.5s, shorten 0.5s ease forwards 8s;
 }
 
-
+:host ::ng-deep body{
+  overflow: hidden!important;
+}
 
 @keyframes fold-out {
     0%{
