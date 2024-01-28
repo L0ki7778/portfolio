@@ -1,23 +1,10 @@
-h1{
-    font-size: 5vw;
-    text-align: center;
-    font-weight: bold;
-    color: white;
-    font-family: 'Poppins';
-}
-
-#about-me-img {
-    position: absolute;
-    right:0;
-    top:0;
-    bottom: 0;
+app-about-me-text{
+    position: relative;
+    width: 100%;
+    max-width: 2400px;
+    margin: 0 auto;
+    height: calc(100vh - 6rem);
+    top: -1px;
     margin: auto;
-    width: 70%;
-    height: 50%;
-}
-
-#svg-circle-img{
-    width: 48%;
-    transform: translate(-5%, 0);
-    clip-path: ellipse(40% 50% at 50% 52%);
+    background-color: transparent;
 }

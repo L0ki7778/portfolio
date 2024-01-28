@@ -1,0 +1,73 @@
+
+#about-me-img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow: visible;
+    margin: auto;
+    width: 70%;
+    height: 50%;
+
+    svg {
+        transform: translate(10%,10%) scale(1.2);
+        animation: first-x-translation .25s ease forwards 0.8s, second-x-translation .5s ease-in-out forwards 2s;
+        overflow: visible;
+        circle {
+            stroke-dasharray: 3954.865966796875;
+            stroke-dashoffset: 3954.865966796875;
+            animation: dash-circle .25s linear forwards 1s;
+        }
+
+        line {
+            stroke-dasharray: 2081;
+            stroke-dashoffset: 2081;
+            animation: dash .5s linear forwards 1.3s;
+        }
+    }
+}
+
+#svg-circle-img {
+    width: 48%;
+    transition: all ease 0.3s;
+    transform: translate(-14%, -25%) scale(1.5);
+    clip-path: ellipse(54% 71% at 50% 52%);
+    animation: scale-down 0.25s ease forwards 0.8s;
+}
+
+@keyframes dash {
+    to {
+        stroke-dashoffset: 0;
+    }
+
+}
+
+
+@keyframes dash-circle {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes first-x-translation {
+    to {
+        transform: translate(11%,10%) scale(1);
+    }
+    
+}
+
+@keyframes second-x-translation {
+    to {
+        transform: translate(35%,10%) scale(1);
+    }
+    
+}
+
+
+@keyframes scale-down {
+    to{
+        transform: translate(-5%, 0) scale(1);
+        clip-path: ellipse(40% 50% at 50% 52%);
+    }
+    
+}

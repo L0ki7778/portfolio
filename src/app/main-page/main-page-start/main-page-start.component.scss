@@ -1,20 +1,25 @@
 @import "../../mixin.scss";
 
-app-selfie{
+app-selfie {
     position: relative;
     display: flex;
     height: 92vh;
-    width:100%;
+    width: 100%;
     justify-content: center;
     background-color: $darkBlue;
 }
 
-  
 
 
-svg{
+
+svg {
     position: absolute;
+    width: 100%;
+    max-width: 2400px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
     bottom: 0;
     z-index: 1;
-    filter: drop-shadow(2px 4px 8px black);
+    filter: drop-shadow(0px -20px 8px rgba(0, 0, 0, 0.2));
 }
