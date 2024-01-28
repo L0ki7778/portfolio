@@ -11,8 +11,10 @@ app-main-page-start {
 
 app-about-me {
     position: relative;
+    display: flex;
     width: 100%;
     max-width: 2400px;
+    font-family: 'Poppins', sans-serif;
     left: 0;
     right: 0;
     z-index: 2;

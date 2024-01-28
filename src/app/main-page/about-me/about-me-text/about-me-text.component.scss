@@ -1,7 +1,36 @@
+@import "../../../mixin.scss";
+
 h1 {
     font-size: 5vw;
     text-align: center;
     font-weight: bold;
     color: white;
     font-family: 'Poppins';
+}
+
+#introduction {
+    position: absolute;
+    top: 15%;
+    bottom: 0;
+    left: 7%;
+    width: 100%;
+    max-width: 500px;
+    height: 500px;
+
+    #additional-info{
+        position: relative;
+        display: flex;
+        gap:2rem;
+        flex-direction: column;
+        top: 15%;
+        left: 7%;
+    
+    }
+}
+
+#light-svg{
+    stroke:$gray
+}
+#puzzle-svg{
+    fill:$gray
 }
