@@ -52,40 +52,40 @@ app-button {
     flex-direction: column;
     position: relative;
 
+    #my-name {
+        font-size: 6vw;
+        font-weight: bold;
+        color: white;
+        transform: translate(-16.5vw, 14.5vh);
+        margin-bottom: calc(1.5vw * -1 - 0.5rem);
+        animation: name-animation 0.5s ease forwards 8s;
+
+    }
+
+
+    #my-profession {
+        font-size: 3.23vw;
+        color: $purple;
+        transform: scale(0, 0);
+        // transform-origin: center;
+        animation: profession-animation 0.5s ease forwards 8s;
+    }
+
+
+    #i-am {
+        position: absolute;
+        color: white;
+        top: 0;
+        left: 0;
+        font-size: 3.9vw;
+        margin: auto;
+        width: fit-content;
+        height: fit-content;
+        animation: i-am-animation 0.5s ease forwards 8s;
+    }
 }
 
 
-#my-name {
-    font-size: 6vw;
-    font-weight: bold;
-    color: white;
-    transform: translate(-16.5vw, 14.5vh);
-    margin-bottom: calc(1.5vw * -1 - 0.5rem);
-    animation: name-animation 0.5s ease forwards 8s;
-
-}
-
-
-#profession {
-    font-size: 3.23vw;
-    color: $purple;
-    transform: scale(0, 0);
-    transform-origin: center;
-    animation: profession-animation 0.5s ease forwards 8s;
-}
-
-
-#i-am {
-    position: absolute;
-    color: white;
-    top: 0;
-    left: 0;
-    font-size: 3.9vw;
-    margin: auto;
-    width: fit-content;
-    height: fit-content;
-    animation: i-am-animation 0.5s ease forwards 8s;
-}
 
 #start-bottom {
     width: 100%;
@@ -179,7 +179,7 @@ app-button {
         font-size: $myNameSize;
     }
 
-    #profession {
+    #my-profession {
         font-size: $professionSize;
     }
 
@@ -200,7 +200,7 @@ app-button {
         margin-bottom: -32px;
     }
 
-    #profession {
+    #my-profession {
         font-size: 54px;
     }
 
@@ -215,7 +215,7 @@ app-button {
 @media screen and (min-width: 2400px) {
     #start-bottom {
         #button-container {
-            left:0
+            left: 0
         }
     }
 }

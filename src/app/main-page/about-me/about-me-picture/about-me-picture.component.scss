@@ -11,20 +11,44 @@
 
     svg {
         transform: translate(10%,10%) scale(1.2);
-        animation: first-x-translation .25s ease forwards 0.8s, second-x-translation .5s ease-in-out forwards 2s;
         overflow: visible;
         circle {
             stroke-dasharray: 3954.865966796875;
             stroke-dashoffset: 3954.865966796875;
-            animation: dash-circle .25s linear forwards 1s;
         }
 
         line {
             stroke-dasharray: 2081;
             stroke-dashoffset: 2081;
-            animation: dash .5s linear forwards 1.3s;
         }
     }
+}
+
+.animated{
+
+    svg {
+        animation: first-x-translation .25s ease forwards 0.8s, second-x-translation .5s ease-in-out forwards 2s;
+        circle {
+            animation: dash-circle .25s linear forwards 1s;
+        }
+
+        line {
+            animation: dash .5s linear forwards 1.3s;
+        }
+
+        #svg-circle-img{
+            animation: scale-down 0.25s ease forwards 0.8s;
+        }
+    }
+}
+
+#animation-trigger{
+    position: absolute;
+    bottom: 0;
+    height: 5px;
+    right:0;
+    left:0;
+    margin: 0 auto;
 }
 
 #svg-circle-img {
@@ -32,8 +56,8 @@
     transition: all ease 0.3s;
     transform: translate(-14%, -25%) scale(1.5);
     clip-path: ellipse(54% 71% at 50% 52%);
-    animation: scale-down 0.25s ease forwards 0.8s;
 }
+
 
 @keyframes dash {
     to {

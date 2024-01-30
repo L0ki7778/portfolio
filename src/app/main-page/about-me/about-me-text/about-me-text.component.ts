@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import Aos from 'aos';
 
 @Component({
   selector: 'app-about-me-text',
@@ -8,5 +9,12 @@ import { Component } from '@angular/core';
   styleUrl: './about-me-text.component.scss'
 })
 export class AboutMeTextComponent {
+
+  constructor() { 
+    Aos.init();
+
+  }
+  
+  
 
 }

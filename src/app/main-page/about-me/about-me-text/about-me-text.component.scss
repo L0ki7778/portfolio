@@ -2,6 +2,7 @@
 
 h1 {
     font-size: 5vw;
+    margin-block:0;
     text-align: center;
     font-weight: bold;
     color: white;
@@ -9,13 +10,29 @@ h1 {
 }
 
 #introduction {
+    @include dFlex(flex-start, center);
+    flex-direction: column;
     position: absolute;
     top: 15%;
-    bottom: 0;
+    bottom: 20%;
+    margin:auto;
+    gap:2rem;
     left: 7%;
     width: 100%;
     max-width: 500px;
-    height: 500px;
+    height: fit-content;
+
+    #introduction-text{
+        p{
+            font-weight: 500;
+            color:white
+            // background: linear-gradient(to right, white 0%, white 50%, purple 50%, purple 100%);
+            // background-clip: text;
+            // -webkit-background-clip: text;
+            // color: transparent;
+
+        }
+    }
 
     #additional-info{
         position: relative;
@@ -26,11 +43,39 @@ h1 {
         left: 7%;
     
     }
+};
+
+#light-box,#puzzle-box{
+    @include dFlex(center,flex-start);
+    flex-direction: row;
+    gap:2rem;
+    align-items: center;
+
+
+    #light-svg{
+        stroke:$gray;
+        width: 20%;
+        animation: light-animation 0.5s ease forwards 1s;
+
+    }
+    #puzzle-svg{
+        fill:$gray;
+        width: 27%;
+        animation: puzzle-animation 0.5s ease forwards 1s;
+    }
+    
+    
 }
 
-#light-svg{
-    stroke:$gray
+@keyframes puzzle-animation {
+    to{
+        fill: $green
+    }
 }
-#puzzle-svg{
-    fill:$gray
+
+@keyframes light-animation {
+    to{
+        stroke: $green
+    }
+    
 }
