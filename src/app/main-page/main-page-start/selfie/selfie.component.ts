@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { MatIconModule } from '@angular/material/icon';
-import { MatDividerModule } from '@angular/material/divider';
-import { MatButtonModule } from '@angular/material/button';
+// import { MatIconModule } from '@angular/material/icon';
+// import { MatDividerModule } from '@angular/material/divider';
+// import { MatButtonModule } from '@angular/material/button';
 import { ButtonComponent } from '../../button/button.component';
 import { ScrollDownComponent } from '../../../scroll-down/scroll-down.component';
 import { SocialButtonsComponent } from '../../social-buttons/social-buttons.component';
@@ -10,9 +10,9 @@ import { SocialButtonsComponent } from '../../social-buttons/social-buttons.comp
   selector: 'app-selfie',
   standalone: true,
   imports: [
-    MatButtonModule,
-    MatDividerModule,
-    MatIconModule,
+    // MatButtonModule,
+    // MatDividerModule,
+    // MatIconModule,
     ButtonComponent,
     ScrollDownComponent,
     SocialButtonsComponent

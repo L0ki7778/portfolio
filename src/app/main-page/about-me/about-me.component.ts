@@ -22,6 +22,7 @@ export class AboutMeComponent {
       }
     })
   }
+  
 
   ngAfterViewInit(){
     if(this.pSvg){
