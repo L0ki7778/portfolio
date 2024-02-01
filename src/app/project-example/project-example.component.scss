@@ -1,0 +1,49 @@
+@import "../mixin.scss";
+
+.project-container{
+    @include dFlex(space-evenly, center);
+    width: 100%;
+    margin-bottom: 10rem;
+    img{
+        width: 30vw;
+        height: auto;
+    }
+
+    .project-text{
+        font-family: 'Poppins', sans-serif;
+        color:white;
+        width:600px;
+
+        h1{
+            font-size: 3vw;
+            margin-block:0;
+            font-weight: bold;
+            color:$purple
+        }
+
+        .skills{
+            color:$lightBlue;
+            font-weight: 500;
+            font-size: 1.5vw;
+
+            p{
+                margin-block:0;
+            }
+        }
+
+        .buttons{
+            a{
+                border-radius: 8px;
+                padding:1.5rem 1rem;
+                font-size: 1.2rem;
+                margin-right:2rem
+            }
+        }
+
+        
+        .stroked{
+            border: 1px solid $lightBlue;
+            color:white
+        }
+    }
+}

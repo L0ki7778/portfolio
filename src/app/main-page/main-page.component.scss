@@ -60,16 +60,31 @@ app-contact{
     top:-2px;
     height: 100vh;
     background: linear-gradient(
-      30deg,
+      40deg,
       #202C42 0%,
       #141D2F 100%);
     margin: auto;
     overflow-x: hidden;
 }
 
-
-
-
+app-portfolio{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 2400px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    top:-2px;
+    height: fit-content;
+    background: linear-gradient(
+        140deg,
+      #202C42 0%,
+      #141D2F 100%);
+    margin: auto;
+    overflow-x: hidden;
+}
 
 
 @keyframes unfold {
