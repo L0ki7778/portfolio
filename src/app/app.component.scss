@@ -1,12 +1,15 @@
 @import "./mixin.scss";
 
+app-root{
+  height: fit-content;
+}
+
 app-main-page{
     display: flex;
     flex-direction: column;
     background-color: $darkBlue;
     width: 100%;
-    min-height: 100vh;
-    height: 100%;
+    height: fit-content;
 }
 
 app-intro{
@@ -23,6 +26,9 @@ app-intro{
     transition: all ease 0.2s;
     animation: fold-out 0.5s ease forwards 6.5s, shorten 0.5s ease forwards 8s;
 }
+
+
+
 
 :host ::ng-deep body{
   overflow: hidden!important;

@@ -1,0 +1,35 @@
+<div id="left-contact-section">
+  <h1>Contact</h1>
+  <h4>Facing a challenge or have a project in mind?</h4>
+  <div>Feel free to send me a message through this form. I'm eager to connect and have a chat about your ideas. Let me offer
+    my skills and dedication to support the progress of your projects.</div>
+</div>
+
+<div id="right-contact-section">
+  <!-- app.component.html -->
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" >
+    <mat-form-field  appearance="outline"  >
+      <mat-label>Name/Company</mat-label>
+      <input  class="test" id="name-input" matInput formControlName="name" name="name" required >
+    </mat-form-field>
+  
+    <mat-form-field  appearance="outline"  >
+      <mat-label >Email</mat-label>
+      <input class="test"  matInput formControlName="email" name="email" required >
+    </mat-form-field>
+  
+    <mat-form-field appearance="outline">
+      <mat-label >Message</mat-label>
+      <textarea class="test" cdkTextareaAutosize cdkAutosizeMinRows="10" cdkAutosizeMaxRows="20" matInput formControlName="message" name="message" required></textarea>
+    </mat-form-field>
+    <mat-checkbox formControlName="checkbox"  disableRipple name="checkbox" id="check-box">
+      I have read the <a href="#" id="privacy">Privacy Policy</a> and agree to the processing of my data as outlined.
+    </mat-checkbox>
+  
+<button id="send" mat-raised-button color="primary" type="submit" [disabled]="!contactForm.valid">
+Send message
+</button>  </form>
+
+</div>
+
+<app-footer></app-footer>

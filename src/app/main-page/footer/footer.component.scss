@@ -1,0 +1,28 @@
+@import "../../mixin.scss";
+
+#footer-flex-container {
+    @include dFlex(space-between, center);
+    position: relative;
+    width: 86%;
+    height: 100%;
+    padding: 0 7%;
+    background-color: #141D2F;
+    font-family: 'Poppins', sans-serif;
+    border-top: 4px solid $green;
+
+    #footer-name-box {
+        display: flex;
+        flex-direction: column;
+
+        #footer-name {
+            font-size: 4vw;
+            margin-block: 0;
+            margin-bottom: -1.5rem;
+        }
+
+        #imprint{
+            font-style: italic;
+            margin-left: .125rem;
+        }
+    }
+}

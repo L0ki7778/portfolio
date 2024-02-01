@@ -1,14 +1,60 @@
-// :root{
-//     width: fit-content;
-// }
+@use "../node_modules/@angular/material/" as mat;
+@import "app/mixin.scss";
 
-body{
-margin:0;
+body {
+  margin: 0;
 }
 
-// @keyframes overflow {
-//     to {
-//         overflow: visible;
-//     }
-    
+
+
+// .mat-form-field-appearance-outline .mat-form-field-outline {
+//   color: green;
 // }
+
+
+
+
+@include mat.core();
+
+$my-primary: mat.define-palette(mat.$deep-purple-palette, 500);
+$my-accent: mat.define-palette(mat.$teal-palette, A400);
+$my-warn: mat.define-palette(mat.$deep-orange-palette);
+$my-theme: mat.define-light-theme((color: (primary: $my-primary, accent: $my-accent, warn: $my-warn)));
+@include mat.all-component-themes($my-theme);
+
+
+
+
+.mdc-floating-label {
+
+  color: $purple
+}
+
+.mdc-label {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  max-width: 400px;
+  padding: 1rem;
+
+}
+
+
+
+.mdc-text-field--outlined {
+  --mdc-outlined-text-field-color: #9747FF;
+  --mdc-outlined-text-field-outline-color: #9747FF;
+  --mdc-outlined-text-field-label-text-color: #9747FF;
+  --mdc-outlined-text-field-hover-outline-width: 10px;
+  --mdc-outlined-text-field-hover-label-text-color: rgb(46 237 172);
+  --mdc-outlined-text-field-hover-outline-color: #1CE6B6;
+  --mdc-outlined-input-field-hover-outline-width: 2px;
+  --mdc-outlined-text-field-container-shape: 10px !important;
+  --mdc-outlined-text-field-outline-width: 2px;
+}
+
+mat-checkbox.mat-checkbox-checked.entradaCheck .mat-checkbox-background {
+  background-color: rgb(15, 91, 33) !important;
+}
+
+
+// mat-mdc-form-field ng-tns-c2608167813-0 mat-mdc-form-field-type-mat-input  mat-primary ng-touched ng-dirty ng-valid

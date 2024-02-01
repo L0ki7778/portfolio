@@ -7,6 +7,7 @@ import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import AOS from 'aos';
+import { FooterComponent } from './main-page/footer/footer.component';
 
 
 

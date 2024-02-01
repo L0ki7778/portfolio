@@ -4,6 +4,10 @@
     align-items: $al;
 }
 
+@mixin poppins(){
+    font-family: 'Poppins', sans-serif;
+}
+
 $purple : #9747FF;
 $darkBlue: #141D2F;
 $lightBlue: #1CDAE6;

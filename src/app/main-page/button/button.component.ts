@@ -12,5 +12,5 @@ import {MatButtonModule} from '@angular/material/button';
   styleUrl: './button.component.scss'
 })
 export class ButtonComponent {
-  @Input() text = "";
+  @Input() text:string = "";
 }

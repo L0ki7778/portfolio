@@ -1,3 +1,5 @@
+@import "./../mixin.scss";
+
 app-main-page-start {
     position: relative;
     top: 0;
@@ -45,6 +47,28 @@ app-my-skills{
     margin: auto;
     overflow-x: hidden;
 }
+
+app-contact{
+    @include dFlex(space-between, center);
+    width: 100%;
+    overflow: hidden;
+    max-width: 2400px;
+    position: relative;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    top:-2px;
+    height: 100vh;
+    background: linear-gradient(
+      30deg,
+      #202C42 0%,
+      #141D2F 100%);
+    margin: auto;
+    overflow-x: hidden;
+}
+
+
+
 
 
 
