@@ -30,6 +30,7 @@
         flex-direction: column;
         align-items: flex-end;
         justify-content: center;
+        margin-bottom:70px
     }
 }
 
@@ -67,7 +68,6 @@ app-button {
         font-size: 3.23vw;
         color: $purple;
         transform: scale(0, 0);
-        // transform-origin: center;
         animation: profession-animation 0.5s ease forwards 8s;
     }
 
@@ -154,6 +154,12 @@ app-button {
     }
 }
 
+@keyframes rotate-mq-variant{
+    100%{
+        transform: rotate(-90deg)translate(-4px, -10rem);
+    }
+}
+
 @keyframes profession-animation {
 
     100% {
@@ -218,4 +224,26 @@ app-button {
             left: 0
         }
     }
+
+    #headline {
+
+    
+        #my-name {
+            font-size: 9rem;
+
+    
+        }
+    
+    
+        #my-profession {
+            font-size: 4.84rem;
+        }
+    
+    
+        #i-am {
+            font-size: 5.7rem;
+            animation: rotate-mq-variant 0.5s ease forwards 8s;;
+        }
+    }
+    
 }

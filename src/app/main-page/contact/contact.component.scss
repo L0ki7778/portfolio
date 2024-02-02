@@ -45,14 +45,11 @@ select:-webkit-autofill:not(:placeholder-shown) {
         font-family: 'Poppins', sans-serif;
       }
 
-      input:-webkit-autofill-selected {
-        background-color: transparent !important;
-        color: white;
+
+      #check-box-input {
+        margin-right: 1rem
       }
 
-      #check-box-input{
-        margin-right:1rem
-      }
 
       #send {
         &:hover {
@@ -73,12 +70,20 @@ select:-webkit-autofill:not(:placeholder-shown) {
   color: white;
   @include poppins();
 
-  h1{
+  h1 {
     font-size: 6vw;
   }
 
-  div{
+  div {
     max-width: 500px;
+  }
+}
+
+#privacy {
+  color: mediumpurple !important;
+
+  &:active {
+    color: #1CE6B6 !important;
   }
 }
 
@@ -90,7 +95,7 @@ app-footer {
   background-color: #141D2F;
   position: absolute;
   width: 100%;
-  height:20vh;
+  height: 20vh;
   bottom: 0;
   right: 0;
   left: 0;

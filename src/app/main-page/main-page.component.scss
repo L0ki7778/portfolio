@@ -22,15 +22,13 @@ app-about-me {
     z-index: 2;
     height: 96vh;
     top: -1px;
-    background: linear-gradient(
-      138deg,
-      #202C42 0%,
-      #141D2F 100%);
+    background: linear-gradient(to right, #141D2F, #202C42, #141D2F);
+    filter: drop-shadow(0px 20px 8px rgba(0, 0, 0, 0.2));
     margin: auto;
     overflow-x: hidden;
 }
 
-app-my-skills{
+app-my-skills {
     position: relative;
     display: flex;
     width: 100%;
@@ -38,17 +36,16 @@ app-my-skills{
     left: 0;
     right: 0;
     z-index: 2;
-    top:-2px;
+    top: -2px;
     height: 65vh;
-    background: linear-gradient(
-      30deg,
-      #202C42 0%,
-      #141D2F 100%);
+    background: linear-gradient(to right, #141D2F, #202C42, #141D2F);
+    filter: drop-shadow(0px 20px 8px rgba(0, 0, 0, 0.2));
+
     margin: auto;
     overflow-x: hidden;
 }
 
-app-contact{
+app-contact {
     @include dFlex(space-between, center);
     width: 100%;
     overflow: hidden;
@@ -57,17 +54,16 @@ app-contact{
     left: 0;
     right: 0;
     z-index: 2;
-    top:-2px;
+    top: -2px;
     height: 100vh;
-    background: linear-gradient(
-      40deg,
-      #202C42 0%,
-      #141D2F 100%);
+    background: linear-gradient(to right, #141D2F, #202C42, #141D2F);
+    filter: drop-shadow(0px 20px 8px rgba(0, 0, 0, 0.2));
+
     margin: auto;
     overflow-x: hidden;
 }
 
-app-portfolio{
+app-portfolio {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -76,12 +72,11 @@ app-portfolio{
     left: 0;
     right: 0;
     z-index: 2;
-    top:-2px;
+    top: -2px;
     height: fit-content;
-    background: linear-gradient(
-        140deg,
-      #202C42 0%,
-      #141D2F 100%);
+    background: linear-gradient(to right, #141D2F, #202C42, #141D2F);
+    filter: drop-shadow(0px 20px 8px rgba(0, 0, 0, 0.2));
+
     margin: auto;
     overflow-x: hidden;
 }

@@ -1,49 +1,86 @@
 @import "../mixin.scss";
 
-.project-container{
+.project-container {
     @include dFlex(space-evenly, center);
     width: 100%;
     margin-bottom: 10rem;
-    img{
+
+    img {
         width: 30vw;
         height: auto;
     }
 
-    .project-text{
+    .project-text {
         font-family: 'Poppins', sans-serif;
-        color:white;
-        width:600px;
+        color: white;
+        width: 600px;
 
-        h1{
+        h1 {
             font-size: 3vw;
-            margin-block:0;
+            margin-block: 0;
             font-weight: bold;
-            color:$purple
+            color: $purple
         }
 
-        .skills{
-            color:$lightBlue;
+        .skills {
+            color: $lightBlue;
             font-weight: 500;
             font-size: 1.5vw;
 
-            p{
-                margin-block:0;
+            p {
+                margin-block: 0;
             }
         }
 
-        .buttons{
-            a{
+        .buttons {
+            a {
                 border-radius: 8px;
-                padding:1.5rem 1rem;
+                padding: 1.5rem 1rem;
                 font-size: 1.2rem;
-                margin-right:2rem
+                margin-right: 2rem
             }
         }
 
-        
-        .stroked{
+
+        .stroked {
             border: 1px solid $lightBlue;
-            color:white
+            color: white
         }
     }
+}
+
+@media screen and (min-width: 2400px) {
+    .project-container {
+        @include dFlex(space-evenly, center);
+        width: 100%;
+        margin-bottom: 10rem;
+
+        img {
+            width: 50rem;
+            height: auto;
+        }
+
+        .project-text {
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            width: 800px;
+
+            .skills{
+                font-size: 2rem;
+            }
+            .project-description{
+                font-size: 1.5rem;
+            }
+
+            .buttons {
+                a {
+                    border-radius: 8px;
+                    padding: 2rem 1.5rem;
+                    font-size: 1.6rem;
+                    margin-right: 5rem
+                }
+            }
+        }
+    }
+
 }

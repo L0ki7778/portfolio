@@ -19,18 +19,12 @@ h1 {
     gap:2rem;
     left: 7%;
     width: 100%;
-    max-width: 500px;
     height: fit-content;
 
     #introduction-text{
         p{
             font-weight: 500;
             color:white
-            // background: linear-gradient(to right, white 0%, white 50%, purple 50%, purple 100%);
-            // background-clip: text;
-            // -webkit-background-clip: text;
-            // color: transparent;
-
         }
     }
 
@@ -79,4 +73,49 @@ h1 {
         stroke: $green
     }
     
+}
+
+@media screen and (min-width:2400px) {
+    h1 {
+        font-size: 5vw;
+        margin-block:0;
+        text-align: center;
+        font-weight: bold;
+        color: white;
+        font-family: 'Poppins';
+    }
+    
+    #introduction {
+        @include dFlex(flex-start, center);
+        flex-direction: column;
+        position: absolute;
+        top: 15%;
+        bottom: 20%;
+        margin:auto;
+        gap:2rem;
+        left: 7%;
+        width: 700px;
+        height: fit-content;
+    
+        #introduction-text{
+            p{
+                font-weight: 500;
+                font-size: 1.5rem;
+                color:white
+            }
+        }
+    
+        #additional-info{
+            font-size: 1.5rem;
+
+            position: relative;
+            color:white;
+            display: flex;
+            gap:2rem;
+            flex-direction: column;
+            top: 15%;
+            left: 10%;
+        
+        }
+    };
 }

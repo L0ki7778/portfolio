@@ -38,6 +38,16 @@ $my-theme: mat.define-light-theme((color: (primary: $my-primary, accent: $my-acc
 
 }
 
+.mdc-checkbox__background{
+  border-color: #1CE6B6!important;
+
+}
+
+
+.mdc-checkbox__ripple{
+  background-color: transparent!important;
+}
+
 
 
 .mdc-text-field--outlined {
@@ -56,5 +66,13 @@ mat-checkbox.mat-checkbox-checked.entradaCheck .mat-checkbox-background {
   background-color: rgb(15, 91, 33) !important;
 }
 
+@media  screen and (min-width:2400px) {
+  h1{
+    font-size: 9rem!important;
+  }
 
-// mat-mdc-form-field ng-tns-c2608167813-0 mat-mdc-form-field-type-mat-input  mat-primary ng-touched ng-dirty ng-valid
+  .project-title{
+    font-size: 5rem!important;
+  }
+  
+}

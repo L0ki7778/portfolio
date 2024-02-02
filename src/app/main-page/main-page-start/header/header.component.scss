@@ -11,7 +11,7 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1;
+    z-index: 2;
     display: flex;
     justify-content: center;
     background-color: $darkBlue;
@@ -36,24 +36,23 @@ header {
                 animation: color-letter 0.5s ease forwards 8s;
             }
         }
+    }
+}
 
-        #header-links {
-            display: flex;
-            gap: 2rem;
+#header-links {
+    display: flex;
+    gap: 2rem;
 
-            a {
-                color: white;
-                font-size: 1.5rem;
-                text-decoration: none;
-                opacity: 0;
-                animation: fade-in 0.5s ease forwards 8s;
+    a {
+        color: white;
+        font-size: 1.5rem;
+        text-decoration: none;
+        opacity: 0;
+        animation: fade-in 0.5s ease forwards 8s;
 
-                &:hover {
-                    color: $purple
-                }
-            }
+        &:hover {
+            color: $purple
         }
-
     }
 }
 
@@ -61,6 +60,15 @@ header {
     to {
         transform: translate(0, 0);
         font-size: 2.5rem;
+        opacity: 1;
+    }
+
+}
+
+@keyframes name-into-heade-mq-variant {
+    to {
+        transform: translate(0, 0);
+        font-size: 5rem;
         opacity: 1;
     }
 
@@ -93,7 +101,7 @@ header {
     }
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (min-width: 1100px) {
     nav {
         #header-links {
             a {
@@ -111,4 +119,19 @@ header {
         margin-bottom: -32px;
     }
 
+}
+
+@media screen and (min-width: 2400px) {
+    header{
+        nav{
+            #name{
+                animation: name-into-heade-mq-variant 0.5s ease forwards 8s;
+            }
+        }
+        #header-links {
+            a {
+                font-size:  2rem;
+            }
+        }
+    }
 }
