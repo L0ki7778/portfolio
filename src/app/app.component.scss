@@ -8,6 +8,7 @@ app-main-page{
     display: flex;
     flex-direction: column;
     background-color: $darkBlue;
+    overflow-x: hidden;
     width: 100%;
     height: fit-content;
 }

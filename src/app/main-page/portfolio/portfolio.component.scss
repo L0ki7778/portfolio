@@ -1,9 +1,55 @@
-#pf-title-box{
+@import "../../mixin.scss";
+
+#pf-title-box {
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
-    color:white;
-    h1{
-        font-size: 6vw;
-        margin-block:0;
+    color: white;
+    margin-bottom: 10rem;
+
+    #purple-line-box{
+        position: relative;
+        display: flex;
+        width: 100%;
+        max-width: 2400px;
+        justify-content: center;
+        align-items: center;
+
+        #purple-line {
+            position: absolute;
+            width: 80%;
+            height: 5px;
+            background-color: $purple;
+            z-index: 1;
+            right:0;
+            top:0;
+            bottom:0;
+            margin:auto
+        }
+    }
+
+    h1 {
+        font-size: 4vw;
+        background: linear-gradient(to right, #1D283D, #202C42, #1D283D);
+        z-index: 3;
+        padding:0 1rem;
+        margin-block: 0;
+    }
+
+    p{
+        text-align: center;
     }
 }
+
+@media screen and (min-width: 2400px) {
+    #pf-title-box {
+        h1 {
+            font-size: 5rem;
+        }
+        p{
+            font-size: 1.5rem;
+            text-align: center;
+        }
+    }
+    
+}
+

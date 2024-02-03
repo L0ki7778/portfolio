@@ -5,13 +5,9 @@ body {
   margin: 0;
 }
 
-
-
-// .mat-form-field-appearance-outline .mat-form-field-outline {
-//   color: green;
-// }
-
-
+h1{
+  font-size: 4vw!important;
+}
 
 
 @include mat.core();
@@ -22,7 +18,9 @@ $my-warn: mat.define-palette(mat.$deep-orange-palette);
 $my-theme: mat.define-light-theme((color: (primary: $my-primary, accent: $my-accent, warn: $my-warn)));
 @include mat.all-component-themes($my-theme);
 
-
+.d-none{
+  display: none;
+}
 
 
 .mdc-floating-label {

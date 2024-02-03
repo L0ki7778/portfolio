@@ -1,7 +1,7 @@
 @import "../../../mixin.scss";
 
 h1 {
-    font-size: 5vw;
+    font-size: 4vw;
     margin-block:0;
     text-align: center;
     font-weight: bold;
@@ -18,7 +18,7 @@ h1 {
     margin:auto;
     gap:2rem;
     left: 7%;
-    width: 100%;
+    width: 40%;
     height: fit-content;
 
     #introduction-text{
@@ -77,7 +77,7 @@ h1 {
 
 @media screen and (min-width:2400px) {
     h1 {
-        font-size: 5vw;
+        font-size: 9rem;
         margin-block:0;
         text-align: center;
         font-weight: bold;
@@ -107,7 +107,6 @@ h1 {
     
         #additional-info{
             font-size: 1.5rem;
-
             position: relative;
             color:white;
             display: flex;

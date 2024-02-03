@@ -108,9 +108,9 @@ app-button {
 
     #button-container {
         position: absolute;
-        left: 7%;
-        width: 20%;
-        bottom: 1rem;
+        left: 0;
+        width: 25%;
+        bottom: 0.5rem;
         z-index: 2;
         @include dFlex(space-between, center);
         gap: 2rem;
@@ -133,7 +133,7 @@ app-button {
 
 @keyframes lengthen {
     to {
-        width: 50%;
+        width: 55%;
     }
 
 }
@@ -174,6 +174,140 @@ app-button {
         opacity: 1;
 
     }
+}
+
+@media screen and (min-width: 320px) {
+    #start-page-container {
+        flex-direction: column;
+        align-items: center;
+
+        width: 100%;
+        height: 70vh;
+    
+        #left-section {
+            width: 100%;
+    
+            img {
+                height: auto;
+                width: 100%;
+                inset:0;
+                position: relative;
+                margin:auto;
+            }
+    
+        }
+    
+        #right-section {
+            font-family: "Poppins", sans-serif;
+            height: 100%;
+            z-index: 2;
+            width: fit-content;
+            max-width: 60%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: center;
+            margin-bottom:70px
+        }
+    }
+    
+    app-button {
+        align-self: center;
+        font: 400 unset !important;
+        position: relative;
+        opacity: 0;
+        animation: fade-in 0.5s ease forwards 8s;
+    }
+    
+    
+    
+    #headline {
+        font-family: 'Poppins', sans-serif;
+        display: flex;
+        width: fit-content;
+        align-items: center;
+        justify-content: flex-end;
+        flex-direction: column;
+        position: relative;
+    
+        #my-name {
+            font-size: 6vw;
+            font-weight: bold;
+            color: white;
+            transform: translate(-16.5vw, 14.5vh);
+            margin-bottom: calc(1.5vw * -1 - 0.5rem);
+            animation: name-animation 0.5s ease forwards 8s;
+    
+        }
+    
+    
+        #my-profession {
+            font-size: 3.23vw;
+            color: $purple;
+            transform: scale(0, 0);
+            animation: profession-animation 0.5s ease forwards 8s;
+        }
+    
+    
+        #i-am {
+            position: absolute;
+            color: white;
+            top: 0;
+            left: 0;
+            font-size: 3.9vw;
+            margin: auto;
+            width: fit-content;
+            height: fit-content;
+            animation: i-am-animation 0.5s ease forwards 8s;
+        }
+    }
+    
+    
+    
+    #start-bottom {
+        width: 100%;
+        max-width: 2400px;
+        height: 30vh;
+        margin: 0 auto;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        position: absolute;
+    
+        app-scroll-down {
+            position: absolute;
+            right: 0;
+            bottom: 3rem;
+            z-index: 2;
+            opacity: 0;
+            animation: fade-in 2s ease forwards 10s;
+        }
+    
+        #button-container {
+            position: absolute;
+            left: 0;
+            width: 25%;
+            bottom: 0.5rem;
+            z-index: 2;
+            @include dFlex(space-between, center);
+            gap: 2rem;
+    
+            #purple-line {
+                width: 0%;
+                height: 3px;
+                background-color: $purple;
+                transition: all ease 0.2s;
+                animation: lengthen 0.5s ease forwards 8s;
+    
+            }
+    
+            app-social-buttons {
+                @include dFlex(center, center);
+                gap: 1rem;
+            }
+        }
+    }
+    
 }
 
 @media screen and (min-width: 600px) {

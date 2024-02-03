@@ -51,7 +51,6 @@ export class SocialButtonsComponent {
 
 
 
-      // gsap.to(buttons, {  duration: 2 });
     }
   };
 

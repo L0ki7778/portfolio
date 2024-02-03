@@ -9,10 +9,12 @@
     grid-row-gap: 3rem;
     height: fit-content;
     width: 50%;
+    max-width: 50rem;
     left: 7%;
     align-items: center;
     justify-items: center;
     overflow: visible;
+    visibility: hidden;
 
     .grid-item {
         display: flex;
@@ -25,6 +27,7 @@
         height: 100%;
 
         svg {
+            transform: translate(0, 10%);
             transition: all 0.2s ease;
             filter: brightness(0.9);
         }
@@ -53,8 +56,8 @@
     flex-wrap: wrap;
     width: fit-content;
     max-width: 50%;
-    top:0;
-    bottom:0;
+    top: 0;
+    bottom: 0;
     right: 0;
     margin: auto;
     color: white;
@@ -67,7 +70,7 @@
         font-size: 6vw;
     }
 
-    div {
+    #skill-text {
         max-width: 340px;
     }
 
@@ -76,6 +79,28 @@
         margin-top: 1rem;
         width: 14rem !important;
 
+    }
+
+}
+
+@media screen and (min-width: 2400px) {
+    #skills {
+        #skill-text-container{
+            display: flex;
+            flex-direction: column;
+
+            #skill-text {
+                max-width: 37rem!important;
+                font-size: 1.5rem;
+                text-align: center;
+                margin: 2rem 0;
+            };
+            #skill-button{
+                display: flex;
+                align-self: center;
+                width: 15rem!important;
+            }
+        }
     }
 
 }
