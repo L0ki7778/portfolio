@@ -210,8 +210,12 @@ app-button {
     }
 
     #start-bottom {
+
         #button-container {
-            width: 60%;
+            width: 50%;
+            app-social-buttons {
+                transform: translate(50%,0);
+            }
         }
     }
 }

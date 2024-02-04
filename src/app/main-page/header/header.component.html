@@ -2,9 +2,10 @@
     <nav>
         <div id="name" #name><span id="e-letter">R</span>ené</div>
         <div id="header-left">
-            <a href="#about">About me</a>
+            <a href="#about-me">About me</a>
             <a href="#skills">Skills</a>
             <a href="#portfolio">Portfolio</a>
         </div>
+        <app-burger-cross-animation (dialogEvent)="manageOverlay($event)"></app-burger-cross-animation>
     </nav>
 </header>

@@ -3,13 +3,12 @@
 app-selfie {
     position: relative;
     display: flex;
+    margin-top:8vh;
     height: 92vh;
     width: 100%;
     justify-content: center;
     background-color: $darkBlue;
 }
-
-
 
 
 svg {

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-menu-system',
@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './menu-system.component.scss'
 })
 export class MenuSystemComponent {
+  @Input() overlayStatus:string = 'hide-overlay'
 
 }

@@ -1,0 +1,25 @@
+@import "../../mixin.scss";
+
+#menu-system{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: #414856;
+    gap:1rem;
+    a{
+
+        font-family: 'Poppins',sans-serif;
+        font-size: 2rem;
+        font-weight: bold;
+        color:white;
+        text-decoration: none;
+        &:hover{
+            color:$purple;
+            cursor: pointer;
+        }
+    }
+}
+

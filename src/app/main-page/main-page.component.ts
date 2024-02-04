@@ -5,11 +5,15 @@ import { MySkillsComponent } from './my-skills/my-skills.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
+import { MenuSystemComponent } from './menu-system/menu-system.component';
+import { HeaderComponent } from './header/header.component';
 
 @Component({
   selector: 'app-main-page',
   standalone: true,
   imports: [
+    HeaderComponent,
+    MenuSystemComponent,
     MainPageStartComponent,
     AboutMeComponent,
     MySkillsComponent,
@@ -20,5 +24,10 @@ import { FooterComponent } from './footer/footer.component';
   styleUrl: './main-page.component.scss'
 })
 export class MainPageComponent {
+  overlayStatus:string='hide-overlay';
 
+
+  handleOverlay(value: string) {
+    this.overlayStatus = value;
+  }
 }

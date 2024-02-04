@@ -1,5 +1,7 @@
+<app-header (dialogEvent)="handleOverlay($event)"></app-header>
+<app-menu-system [class]="overlayStatus"></app-menu-system>
 <app-main-page-start></app-main-page-start>
 <app-about-me></app-about-me>
 <app-my-skills></app-my-skills>
-<app-portfolio></app-portfolio>
-<app-contact></app-contact>
+<app-portfolio id="portfolio"></app-portfolio>
+<app-contact id="contact"></app-contact>
