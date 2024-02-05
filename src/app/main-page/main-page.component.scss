@@ -18,7 +18,6 @@ app-about-me {
     max-width: 2400px;
     font-family: 'Poppins', sans-serif;
     left: 0;
-    max-height: 94rem;
     overflow-y: hidden;
     right: 0;
     z-index: 2;
@@ -133,5 +132,31 @@ app-portfolio {
 
     100% {
         clip-path: ellipse(100% 60% at 50% 50%);
+    }
+}
+
+@media screen and (max-width: 1000px){
+    app-about-me{
+        height: 48rem;
+    }
+    
+}
+
+@media screen and (max-width: 900px){
+    app-about-me{
+        height: 40rem;
+    }
+    
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+    app-about-me{
+        height: 50rem;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    app-about-me{
+        height: 55rem;
     }
 }

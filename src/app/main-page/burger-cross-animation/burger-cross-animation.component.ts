@@ -13,11 +13,11 @@ export class BurgerCrossAnimationComponent {
   @Output() dialogEvent = new EventEmitter<string>();
 
 
-  constructor(private getOverlayService: OverlayService){}
+  constructor(private overlayService: OverlayService){}
 
 
   ngOnInit(){
-    this.getOverlayService.overlayTriggered$.subscribe(()=>{
+    this.overlayService.overlayTriggered$.subscribe(()=>{
       this.executeServiceMethod()
     })
   }

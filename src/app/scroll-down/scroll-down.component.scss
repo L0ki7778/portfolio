@@ -1,20 +1,21 @@
-
-
-#scroll{
+#scroll {
     font-family: "Poppins", sans-serif;
     font-size: 1.5rem;
     color: white;
     transform: rotate(90deg) translate(-6rem, 4rem);
     transform-origin: center;
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
-    
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+    /* Standard syntax */
+
 }
 
 
-.box{
-    span{
+.box {
+    span {
         display: block;
         width: 20px;
         height: 20px;
@@ -28,16 +29,34 @@
 
 
 @keyframes animate {
-    0%{
+    0% {
         opacity: 0;
         transform: rotate(45deg) translate(-20px, -20px);
     }
-    50%{
+
+    50% {
         opacity: 1;
     }
-    100%{
+
+    100% {
         opacity: 0;
         transform: rotate(45deg) translate(20px, 20px);
     }
+
+}
+
+@media screen and (max-width: 1025px) {
+    #scroll {
+        font-size: 1rem;
+        transform: rotate(90deg) translate(-4rem, 2rem);
+    }
+    .box {
+        span {
+            width: 14px;
+            height: 14px;
+            margin: -5px 5px -5px 5px;
+        }
+    }
     
+
 }

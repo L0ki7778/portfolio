@@ -2,7 +2,8 @@
 
 h1 {
     font-size: 4vw;
-    margin-block:0;
+    margin-block: 0;
+    transform: translate(0, 8vh);
     text-align: center;
     font-weight: bold;
     color: white;
@@ -10,111 +11,131 @@ h1 {
 }
 
 #introduction {
-    @include dFlex(flex-start, center);
+    @include dFlex(center, center);
     flex-direction: column;
     position: absolute;
-    top: 15%;
-    bottom: 20%;
-    margin:auto;
-    gap:2rem;
+    top: 1rem;
+    bottom: 0;
+    margin: auto;
+    gap: 2rem;
     left: 7%;
     width: 40%;
-    height: fit-content;
+    height: 100%;
 
-    #introduction-text{
-        p{
+    #introduction-text {
+        p {
             font-weight: 500;
-            color:white
+            color: white
         }
     }
 
-    #additional-info{
+    #additional-info {
         position: relative;
-        color:white;
+        color: white;
         display: flex;
-        gap:2rem;
+        gap: 2rem;
         flex-direction: column;
-        top: 15%;
         left: 7%;
-    
-    }
-};
 
-#light-box,#puzzle-box{
-    @include dFlex(center,flex-start);
+    }
+}
+
+;
+
+#light-box,
+#puzzle-box {
+    @include dFlex(center, flex-start);
     flex-direction: row;
-    gap:2rem;
+    gap: 2rem;
     align-items: center;
 
 
-    #light-svg{
-        stroke:$gray;
+    #light-svg {
+        stroke: $gray;
         width: 20%;
         animation: light-animation 0.5s ease forwards 1s;
 
     }
-    #puzzle-svg{
-        fill:$gray;
+
+    #puzzle-svg {
+        fill: $gray;
         width: 27%;
         animation: puzzle-animation 0.5s ease forwards 1s;
     }
-    
-    
+
+
 }
 
 @keyframes puzzle-animation {
-    to{
+    to {
         fill: $green
     }
 }
 
 @keyframes light-animation {
-    to{
+    to {
         stroke: $green
     }
-    
+
+}
+
+@media screen and (max-width: 900px) {
+    #introduction {
+        width: 75%;
+    }
+
+    h1 {
+        transform: translate(0, 4vh);
+    }
+
+    #light-box,
+    #puzzle-box {
+        width: calc(100% - 7%);
+    }
+}
+
+@media screen and (min-width: 980px) {
+    h1 {
+        transform: translate(0, 4vh);
+    }
+
 }
 
 @media screen and (min-width:2400px) {
     h1 {
         font-size: 9rem;
-        margin-block:0;
-        text-align: center;
-        font-weight: bold;
-        color: white;
-        font-family: 'Poppins';
     }
-    
+
     #introduction {
-        @include dFlex(flex-start, center);
+        @include dFlex(center, center);
         flex-direction: column;
         position: absolute;
         top: 15%;
         bottom: 20%;
-        margin:auto;
-        gap:2rem;
+        height: 100%;
+        gap: .5rem;
         left: 7%;
         width: 700px;
-        height: fit-content;
-    
-        #introduction-text{
-            p{
+
+        #introduction-text {
+            p {
                 font-weight: 500;
                 font-size: 1.5rem;
-                color:white
+                color: white
             }
         }
-    
-        #additional-info{
+
+        #additional-info {
             font-size: 1.5rem;
             position: relative;
-            color:white;
+            color: white;
             display: flex;
-            gap:2rem;
+            gap: 2rem;
             flex-direction: column;
-            top: 15%;
             left: 10%;
-        
+
         }
-    };
+    }
+
+    ;
 }

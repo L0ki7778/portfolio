@@ -1,10 +1,16 @@
 app-about-me-text{
-    position: relative;
     width: 100%;
     padding: 0 7%;
     max-width: 2400px;
     margin: 0 auto;
-    height: calc(90vh - 6rem);
+    height: fit-content;
     top: -1px;
     background-color: transparent;
+}
+
+@media screen and (max-width: 900px){
+    app-about-me-picture{
+        display: none;
+    }
+    
 }
