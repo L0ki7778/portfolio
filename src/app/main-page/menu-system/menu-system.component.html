@@ -1,10 +1,6 @@
 <div id="menu-system">
-    <a  href="#about-me">About me</a>
-    <!-- (click)="closeDialog()" -->
-    <a  href="#skills">My skills</a>
-    <!-- (click)="closeDialog()" -->
-    <a  href="#portfolio">Porfolio</a>
-    <!-- (click)="closeDialog()" -->
-    <a  href="#contact">Contact</a>
-    <!-- (click)="closeDialog()" -->
+    <a  href="#about-me" (click)="handleOverlay()">About me</a>
+    <a  href="#skills" (click)="handleOverlay()">My skills</a>
+    <a  href="#portfolio" (click)="handleOverlay()">Porfolio</a>
+    <a  href="#contact" (click)="handleOverlay()">Contact</a>
 </div>

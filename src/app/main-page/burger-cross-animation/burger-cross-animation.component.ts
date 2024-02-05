@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { OverlayService } from '../../overlay.service';
 
 @Component({
   selector: 'app-burger-cross-animation',
@@ -10,6 +11,17 @@ import { Component, EventEmitter, Output } from '@angular/core';
 export class BurgerCrossAnimationComponent {
   open:string="closed";
   @Output() dialogEvent = new EventEmitter<string>();
+
+
+  constructor(private getOverlayService: OverlayService){}
+
+
+  ngOnInit(){
+    this.getOverlayService.overlayTriggered$.subscribe(()=>{
+      this.executeServiceMethod()
+    })
+  }
+
 
   manageOverlay(value:string){
     this.dialogEvent.emit(value)
@@ -23,5 +35,9 @@ export class BurgerCrossAnimationComponent {
       this.open="open";
       this.manageOverlay("display-overlay")
     }
+  }
+
+  executeServiceMethod(){
+    this.openBurger()
   }
 }
