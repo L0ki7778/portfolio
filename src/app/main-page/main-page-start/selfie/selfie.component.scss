@@ -101,6 +101,7 @@ app-button {
         position: absolute;
         right: 0;
         bottom: 3rem;
+        transform: translate(20%,0);
         z-index: 2;
         opacity: 0;
         animation: fade-in 2s ease forwards 10s;
@@ -161,7 +162,6 @@ app-button {
 }
 
 @keyframes profession-animation {
-
     100% {
         transform: scale(1, 1);
     }
@@ -170,24 +170,69 @@ app-button {
 
 @keyframes fade-in {
     to {
-
         opacity: 1;
-
     }
 }
 
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1000px) {
     #start-page-container {
+        position: absolute;
         flex-direction: column;
         height: 100%;
-
+        width: 100%;
         #left-section {
             width: 100%;
+            img{
+                width: 100%;
+                height: 100%;
+            }
         }
 
+    //     #right-section {
+    //         height: unset;
+    //     }
+    }
+    app-scroll-down {
+        display: none;
+    }
+    #headline {
+        #my-name {
+            animation: name-animation 0.5s ease forwards 1s;
+        }
+        #my-profession {
+            animation: profession-animation 0.5s ease forwards 1s;
+        }
+        #i-am {
+            animation: i-am-animation 0.5s ease forwards 1s;
+        }
+    }
+    #start-bottom {
+        #button-container {
+            width: 50%;
+            app-social-buttons {
+                transform: translate(50%, 0);
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1024px) and (min-height: 1200px) {
+    #start-page-container {
+        position: absolute;
+        flex-direction: column;
+        height: 100%;
+        width: unset;
+        #left-section {
+            width: unset;
+            img{
+                width: unset;
+                height: 100%;
+            }
+        }
         #right-section {
-            height: unset;
+            margin:14rem 0 0
         }
     }
 
@@ -199,26 +244,63 @@ app-button {
         #my-name {
             animation: name-animation 0.5s ease forwards 1s;
         }
-
         #my-profession {
             animation: profession-animation 0.5s ease forwards 1s;
         }
-
         #i-am {
             animation: i-am-animation 0.5s ease forwards 1s;
         }
     }
-
     #start-bottom {
-
+        bottom:3rem;
         #button-container {
             width: 50%;
             app-social-buttons {
-                transform: translate(50%,0);
+                transform: translate(50%, 0);
             }
         }
     }
 }
+
+
+
+@media screen and (max-width:920px) {
+    app-button {
+        margin-top: 2rem;
+    }
+}
+
+
+
+@media screen and (max-width: 700px) {
+    #start-page-container{
+        #right-section {
+            margin-bottom:-3rem;
+        }
+    }
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 599px) {
+    $iAmSize: 1.1rem;
+    $myNameSize: 1.9rem;
+    $professionSize: 1.03rem;
+
+    #my-name {
+        font-size: $myNameSize!important;
+    }
+
+    #my-profession {
+        font-size: $professionSize!important;
+    }
+
+    #i-am {
+        font-size: $iAmSize!important;
+        transform: rotate(0deg) translate(-5vw, 0vw);
+        bottom: -5px;
+    }
+}
+
 
 @media screen and (min-width: 600px) {
     $iAmSize: 3.8vw;

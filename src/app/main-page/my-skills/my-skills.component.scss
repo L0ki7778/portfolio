@@ -11,6 +11,7 @@
     width: 50%;
     max-width: 50rem;
     left: 7%;
+    top: 15%;
     align-items: center;
     justify-items: center;
     overflow: visible;
@@ -32,7 +33,6 @@
             filter: brightness(0.9);
         }
 
-
         .logo-name {
             font-family: 'Poppins', sans-serif;
             font-weight: bold;
@@ -49,6 +49,24 @@
 
 }
 
+#skill-title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: auto;
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+}
+
+h1 {
+    margin-block: 0;
+    font-size: 4vw;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
 #skills {
     position: relative;
     @include dFlex(center, center);
@@ -59,19 +77,15 @@
     top: 0;
     bottom: 0;
     right: 0;
-    margin: auto;
     color: white;
     text-align: right;
     height: 100%;
     font-family: 'Poppins', sans-serif;
 
-    h1 {
-        margin-block: 0;
-        font-size: 6vw;
-    }
 
     #skill-text {
         max-width: 340px;
+        margin: 1rem 0 2rem;
     }
 
 
@@ -84,23 +98,61 @@
 }
 
 @media screen and (min-width: 2400px) {
+
     #skills {
-        #skill-text-container{
+        #skill-text-container {
             display: flex;
             flex-direction: column;
 
             #skill-text {
-                max-width: 37rem!important;
+                max-width: 37rem !important;
                 font-size: 1.5rem;
                 text-align: center;
                 margin: 2rem 0;
-            };
-            #skill-button{
+            }
+
+            ;
+
+            #skill-button {
                 display: flex;
                 align-self: center;
-                width: 15rem!important;
+                width: 15rem !important;
             }
         }
     }
 
+}
+
+
+
+@media screen and (max-width: 1024px) and (min-height: 1200px) {
+    #svg-container {
+        left: unset;
+        margin: auto;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        width: unset;
+        grid-gap: 3rem;
+    }
+}
+
+@media screen and (max-width:920px) {
+    #svg-container {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        width: 80%;
+        left: unset;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #skills {
+        max-width: 80%;
+        #skill-text {
+            max-width: unset;
+            margin: 4rem 0 3rem;
+            text-align: justify
+        }
+
+    }
 }

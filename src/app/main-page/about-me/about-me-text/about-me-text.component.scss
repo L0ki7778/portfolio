@@ -3,7 +3,7 @@
 h1 {
     font-size: 4vw;
     margin-block: 0;
-    transform: translate(0, 8vh);
+    transform: translate(0, 4vh);
     text-align: center;
     font-weight: bold;
     color: white;
@@ -84,21 +84,16 @@ h1 {
         width: 75%;
     }
 
-    h1 {
-        transform: translate(0, 4vh);
-    }
-
     #light-box,
     #puzzle-box {
         width: calc(100% - 7%);
     }
 }
 
-@media screen and (min-width: 980px) {
-    h1 {
-        transform: translate(0, 4vh);
+@media screen and (max-width: 700px) {
+    h1{
+        transform: translate(0, 2vh);
     }
-
 }
 
 @media screen and (min-width:2400px) {

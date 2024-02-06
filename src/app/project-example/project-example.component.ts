@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, HostListener, Input } from '@angular/core';
 import { MatButton, MatButtonModule } from '@angular/material/button';
 
 @Component({
@@ -9,10 +9,22 @@ import { MatButton, MatButtonModule } from '@angular/material/button';
   styleUrl: './project-example.component.scss'
 })
 export class ProjectExampleComponent {
-@Input() imgSrc: string = '';
-@Input() title: string = '';
-@Input() description: string = '';
-@Input() skills: string = '';
-@Input() git: string = '';
-@Input() html:string=''
+  @Input() imgSrc: string = '';
+  @Input() title: string = '';
+  @Input() description: string = '';
+  @Input() skills: string = '';
+  @Input() git: string = '';
+  @Input() html: string = ''
+
+  isMobileView: boolean = false;
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event) {
+    this.isMobileView = window.innerWidth < 800;
+  }
+
+  constructor() {
+    this.isMobileView = window.innerWidth < 800;
+  }
+
 }
