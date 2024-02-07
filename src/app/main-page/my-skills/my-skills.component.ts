@@ -18,6 +18,7 @@ export class MySkillsComponent {
   @ViewChild('svgContainer') svgContainer: ElementRef<HTMLDivElement> | undefined;
   @ViewChild('boxedSkillTitle') boxedSkillTitle: ElementRef<HTMLHeadElement> | undefined;
   @ViewChild('skillTextContainer') skillTextContainer: ElementRef<HTMLDivElement> | undefined;
+  @ViewChild('usedSkills') usedSkills: ElementRef<HTMLDivElement> | undefined;
   isMobileView: boolean = false;
   // tl: gsap.core.Timeline;
 
@@ -39,19 +40,20 @@ export class MySkillsComponent {
       const scrollTrigger = this.boxedSkillTitle.nativeElement;
       const container = this.svgContainer.nativeElement;
       gsap.to(container, { autoAlpha: 1, duration: 1 });
-      this.setGsapItems(scrollTrigger,container);
+      this.setGsapItems(scrollTrigger, container);
     }
   }
 
 
   setGsapItems(scrollTrigger: HTMLElement, mobileScrollTrigger: HTMLElement) {
-    this.setGsapGrid(scrollTrigger,mobileScrollTrigger);
+    this.setGsapGrid(scrollTrigger, mobileScrollTrigger);
     this.setGsapTopHeadline(scrollTrigger);
     this.setGsapBoxHeadline(scrollTrigger);
     this.setGsapBoxText(scrollTrigger);
+    this.setGsapUsedSkills(scrollTrigger);
   }
 
-  setGsapGrid(scrollTrigger: HTMLElement,mobileScrollTrigger: HTMLElement) {
+  setGsapGrid(scrollTrigger: HTMLElement, mobileScrollTrigger: HTMLElement) {
     if (this.svgContainer) {
       const container = this.svgContainer.nativeElement;
       const gridItems = container.querySelectorAll('.grid-item');
@@ -64,11 +66,11 @@ export class MySkillsComponent {
         rotation: 180,
         transformOrigin: '50% 50%'
       });
-      this.toGsapGrid(scrollTrigger,mobileScrollTrigger, gridItems)
+      this.toGsapGrid(scrollTrigger, mobileScrollTrigger, gridItems)
     };
   }
 
-  toGsapGrid(trigger: HTMLElement,mobileScrollTrigger: HTMLElement, item: NodeListOf<Element>) {
+  toGsapGrid(trigger: HTMLElement, mobileScrollTrigger: HTMLElement, item: NodeListOf<Element>) {
     if (this.isMobileView) {
       console.log("true grid")
       return this.mobileIconAnimation(mobileScrollTrigger, item);
@@ -78,8 +80,8 @@ export class MySkillsComponent {
           trigger: trigger,
           once: true,
           markers: true,
-          start: "center center",
-          end: "center center",
+          start: "top center+=400",
+          end: "top center+=400",
           toggleActions: "restart none none none",
         },
         autoAlpha: 1,
@@ -93,13 +95,40 @@ export class MySkillsComponent {
         transformOrigin: '50% 50%',
         stagger: {
           each: .1,
-          from: "start",
+          from: "random",
           ease: "power1.in"
         }
       });
     };
   }
 
+
+  mobileIconAnimation(trigger: HTMLElement, item: NodeListOf<Element>) {
+    gsap.to(item, {
+      scrollTrigger: {
+        trigger: trigger,
+        once: true,
+        markers: true,
+        start: "top bottom-=100",
+        end: "top bottom-=100",
+        toggleActions: "restart none none none",
+      },
+      autoAlpha: 1,
+      scale: 1,
+      yPercent: 0,
+      xPercent: 0,
+      duration: 1,
+      skewX: 0,
+      skewY: 0,
+      rotation: 0,
+      transformOrigin: '50% 50%',
+      stagger: {
+        each: .1,
+        from: "random",
+        ease: "power1.in"
+      }
+    });
+  };
 
 
   setGsapTopHeadline(scrollTrigger: HTMLElement) {
@@ -119,8 +148,8 @@ export class MySkillsComponent {
     gsap.to(item, {
       scrollTrigger: {
         trigger: trigger,
-        start: "center center",
-        end: "center center",
+        start: "top center+=400",
+        end: "top center+=400",
         toggleActions: "restart none reverse none"
       },
 
@@ -129,6 +158,64 @@ export class MySkillsComponent {
       duration: .5
 
     });
+  }
+
+
+  setGsapUsedSkills(scrollTrigger: HTMLElement) {
+    if (this.usedSkills) {
+      console.log(this.isMobileView)
+      const skills = this.usedSkills.nativeElement;
+      gsap.set(skills, {
+        scale: 0,
+        autoAlpha: 0,
+        skewX: 90,
+      });
+      if(this.isMobileView){
+        this.mobileUsedSkills(scrollTrigger, skills)
+      }else{
+        this.toGsapUsedSkills(scrollTrigger, skills)
+      }
+    }
+  };
+
+
+  toGsapUsedSkills(trigger: HTMLElement, item: HTMLElement) {
+    gsap.to(item, {
+      scrollTrigger: {
+        trigger: trigger,
+        once: true,
+        markers:true,
+        start: "top center+=400",
+        end: "top center+=400",
+        toggleActions: "restart none reverse none"
+      },
+      scale: 1,
+      skewX: 0,
+      autoAlpha: 1,
+      duration: 2
+
+    });
+  }
+
+
+  mobileUsedSkills(trigger: HTMLElement, item: HTMLElement) {
+    gsap.to(item, {
+      scrollTrigger: {
+        trigger: trigger,
+        once: true,
+        markers:true,
+        start: "top center+=400",
+        end: "top center+=400",
+        toggleActions: "restart none reverse none"
+      },
+
+      scale: 1,
+      skewX: 0,
+      autoAlpha: 1,
+      duration: 2
+
+    });
+
   }
 
 
@@ -151,8 +238,8 @@ export class MySkillsComponent {
     gsap.to(item, {
       scrollTrigger: {
         trigger: trigger,
-        start: "center center",
-        end: "center center",
+        start: "top center+=400",
+        end: "top center+=400",
         toggleActions: "restart none reverse none"
       },
 
@@ -174,9 +261,9 @@ export class MySkillsComponent {
         yPercent: -100,
         xPercent: -150
       });
-      if(this.isMobileView) {
+      if (this.isMobileView) {
         this.mobileTextAnimation(scrollTrigger, contentElements);
-      }else{
+      } else {
         this.toGsapBoxText(scrollTrigger, contentElements);
       }
     }
@@ -188,8 +275,8 @@ export class MySkillsComponent {
       scrollTrigger: {
         trigger: trigger,
         once: true,
-        start: "center center",
-        end: "center center",
+        start: "top center+=400",
+        end: "top center+=400",
         toggleActions: "restart none none none"
       },
       autoAlpha: 1,
@@ -216,32 +303,4 @@ export class MySkillsComponent {
       duration: 1,
     });
   }
-
-
-  mobileIconAnimation(trigger: HTMLElement, item: NodeListOf<Element>) {
-    gsap.to(item, {
-      scrollTrigger: {
-        trigger: trigger,
-        once: true,
-        markers: true,
-        start: "top bottom-=100",
-        end: "top bottom-=100",
-        toggleActions: "restart none none none",
-      },
-      autoAlpha: 1,
-      scale: 1,
-      yPercent: 0,
-      xPercent: 0,
-      duration: 1,
-      skewX: 0,
-      skewY: 0,
-      rotation: 0,
-      transformOrigin: '50% 50%',
-      stagger: {
-        each: .1,
-        from: "start",
-        ease: "power1.in"
-      }
-    });
-  };
 }
