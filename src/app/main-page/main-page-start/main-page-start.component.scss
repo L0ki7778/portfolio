@@ -79,6 +79,18 @@ svg {
     }
 }
 
+@media screen and  (max-width: 460px) {
+    #responsive-overlay {
+        height: 33%;
+        display: block;
+    }
+    svg {
+        height: 75%;
+        bottom: 0;
+        z-index: 1;
+    }
+}
+
 
 
 

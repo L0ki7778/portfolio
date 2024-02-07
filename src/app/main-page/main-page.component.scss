@@ -139,6 +139,13 @@ app-portfolio {
     }
 }
 
+@media screen and (min-width: 2400px) {
+    app-contact {
+        height: 94rem;
+    }
+    
+}
+
 @media screen and (max-width: 2399px) {
     app-my-skills {
         height: 60rem;
@@ -157,17 +164,11 @@ app-portfolio {
 
 @media screen and (min-width: 1024px) and (max-width: 1200px) {
     app-my-skills {
-        height: 45rem;
+        height: 55rem;
         padding-bottom: 10rem;
     }
 }
 
-@media screen and (min-width: 1200px) and (max-width: 1600px) {
-    app-my-skills {
-        height: 45rem;
-        padding-bottom: 10rem;
-    }
-}
 
 @media screen and (max-width: 1024px) and (min-height: 1200px) {
     app-my-skills {
@@ -187,7 +188,7 @@ app-portfolio {
 
 }
 
-@media screen and (max-width: 920px) {
+@media screen and (max-width: 1024px) {
 
     app-my-skills {
         height: 60rem;
@@ -206,6 +207,13 @@ app-portfolio {
 }
 
 
+@media screen and (max-width: 480px) {
+    app-about-me {
+        height: 60rem;
+    }
+}
+
+
 @media screen and (min-width: 1024px) and (max-width: 1279px) {
     app-about-me {
         height: 50rem;
@@ -219,7 +227,12 @@ app-portfolio {
     }
 }
 
+@media screen and (min-width: 1920px) and (max-width: 2400px) {
+    app-portfolio {
+        margin-bottom:-5rem
 
+    }
+}
 
 @media screen and (min-width: 2400px) {
     app-about-me {
@@ -230,3 +243,12 @@ app-portfolio {
         height: 70rem;
     }
 }
+
+@media screen and (min-width: 2500px) {
+    app-about-me {
+        height: 97rem;
+    }
+    
+}
+
+// (min-width:920px) and (max-width: 1024)

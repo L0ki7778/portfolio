@@ -1,6 +1,6 @@
 @import "../../../styles.scss";
 
-app-about-me-text{
+app-about-me-text {
     width: 100%;
     padding: 0 7%;
     max-width: 2400px;
@@ -10,9 +10,10 @@ app-about-me-text{
     background-color: transparent;
 }
 
-@media screen and (max-width: 900px){
-    app-about-me-picture{
+@media screen and (max-width: 900px) {
+    app-about-me-picture {
         display: none;
     }
-    
+
 }
+
