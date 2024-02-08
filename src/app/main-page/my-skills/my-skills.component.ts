@@ -4,8 +4,6 @@ import gsap from 'gsap';
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 
-
-
 @Component({
   selector: 'app-my-skills',
   standalone: true,
@@ -20,19 +18,17 @@ export class MySkillsComponent {
   @ViewChild('skillTextContainer') skillTextContainer: ElementRef<HTMLDivElement> | undefined;
   @ViewChild('usedSkills') usedSkills: ElementRef<HTMLDivElement> | undefined;
   isMobileView: boolean = false;
-  // tl: gsap.core.Timeline;
 
   constructor() {
     this.isMobileView = window.innerWidth <= 1024 && window.innerHeight >= 1200 || window.innerWidth < 1024;
-
     gsap.registerPlugin(ScrollTrigger);
   }
+
 
   @HostListener('window:resize', ['$event'])
   onResize(event: Event) {
     this.isMobileView = window.innerWidth <= 1024 && window.innerHeight >= 1200 || window.innerWidth < 1024;
-    // console.log("skills", this.isMobileView);
-  }
+  };
 
 
   ngAfterViewInit() {
@@ -42,7 +38,7 @@ export class MySkillsComponent {
       gsap.to(container, { autoAlpha: 1, duration: 1 });
       this.setGsapItems(scrollTrigger, container);
     }
-  }
+  };
 
 
   setGsapItems(scrollTrigger: HTMLElement, mobileScrollTrigger: HTMLElement) {
@@ -51,7 +47,7 @@ export class MySkillsComponent {
     this.setGsapBoxHeadline(scrollTrigger);
     this.setGsapBoxText(scrollTrigger);
     this.setGsapUsedSkills(scrollTrigger);
-  }
+  };
 
   setGsapGrid(scrollTrigger: HTMLElement, mobileScrollTrigger: HTMLElement) {
     if (this.svgContainer) {
@@ -68,7 +64,7 @@ export class MySkillsComponent {
       });
       this.toGsapGrid(scrollTrigger, mobileScrollTrigger, gridItems)
     };
-  }
+  };
 
   toGsapGrid(trigger: HTMLElement, mobileScrollTrigger: HTMLElement, item: NodeListOf<Element>) {
     if (this.isMobileView) {
@@ -76,14 +72,7 @@ export class MySkillsComponent {
       return this.mobileIconAnimation(mobileScrollTrigger, item);
     } else {
       gsap.to(item, {
-        scrollTrigger: {
-          trigger: trigger,
-          once: true,
-          markers: true,
-          start: "top center+=400",
-          end: "top center+=400",
-          toggleActions: "restart none none none",
-        },
+        scrollTrigger: this.gridScrollTrigger(trigger),
         autoAlpha: 1,
         scale: 1,
         yPercent: 0,
@@ -100,19 +89,24 @@ export class MySkillsComponent {
         }
       });
     };
-  }
+  };
+
+
+  gridScrollTrigger(trigger:HTMLElement){
+    return{
+      trigger: trigger,
+      once: true,
+      markers: true,
+      start: "top center+=400",
+      end: "top center+=400",
+      toggleActions: "restart none none none"
+    }
+  };
 
 
   mobileIconAnimation(trigger: HTMLElement, item: NodeListOf<Element>) {
     gsap.to(item, {
-      scrollTrigger: {
-        trigger: trigger,
-        once: true,
-        markers: true,
-        start: "top bottom-=100",
-        end: "top bottom-=100",
-        toggleActions: "restart none none none",
-      },
+      scrollTrigger: this.mobileIconAnimationScrollTrigger(trigger),
       autoAlpha: 1,
       scale: 1,
       yPercent: 0,
@@ -131,6 +125,18 @@ export class MySkillsComponent {
   };
 
 
+  mobileIconAnimationScrollTrigger(trigger: HTMLElement) {
+    return {
+      trigger: trigger,
+      once: true,
+      markers: true,
+      start: "top bottom-=100",
+      end: "top bottom-=100",
+      toggleActions: "restart none none none"
+    }
+  };
+  
+
   setGsapTopHeadline(scrollTrigger: HTMLElement) {
     if (this.skillTitle && !this.isMobileView) {
       console.log(this.isMobileView)
@@ -146,19 +152,22 @@ export class MySkillsComponent {
 
   toGsapTopHeadline(trigger: HTMLElement, item: HTMLElement) {
     gsap.to(item, {
-      scrollTrigger: {
-        trigger: trigger,
-        start: "top center+=400",
-        end: "top center+=400",
-        toggleActions: "restart none reverse none"
-      },
-
+      scrollTrigger: this.topHeadlineScrollTrigger(trigger),
       scale: 0,
       autoAlpha: 0,
       duration: .5
-
     });
-  }
+  };
+
+
+  topHeadlineScrollTrigger(trigger: HTMLElement) {
+    return {
+      trigger: trigger,
+      start: "top center+=400",
+      end: "top center+=400",
+      toggleActions: "restart none reverse none"
+    }
+  };
 
 
   setGsapUsedSkills(scrollTrigger: HTMLElement) {
@@ -170,9 +179,9 @@ export class MySkillsComponent {
         autoAlpha: 0,
         skewX: 90,
       });
-      if(this.isMobileView){
+      if (this.isMobileView) {
         this.mobileUsedSkills(scrollTrigger, skills)
-      }else{
+      } else {
         this.toGsapUsedSkills(scrollTrigger, skills)
       }
     }
@@ -181,42 +190,47 @@ export class MySkillsComponent {
 
   toGsapUsedSkills(trigger: HTMLElement, item: HTMLElement) {
     gsap.to(item, {
-      scrollTrigger: {
-        trigger: trigger,
-        once: true,
-        markers:true,
-        start: "top center+=400",
-        end: "top center+=400",
-        toggleActions: "restart none reverse none"
-      },
+      scrollTrigger: this.usedSkillsScrollTrigger(trigger),
       scale: 1,
       skewX: 0,
       autoAlpha: 1,
       duration: 2
-
     });
-  }
+  };
 
+
+  usedSkillsScrollTrigger(trigger: HTMLElement) {
+    return {
+      trigger: trigger,
+      once: true,
+      markers: true,
+      start: "top center+=400",
+      end: "top center+=400",
+      toggleActions: "restart none reverse none"
+    }
+  };
 
   mobileUsedSkills(trigger: HTMLElement, item: HTMLElement) {
     gsap.to(item, {
-      scrollTrigger: {
-        trigger: trigger,
-        once: true,
-        markers:true,
-        start: "top center+=400",
-        end: "top center+=400",
-        toggleActions: "restart none reverse none"
-      },
-
+      scrollTrigger: this.mobileUsedSkillsScrollTrigger(trigger),
       scale: 1,
       skewX: 0,
       autoAlpha: 1,
       duration: 2
-
     });
+  };
 
-  }
+
+  mobileUsedSkillsScrollTrigger(trigger: HTMLElement) {
+    return {
+      trigger: trigger,
+      once: true,
+      markers: true,
+      start: "top center+=400",
+      end: "top center+=400",
+      toggleActions: "restart none reverse none"
+    }
+  };
 
 
 
@@ -231,25 +245,27 @@ export class MySkillsComponent {
         this.toGsapBoxHeadline(scrollTrigger, headline)
       }
     };
-  }
+  };
 
 
   toGsapBoxHeadline(trigger: HTMLElement, item: HTMLElement) {
     gsap.to(item, {
-      scrollTrigger: {
-        trigger: trigger,
-        start: "top center+=400",
-        end: "top center+=400",
-        toggleActions: "restart none reverse none"
-      },
-
+      scrollTrigger: this.boxHeadlineScrollTrigger(trigger),
       scale: 1,
       autoAlpha: 1,
       duration: .5
-
     });
+  };
 
-  }
+
+  boxHeadlineScrollTrigger(trigger: HTMLElement) {
+    return {
+      trigger: trigger,
+      start: "top center+=400",
+      end: "top center+=400",
+      toggleActions: "restart none reverse none"
+    }
+  };
 
 
   setGsapBoxText(scrollTrigger: HTMLElement) {
@@ -267,40 +283,50 @@ export class MySkillsComponent {
         this.toGsapBoxText(scrollTrigger, contentElements);
       }
     }
-  }
+  };
 
 
   toGsapBoxText(trigger: HTMLElement, item: NodeListOf<Element>) {
     gsap.to(item, {
-      scrollTrigger: {
-        trigger: trigger,
-        once: true,
-        start: "top center+=400",
-        end: "top center+=400",
-        toggleActions: "restart none none none"
-      },
+      scrollTrigger: this.boxTextScrollTrigger(trigger),
       autoAlpha: 1,
       yPercent: 0,
       xPercent: 0,
       duration: 1,
     });
-  }
+  };
+
+
+  boxTextScrollTrigger(trigger: HTMLElement) {
+    return {
+      trigger: trigger,
+      once: true,
+      start: "top center+=400",
+      end: "top center+=400",
+      toggleActions: "restart none none none"
+    }
+  };
 
 
   mobileTextAnimation(trigger: HTMLElement, item: NodeListOf<Element>) {
     gsap.to(item, {
-      scrollTrigger: {
-        trigger: trigger,
-        once: true,
-        markers: true,
-        start: "top bottom-=100",
-        end: "top bottom-=100",
-        toggleActions: "restart none none none",
-      },
+      scrollTrigger: this.mobileTextScrollTrigger(trigger),
       autoAlpha: 1,
       yPercent: 0,
       xPercent: 0,
       duration: 1,
     });
-  }
+  };
+
+
+  mobileTextScrollTrigger(trigger: HTMLElement) {
+    return {
+      trigger: trigger,
+      once: true,
+      markers: true,
+      start: "top bottom-=100",
+      end: "top bottom-=100",
+      toggleActions: "restart none none none",
+    }
+  };
 }

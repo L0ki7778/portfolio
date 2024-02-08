@@ -184,6 +184,7 @@ app-button {
     #headline {
         #my-name {
             animation: name-animation 0.5s ease forwards 1s;
+            margin-bottom:-1rem;
         }
 
         #my-profession {
@@ -228,51 +229,42 @@ app-button {
 }
 
 
-@media screen and (max-width: 1024px) and (min-height: 1200px) {
+@media screen and (max-width: 1024px) and (min-height: 1200px),
+screen and (min-width: 820px) and (max-width: 1024px) and (max-height: 1400px) and (min-height: 1100px){
     #start-page-container {
         position: absolute;
         flex-direction: column;
         height: 100%;
         width: unset;
-
         #left-section {
             width: unset;
-
             img {
                 width: unset;
                 height: 100%;
             }
         }
-
         #right-section {
             margin: 14rem 0 0
         }
     }
-
     app-scroll-down {
         display: none;
     }
-
     #headline {
         #my-name {
             animation: name-animation 0.5s ease forwards 1s;
         }
-
         #my-profession {
             animation: profession-animation 0.5s ease forwards 1s;
         }
-
         #i-am {
             animation: i-am-animation 0.5s ease forwards 1s;
         }
     }
-
     #start-bottom {
         bottom: 3rem;
-
         #button-container {
             width: 50%;
-
             app-social-buttons {
                 transform: translate(50%, 0);
             }
@@ -301,7 +293,7 @@ app-button {
             position: absolute;
             bottom: -38%;
             max-width: unset;
-            margin-left:.5rem;
+            margin-left:1.5rem;
         }
         app-button {
             margin-top: unset
@@ -325,7 +317,7 @@ app-button {
 
     #i-am {
         font-size: $iAmSize !important;
-        transform: rotate(-90deg) translate(0.1rem, -2.6rem);
+        transform: rotate(-90deg) translate(0.1rem, -2.8rem);
         bottom: -10px;
         animation: unset !important;
     }
@@ -379,6 +371,7 @@ app-button {
     #headline {
         #my-name {
             font-size: 9rem;
+            margin-bottom: -3.4rem;
         }
         #my-profession {
             font-size: 4.84rem;
@@ -389,5 +382,4 @@ app-button {
             ;
         }
     }
-
 }

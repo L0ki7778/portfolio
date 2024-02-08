@@ -1,5 +1,6 @@
 import { Component, HostListener, Input } from '@angular/core';
 import { MatButton, MatButtonModule } from '@angular/material/button';
+import Aos from 'aos';
 
 @Component({
   selector: 'app-project-example',
@@ -14,7 +15,8 @@ export class ProjectExampleComponent {
   @Input() description: string = '';
   @Input() skills: string = '';
   @Input() git: string = '';
-  @Input() html: string = ''
+  @Input() html: string = '';
+  @Input() direction:string='';
 
   isMobileView: boolean = false;
 
@@ -25,6 +27,9 @@ export class ProjectExampleComponent {
 
   constructor() {
     this.isMobileView = window.innerWidth < 800;
+    Aos.init()
   }
+
+  
 
 }

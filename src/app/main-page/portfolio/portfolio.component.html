@@ -1,20 +1,21 @@
-<div id="pf-title-box">
+<div data-aos="fade-left" id="pf-title-box">
     <div id="purple-line-box">
         <h1>Portfolio</h1>
         <div id="purple-line"></div>
     </div>
-    <p>
+    <p data-aos="fade-right">
         Let me show you my most recent projects - feel free to try them out.
     </p>
 
 </div>
 
-<app-project-example [imgSrc]="'/assets/img/join.png'" [title]="'Join'"
+<app-project-example [imgSrc]="'/assets/img/join.png'" [title]="'Join'" [direction]="'row'"
     [description]="'A Kanban-like taskmanager to create and manage your tasks. You may add users and assign tasks to them and organize the tasks, using drag and drop functionalities.'"
     [skills]="'HTML | CSS | JavaScript | Bootstrap | Git'" [git]="'https://github.com/DustinRs/Join'"
     [html]="'https://rene-heller.developerakademie.net/join/index.html'"></app-project-example>
 <app-project-example [imgSrc]="'/assets/img/pollo.png'"
     [title]="'El Pollo Loco'"
+    [direction]="'row-reverse'"
     [description]="'Object-oriented approach meets jump-and-run. Pepe is collecting coins and Salza bottles, just to throw the latter at vicious chickens.'"
     [skills]="'HTML | CSS | JavaScript | Git'"
     [git]="'https://github.com/L0ki7778/El-Pollo-Locco'"

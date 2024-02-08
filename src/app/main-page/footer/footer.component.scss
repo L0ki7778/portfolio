@@ -17,12 +17,30 @@
         #footer-name {
             font-size: 4vw;
             margin-block: 0;
-            margin-bottom: -1.5rem;
+            margin-bottom: -1rem;
         }
 
         #imprint{
-            font-style: italic;
             margin-left: .125rem;
+        }
+    }
+}
+
+@media screen and (max-width:720px) {
+    #footer-flex-container{
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 80%;
+
+        #footer-name-box{
+            #imprint{
+                position: absolute;
+                bottom: -10%;
+                left: 0;
+                right: 0;
+                margin: auto;
+                width: fit-content;
+            }
         }
     }
 }

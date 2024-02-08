@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ProjectExampleComponent } from '../../project-example/project-example.component';
+import Aos from 'aos';
 
 @Component({
   selector: 'app-portfolio',
@@ -9,5 +10,7 @@ import { ProjectExampleComponent } from '../../project-example/project-example.c
   styleUrl: './portfolio.component.scss'
 })
 export class PortfolioComponent {
-
+  constructor() {
+    Aos.init();
+  }
 }

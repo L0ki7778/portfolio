@@ -1,25 +1,32 @@
 @import "../mixin.scss";
 
 .project-container {
-    @include dFlex(space-evenly, center);
+    @include dFlex(space-evenly, flex-start);
     width: 100%;
     margin-bottom: 10rem;
 
     img {
         width: 30vw;
         height: auto;
+        min-width: 300px;
     }
 
     .project-text {
         font-family: 'Poppins', sans-serif;
         color: white;
         width: 600px;
+        display: flex;
+        flex-direction: column;
 
         h1 {
             font-size: 3vw;
             margin-block: 0;
             font-weight: bold;
             color: $purple
+        }
+
+        .project-description {
+            max-width: 49rem;
         }
 
         .skills {
@@ -33,11 +40,13 @@
         }
 
         .buttons {
+            @include dFlex(flex-start, center);
+            gap: 3rem;
+
             a {
                 border-radius: 8px;
                 padding: 1.5rem 1rem;
                 font-size: 1.2rem;
-                margin-right: 2rem
             }
         }
 
@@ -48,6 +57,29 @@
         }
     }
 }
+
+.row {
+    flex-direction: row;
+
+}
+
+.row-reverse {
+    flex-direction: row-reverse;
+
+    .project-text {
+        text-align: right;
+
+        .project-description {
+            align-self: flex-end;
+        }
+
+        .buttons {
+            justify-content: flex-end;
+        }
+    }
+}
+
+
 
 @media screen and (min-width: 2400px) {
     .project-container {
@@ -65,15 +97,15 @@
             color: white;
             width: 800px;
 
-            h{
+            h1 {
                 font-size: 4rem;
-                
             }
 
-            .skills{
+            .skills {
                 font-size: 2rem;
             }
-            .project-description{
+
+            .project-description {
                 font-size: 1.5rem;
             }
 
@@ -82,10 +114,54 @@
                     border-radius: 8px;
                     padding: 2rem 1.5rem;
                     font-size: 1.6rem;
-                    margin-right: 5rem
                 }
             }
         }
     }
 
+}
+
+
+@media screen and (max-width:1200px) {
+    .project-container {
+        align-items: center;
+        .project-text {
+            align-items: center;
+            max-width: 98%;
+            h1{
+                margin-block:1rem;
+            }
+            .project-description{
+                text-align: center;
+            }
+        }
+        .skills {
+            p {
+                font-size: 1.2rem;
+            }
+        }
+    }
+    .row,
+    .row-reverse {
+        flex-direction: column;
+    }
+}
+
+
+@media screen and (max-width:420px) {
+    .project-container{
+        .skills {
+            p {
+                font-size: .9rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1900px) {
+    .project-container {
+        .project-text {
+            margin: 0 -5rem;
+        }
+    }
 }
