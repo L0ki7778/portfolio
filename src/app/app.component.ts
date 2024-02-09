@@ -6,8 +6,8 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { TranslateService, TranslateModule } from '@ngx-translate/core';
 import AOS from 'aos';
-import { FooterComponent } from './main-page/footer/footer.component';
 
 
 
@@ -20,24 +20,28 @@ import { FooterComponent } from './main-page/footer/footer.component';
     IntroComponent,
     MainPageComponent,
     HttpClientModule,
-    MatIconModule
+    MatIconModule,
+    TranslateModule
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
   title = 'portfolio';
-  
+
 
   constructor(
+    public translate: TranslateService,
     private matIconRegistry: MatIconRegistry,
     private domSanitizer: DomSanitizer
   ) {
+    translate.addLangs(['en', 'de']);
+    translate.setDefaultLang('en');
+    const browserLanguage = translate.getBrowserLang();
+    translate.use(browserLanguage?.match(/en|de/) ? browserLanguage : 'en');
     this.matIconRegistry.addSvgIcon('git',
     this.domSanitizer.bypassSecurityTrustResourceUrl("/assets/svg/git.svg"));
     AOS.init();
   }
 
-  
-  
 }

@@ -1,0 +1,53 @@
+{
+    "about-me": "About me",
+    "introduction-text": {
+      "quote": "\"[...]Every solution for every problem does allready exist. We just have to find it.[...]\"",
+      "description": "Hi! I´m René Heller, a Frontend Developer and the quote above is literally my mindset. Now I´m 34 years old, based near Berlin, Germany, and learned a profession which matches my passion. I´m looking forward to help you to create the design as well as the logic you desire for your website!"
+    },
+    "left-contact-section": {
+      "title": "Contact",
+      "subtitle": "Facing a challenge or have a project in mind?",
+      "description": "Feel free to send me a message through this form. I'm eager to connect and have a chat about your ideas. Let me offer my skills and dedication to support the progress of your projects."
+    },
+    "right-contact-section": {
+      "name-label": "Name/Company",
+      "email-label": "Email",
+      "message-label": "Message",
+      "checkbox-text": "I have read the Privacy Policy and agree to the processing of my data as outlined.",
+      "send-button": "Send message"
+    },
+    "footer-flex-container": {
+      "footer-name": "René",
+      "imprint": "Imprint",
+      "copy-rights": "©  René Heller 2022"
+    },
+    "header": {
+      "about-me": "About me",
+      "skills": "Skills",
+      "portfolio": "Portfolio"
+    },
+    "start-page-container": {
+      "headline": {
+        "i-am": "I am",
+        "my-name": "René Heller",
+        "my-profession": "FRONTEND DEVELOPER"
+      },
+      "lets-talk-button": "Let´s talk"
+    },
+    "menu-system": {
+      "about-me": "About me",
+      "skills": "My skills",
+      "portfolio": "Portfolio",
+      "contact": "Contact"
+    },
+    "skill-title": "My skills",
+    "boxed-skill-title": "My skills",
+    "skill-text": "While building several Projects I got myself familiar with the following technologies.",
+    "skill-button": "Get in touch",
+    "portfolio-title": "Portfolio",
+    "purple-line-box": {
+      "title": "Portfolio",
+      "subtitle": "Let me show you my most recent projects - feel free to try them out."
+    }
+  }
+  
