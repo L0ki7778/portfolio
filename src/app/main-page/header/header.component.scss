@@ -39,9 +39,23 @@ header {
     }
 }
 
+#current-language{
+    font-size: 1.2rem;
+    font-weight: bold;
+    position: absolute;
+    align-self: center;
+    color:white;
+    right: 3%;
+    width: fit-content;
+
+    &:hover{
+        cursor: pointer;
+    }
+}
 #header-left {
     display: flex;
     gap: 2rem;
+
 
     a {
         color: white;
@@ -101,6 +115,12 @@ app-burger-cross-animation{
 
 }
 
+@media  screen and (min-width:2400px) {
+    #current-language{
+        font-size: 2.2rem;
+    }
+}
+
 
 @media screen and (max-width:1023px) {
     header {
@@ -114,6 +134,9 @@ app-burger-cross-animation{
                     animation: color-letter 0.5s ease forwards 1s;
                 }
             }
+        }
+        #current-language{
+            display: none;
         }
     }
 

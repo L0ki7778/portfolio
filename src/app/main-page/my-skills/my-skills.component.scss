@@ -110,7 +110,7 @@ h1 {
 
 
     #skill-text {
-        max-width: 340px;
+        max-width: 380px;
         margin: 1rem 0 2rem;
         text-align: right;
     }
@@ -130,19 +130,13 @@ h1 {
         #skill-text-container {
             display: flex;
             flex-direction: column;
-
             #skill-text {
                 max-width: 37rem !important;
                 font-size: 1.5rem;
                 text-align: center;
                 margin: 2rem 0;
             }
-
-            ;
-
             #skill-button {
-                display: flex;
-                align-self: center;
                 width: 15rem !important;
             }
         }
@@ -257,7 +251,9 @@ h1 {
 
 @media screen and (max-width:400px) {
 
-
+    .logo-name{
+        font-size: 12px;
+    }
     #svg-container {
         .grid-item {
             width: 80%;

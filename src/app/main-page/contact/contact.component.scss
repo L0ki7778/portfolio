@@ -24,6 +24,10 @@ select:-webkit-autofill:not(:placeholder-shown) {
   transition: background-color 5000s ease-in-out 0s;
 }
 
+.success{
+  outline: #31e461!important;
+  color: #31e461!important;
+}
 
 #right-contact-section {
   @include dFlex(center, flex-end);
@@ -35,6 +39,7 @@ select:-webkit-autofill:not(:placeholder-shown) {
     @include dFlex(center, center);
     flex-direction: column;
     width: 80%;
+    gap:1rem;
 
     mat-form-field {
       width: 100%;
@@ -60,20 +65,17 @@ select:-webkit-autofill:not(:placeholder-shown) {
       }
     }
   }
-
-
 }
 
 #left-contact-section {
-  align-self: center;
+  align-self: flex-start;
   flex: 1;
   margin-left: 7%;
-  transform: translate(0, -55%);
   color: white;
   @include poppins();
 
   h1 {
-    font-size: 4vw;
+    font-size: 5rem;
   }
 
   div {
@@ -128,7 +130,7 @@ app-footer {
     @include poppins();
 
     h1 {
-      font-size: 9rem !important;
+      font-size: 7rem !important;
     }
 
     h4 {
@@ -209,5 +211,11 @@ app-footer {
     form {
       width: 100%;
     }
+  }
+}
+
+@media screen and (min-width: 820px) and (max-width: 1024px) {
+  #right-contact-section{
+    width: 80%;
   }
 }

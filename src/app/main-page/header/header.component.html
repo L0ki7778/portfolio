@@ -2,10 +2,11 @@
     <nav>
         <div id="name" #name><span id="e-letter">R</span>ené</div>
         <div id="header-left">
-            <a href="#app-about">About me</a>
-            <a href="#app-skill">Skills</a>
+            <a href="#app-about">{{"header.about-me"|translate}}</a>
+            <a href="#app-skill">{{"header.skills"|translate}}</a>
             <a href="#portfolio">Portfolio</a>
         </div>
+        <div id="current-language" (click)="switchLanguage()">{{currentLanguage}}</div>
         <app-burger-cross-animation (dialogEvent)="manageOverlay($event)"></app-burger-cross-animation>
     </nav>
 </header>

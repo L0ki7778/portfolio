@@ -2,12 +2,13 @@ import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { ButtonComponent } from '../button/button.component';
 import gsap from 'gsap';
 import ScrollTrigger from "gsap/ScrollTrigger";
+import { TranslateModule } from '@ngx-translate/core';
 
 
 @Component({
   selector: 'app-my-skills',
   standalone: true,
-  imports: [ButtonComponent],
+  imports: [ButtonComponent,TranslateModule],
   templateUrl: './my-skills.component.html',
   styleUrl: './my-skills.component.scss'
 })
@@ -68,7 +69,6 @@ export class MySkillsComponent {
 
   toGsapGrid(trigger: HTMLElement, mobileScrollTrigger: HTMLElement, item: NodeListOf<Element>) {
     if (this.isMobileView) {
-      console.log("true grid")
       return this.mobileIconAnimation(mobileScrollTrigger, item);
     } else {
       gsap.to(item, {
@@ -139,7 +139,6 @@ export class MySkillsComponent {
 
   setGsapTopHeadline(scrollTrigger: HTMLElement) {
     if (this.skillTitle && !this.isMobileView) {
-      console.log(this.isMobileView)
       const topHeadline = this.skillTitle.nativeElement;
       gsap.set(topHeadline, {
         scale: 1,
@@ -172,7 +171,6 @@ export class MySkillsComponent {
 
   setGsapUsedSkills(scrollTrigger: HTMLElement) {
     if (this.usedSkills) {
-      console.log(this.isMobileView)
       const skills = this.usedSkills.nativeElement;
       gsap.set(skills, {
         scale: 0,

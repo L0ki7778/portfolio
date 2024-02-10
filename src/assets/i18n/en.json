@@ -1,53 +1,64 @@
 {
+  "about-me": "About me",
+  "introduction-text": {
+    "quote": "\"[...]Every solution for every problem does allready exist. We just have to find it.[...]\"",
+    "description": "Hi! I´m René Heller, a Frontend Developer and the quote above is literally my mindset. Now I´m 34 years old, based near Berlin, Germany, and learned a profession which matches my passion. I´m looking forward to help you to create the design as well as the logic you desire for your website!"
+  },
+  "light-box":  "Every new idea for tackling a task motivates me in my work. I find great joy in overcoming challenges and ultimately delivering the desired results. Working in a team and the associated responsibility motivates me even more.",
+  "puzzle-box": "No idea? No problem! Reading documentation and developing new approaches are part of my personal commitment to improve daily. If I can also exchange ideas with a team, even better.",
+  "left-contact-section": {
+    "title": "Contact",
+    "subtitle": "Facing a challenge or have a project in mind?",
+    "description": "Feel free to send me a message through this form. I'm eager to connect and have a chat about your ideas. Let me offer my skills and dedication to support the progress of your projects."
+  },
+  "right-contact-section": {
+    "name-label": "Name/Company",
+    "email-label": "Email",
+    "message-label": "Message",
+    "checkbox-text-start": "I have read the ",
+    "checkbox-text-end": " and agree to the processing of my data as outlined.",
+    "checkbox-text-link": "Privacy Policy",
+    "send-button": "Send message",
+    "name-error":"Please enter your name or the name of your company.",
+    "email-error":"Please use a valid email-format.",
+    "message-error":"Please briefly describe your request."
+  },
+  "footer-flex-container": {
+    "footer-name": "René",
+    "imprint": "Imprint",
+    "copy-rights": "©  René Heller 2022"
+  },
+  "header": {
     "about-me": "About me",
-    "introduction-text": {
-      "quote": "\"[...]Every solution for every problem does allready exist. We just have to find it.[...]\"",
-      "description": "Hi! I´m René Heller, a Frontend Developer and the quote above is literally my mindset. Now I´m 34 years old, based near Berlin, Germany, and learned a profession which matches my passion. I´m looking forward to help you to create the design as well as the logic you desire for your website!"
+    "skills": "Skills",
+    "portfolio": "Portfolio"
+  },
+  "start-page-container": {
+    "headline": {
+      "i-am": "I am",
+      "my-name": "René Heller",
+      "my-profession": "FRONTEND DEVELOPER"
     },
-    "left-contact-section": {
-      "title": "Contact",
-      "subtitle": "Facing a challenge or have a project in mind?",
-      "description": "Feel free to send me a message through this form. I'm eager to connect and have a chat about your ideas. Let me offer my skills and dedication to support the progress of your projects."
-    },
-    "right-contact-section": {
-      "name-label": "Name/Company",
-      "email-label": "Email",
-      "message-label": "Message",
-      "checkbox-text": "I have read the Privacy Policy and agree to the processing of my data as outlined.",
-      "send-button": "Send message"
-    },
-    "footer-flex-container": {
-      "footer-name": "René",
-      "imprint": "Imprint",
-      "copy-rights": "©  René Heller 2022"
-    },
-    "header": {
-      "about-me": "About me",
-      "skills": "Skills",
-      "portfolio": "Portfolio"
-    },
-    "start-page-container": {
-      "headline": {
-        "i-am": "I am",
-        "my-name": "René Heller",
-        "my-profession": "FRONTEND DEVELOPER"
-      },
-      "lets-talk-button": "Let´s talk"
-    },
-    "menu-system": {
-      "about-me": "About me",
-      "skills": "My skills",
-      "portfolio": "Portfolio",
-      "contact": "Contact"
-    },
-    "skill-title": "My skills",
-    "boxed-skill-title": "My skills",
-    "skill-text": "While building several Projects I got myself familiar with the following technologies.",
-    "skill-button": "Get in touch",
-    "portfolio-title": "Portfolio",
-    "purple-line-box": {
-      "title": "Portfolio",
-      "subtitle": "Let me show you my most recent projects - feel free to try them out."
-    }
+    "lets-talk-button": "Let´s talk"
+  },
+  "menu-system": {
+    "about-me": "About me",
+    "skills": "My skills",
+    "portfolio": "Portfolio",
+    "contact": "Contact"
+  },
+  "skill-title": "My skills",
+  "boxed-skill-title": "My skills",
+  "skill-text": "While building several Projects I got myself familiar with the following technologies.",
+  "skill-button": "Get in touch",
+  "used-skills": "Used skills for this website.",
+  "portfolio-title": "Portfolio",
+  "purple-line-box": {
+    "title": "Portfolio",
+    "subtitle": "Let me show you my most recent projects - feel free to try them out."
+  },
+  "project-examples": {
+    "join-description": "A Kanban-like taskmanager to create and manage your tasks. You may add users and assign tasks to them and organize the tasks, using drag and drop functionalities.",
+    "game-description": "Object-oriented approach meets jump-and-run. Pepe is collecting coins and Salza bottles, just to throw the latter at vicious chickens."
   }
-  
+}

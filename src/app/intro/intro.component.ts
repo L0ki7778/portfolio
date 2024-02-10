@@ -13,6 +13,7 @@ export class IntroComponent {
   @ViewChild('mySvg') nameSvg: ElementRef|undefined;
   tl : gsap.core.Timeline;
 
+
   constructor() {
     this.tl= gsap.timeline({
       defaults: {
@@ -21,29 +22,11 @@ export class IntroComponent {
       }
     })
   }
-  ngOnInit() {
-    // Hier können Sie auf das g-Element zugreifen
-    // const gElement = this.nameSvg?.nativeElement.querySelector('g');
-    // this.tl.set(gElement, { autoAlpha: 0 });
-  }
+
 
   ngAfterViewInit() {
     if(this.nameSvg){
-
       const gElement = this.nameSvg.nativeElement.querySelectorAll('.letter');
-
-      // gsap.to(gElement, { autoAlpha: 1 , duration:4});
-      // gsap.to(gElement, {
-      //   scale: 1.5,
-      //   duration:4
-      // });
-      // gsap.from(gElement, {
-      //   skewY:60,
-      //   yPercent:100,
-      //   stagger:0.05,
-      //   skewX:60,
-      //   duration:1
-      // });
     }
   }
 }

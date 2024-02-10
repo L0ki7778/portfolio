@@ -51,14 +51,14 @@ h1 {
 
     #light-svg {
         stroke: $gray;
-        width: 20%;
+        width: 13rem;
         animation: light-animation 0.5s ease forwards 1s;
 
     }
 
     #puzzle-svg {
         fill: $gray;
-        width: 27%;
+        width: 11rem;
         animation: puzzle-animation 0.5s ease forwards 1s;
     }
 
@@ -85,13 +85,13 @@ h1 {
     #light-box {
         width: calc(100% - 7%);
         #light-svg {
-            width: 5rem;
+            width: 19rem;
         }
     }
     #puzzle-box {
         width: calc(100% - 7%);
         #puzzle-svg {
-            width: 7rem;
+            width: 16rem;
         }
     }
 }

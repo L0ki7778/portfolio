@@ -22,15 +22,13 @@ export class WelcomeComponent {
 
   typeText() {
     let timestamp = new Date().getSeconds();
-    setTimeout(() => {
-      
+    setTimeout(() => {      
       if (this.textElement) {
         const element = this.textElement.nativeElement;
         const interval = setInterval(() => {
           element.textContent += this.text[this.index];
           if (this.index === this.text.length - 1) {
             let timepassed = new Date().getSeconds() - timestamp;
-            console.log(timepassed);
             clearInterval(interval);
           }
           this.index++;

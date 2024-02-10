@@ -1,20 +1,27 @@
-{
+  {
     "about-me": "Über mich",
     "introduction-text": {
-      "quote": "\"[...]Für jedes Problem existiert bereits eine Lösung. Wir müssen sie nur finden.[...]\"",
+      "quote": "\"[...]Für jedes Problem gibt es bereits eine Lösung. Wir müssen sie nur finden.[...]\"",
       "description": "Hallo! Ich bin René Heller, ein Frontend-Entwickler, und das obige Zitat ist buchstäblich meine Denkweise. Jetzt bin ich 34 Jahre alt, lebe in der Nähe von Berlin, Deutschland, und habe einen Beruf erlernt, der meiner Leidenschaft entspricht. Ich freue mich darauf, Ihnen dabei zu helfen, das Design sowie die Logik zu erstellen, die Sie für Ihre Website wünschen!"
     },
+    "light-box": "Jede neue Idee zum Umsetzen einer Aufgabe motiviert mich bei meiner Arbeit. Es bereitet mir sehr viel Spaß, Herausforderung zu bewältigen und letztendlich das gewünschte Ergebnis zu liefern. Die Arbeit in einem Team und damit einhergehende Verantwortung motiviert mich umso mehr.",
+    "puzzle-box": "Keine Idee? Auch kein Problem! Das Lesen von Dokumentationen und Erarbeiten neuer Ansätze gehören zu meinem eigenen Anspruch, mich täglich zu verbessern. Wenn ich mich auch noch mit einem Team austauschen kann, umso besser.",
     "left-contact-section": {
       "title": "Kontakt",
-      "subtitle": "Stehen Sie vor einer Herausforderung oder haben Sie ein Projekt im Sinn?",
-      "description": "Zögern Sie nicht, mir eine Nachricht über dieses Formular zu senden. Ich freue mich darauf, mich zu verbinden und über Ihre Ideen zu sprechen. Lassen Sie mich meine Fähigkeiten und Hingabe einsetzen, um den Fortschritt Ihrer Projekte zu unterstützen."
+      "subtitle": "Stehen Sie vor einer Herausforderung oder haben eine Idee für ein Projekt?",
+      "description": "Nehmen Sie gern Kontakt zu mir auf. Ich freue mich darauf, Ich freue mich darauf, Ihre Ideen zu besprechen und Sie dabei zu unterstützen."
     },
     "right-contact-section": {
       "name-label": "Name/Firma",
       "email-label": "E-Mail",
       "message-label": "Nachricht",
-      "checkbox-text": "Ich habe die Datenschutzbestimmungen gelesen und stimme der Verarbeitung meiner Daten gemäß den Bestimmungen zu.",
-      "send-button": "Nachricht senden"
+      "checkbox-text-start": "Ich habe die ",
+      "checkbox-text-end": " gelesen und stimme der Verarbeitung meiner Daten gemäß den Bestimmungen zu.",
+      "checkbox-text-link": "Datenschutzbestimmungen",
+      "send-button": "Senden",
+      "name-error":"Dieses Feld darf nicht leer sein.",
+      "email-error":"Bitte nutzen Sie ein gültiges E-Mail-Format.",
+      "message-error":"Bitte beschreiben sie kurz Ihre Anfrage."
     },
     "footer-flex-container": {
       "footer-name": "René",
@@ -23,7 +30,7 @@
     },
     "header": {
       "about-me": "Über mich",
-      "skills": "Fähigkeiten",
+      "skills": "Technologien",
       "portfolio": "Portfolio"
     },
     "start-page-container": {
@@ -36,18 +43,22 @@
     },
     "menu-system": {
       "about-me": "Über mich",
-      "skills": "Meine Fähigkeiten",
+      "skills": "Technologien",
       "portfolio": "Portfolio",
       "contact": "Kontakt"
     },
-    "skill-title": "Meine Fähigkeiten",
+    "skill-title": "Technologien",
     "boxed-skill-title": "Meine Fähigkeiten",
-    "skill-text": "Während des Baus mehrerer Projekte habe ich mich mit den folgenden Technologien vertraut gemacht.",
-    "skill-button": "Kontakt aufnehmen",
+    "skill-text": "Beim Bau mehrerer Projekte habe ich mich mit den folgenden Technologien vertraut gemacht.",
+    "skill-button": "Kontakt",
+    "used-skills": "Verwendete Technologien für diese Website.",
     "portfolio-title": "Portfolio",
     "purple-line-box": {
       "title": "Portfolio",
-      "subtitle": "Lassen Sie mich Ihnen meine neuesten Projekte zeigen - fühlen Sie sich frei, sie auszuprobieren."
+      "subtitle": "Hier eine kleine Auswahl meiner aktuellsten Projekte."
+    },
+    "project-examples": {
+      "join-description": "Ein Kanban-ähnlicher Task-Manager zum Erstellen und Verwalten Ihrer Aufgaben. Sie können Benutzer hinzufügen und ihnen Aufgaben zuweisen und die Aufgaben mit Drag-and-Drop-Funktionen organisieren.",
+      "game-description": "Objektorientierter Ansatz trifft auf Jump-and-Run. Pepe sammelt Münzen und Salza-Flaschen, nur um letztere auf bösartige Hühner zu werfen."
     }
   }
-  

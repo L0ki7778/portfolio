@@ -1,6 +1,8 @@
 <div id="menu-system">
-    <a  href="#about-me" (click)="handleOverlay()">About me</a>
-    <a  href="#skills" (click)="handleOverlay()">My skills</a>
+    <a  href="#about-me" (click)="handleOverlay()">{{"menu-system.about-me"|translate}}</a>
+    <a  href="#skills" (click)="handleOverlay()">{{"menu-system.skills"|translate}}</a>
     <a  href="#portfolio" (click)="handleOverlay()">Porfolio</a>
-    <a  href="#contact" (click)="handleOverlay()">Contact</a>
+    <a  href="#contact" (click)="handleOverlay()">{{"menu-system.contact"|translate}}</a>
+    <div id="language-change" (click)="changeLanguage()">{{currentLanguage}}</div>
 </div>
+

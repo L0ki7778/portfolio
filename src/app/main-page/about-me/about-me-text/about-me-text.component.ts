@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import Aos from 'aos';
-import { TranslateService, TranslateModule } from '@ngx-translate/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-about-me-text',
@@ -11,11 +11,8 @@ import { TranslateService, TranslateModule } from '@ngx-translate/core';
 })
 export class AboutMeTextComponent {
 
-  constructor(private translateService: TranslateService) { 
+  constructor() { 
     Aos.init();
   }
 
-  switchLanguage(language: string) {
-    this.translateService.use(language); 
-  }
 }

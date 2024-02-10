@@ -6,29 +6,37 @@ import {FormControl, FormGroup, ReactiveFormsModule, Validators, } from '@angula
 import { MatButton } from '@angular/material/button';
 import { FooterComponent } from '../footer/footer.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import { TranslateModule } from '@ngx-translate/core';
+import { NgClass } from '@angular/common';
 
 
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [MatFormFieldModule, MatInputModule, MatSelectModule, ReactiveFormsModule,MatButton,FooterComponent,MatCheckboxModule],
+  imports: [MatFormFieldModule, MatInputModule, MatSelectModule, ReactiveFormsModule,MatButton,FooterComponent,MatCheckboxModule,TranslateModule,NgClass],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
-  contactForm: FormGroup;
-  // checkboxColor:string="warn";
+  contactForm: FormGroup = new FormGroup({});
 
   constructor() {
+    
+
+  }
+
+  ngOnInit() {
     this.contactForm= new FormGroup({
       name: new FormControl('', Validators.required),
       email: new FormControl('', Validators.email),
       message: new FormControl('', Validators.required),
       checkbox: new FormControl(false, Validators.requiredTrue)
     });
-
   }
-onSubmit(){}
 
+
+  
+onSubmit(){}
+// if(this.contactForm.valid)
 }
