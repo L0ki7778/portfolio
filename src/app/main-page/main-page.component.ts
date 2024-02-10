@@ -7,6 +7,7 @@ import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { MenuSystemComponent } from './menu-system/menu-system.component';
 import { HeaderComponent } from './header/header.component';
+import { IntroComponent } from '../intro/intro.component';
 
 @Component({
   selector: 'app-main-page',
@@ -19,12 +20,13 @@ import { HeaderComponent } from './header/header.component';
     MySkillsComponent,
     PortfolioComponent,
     ContactComponent,
-    FooterComponent],
+    FooterComponent,
+    IntroComponent],
   templateUrl: './main-page.component.html',
   styleUrl: './main-page.component.scss'
 })
 export class MainPageComponent {
-  overlayStatus:string='hide-overlay';
+  overlayStatus: string = 'hide-overlay';
 
 
   handleOverlay(value: string) {

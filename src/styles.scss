@@ -20,12 +20,38 @@ html{
 
 
 body {
-  overflow: hidden;
-  animation: open-main-page 0.5s ease forwards 9.5s;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  background:white;
 }
 
-body {
-  margin: 0;
+app-main-page{
+  display: flex;
+  flex-direction: column;
+  background-color: $darkBlue;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  width: 100%;
+  height: 100vh;
+  animation: open-main-page 1s ease-out forwards 8s;
+}
+
+@keyframes open-main-page {
+  to{
+      overflow-y: visible!important;
+      height: unset;
+  }
+}
+
+app-privacy{
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  background-color: #141D2F;
+  width: 100%;
 }
 
 h1 {
@@ -33,12 +59,7 @@ h1 {
 }
 
 
-@keyframes open-main-page {
-  to {
-    overflow: visible;
-  }
 
-}
 
 
 

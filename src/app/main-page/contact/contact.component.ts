@@ -8,13 +8,25 @@ import { FooterComponent } from '../footer/footer.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { TranslateModule } from '@ngx-translate/core';
 import { NgClass } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [MatFormFieldModule, MatInputModule, MatSelectModule, ReactiveFormsModule,MatButton,FooterComponent,MatCheckboxModule,TranslateModule,NgClass],
+  imports: [
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    ReactiveFormsModule,
+    MatButton,
+    FooterComponent,
+    MatCheckboxModule,
+    TranslateModule,
+    NgClass,
+    RouterLink
+  ],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })

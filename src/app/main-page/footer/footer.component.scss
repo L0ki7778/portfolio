@@ -1,14 +1,23 @@
 @import "../../mixin.scss";
 
-#footer-flex-container {
+#footer-flex-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 86vw;
+    padding: 0 7%;
+    height: 100%;
+    background-color: $darkBlue;
+    border-top: 4px solid $green;
+}
+#footer {
     @include dFlex(space-between, center);
     position: relative;
-    width: 86%;
+    width: 100%;
+    max-width: calc(2400px - 2400px / 100 * 14);
     height: 100%;
-    padding: 0 7%;
     background-color: #141D2F;
     font-family: 'Poppins', sans-serif;
-    border-top: 4px solid $green;
 
     #footer-name-box {
         display: flex;
@@ -27,7 +36,7 @@
 }
 
 @media screen and (max-width:720px) {
-    #footer-flex-container{
+    #footer{
         flex-direction: column;
         justify-content: space-evenly;
         height: 80%;

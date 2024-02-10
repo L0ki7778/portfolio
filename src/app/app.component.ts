@@ -8,6 +8,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
 import AOS from 'aos';
+import { PrivacyComponent } from './main-page/privacy/privacy.component';
 
 
 
@@ -21,7 +22,8 @@ import AOS from 'aos';
     MainPageComponent,
     HttpClientModule,
     MatIconModule,
-    TranslateModule
+    TranslateModule,
+    PrivacyComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

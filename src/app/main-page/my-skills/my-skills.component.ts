@@ -96,7 +96,6 @@ export class MySkillsComponent {
     return{
       trigger: trigger,
       once: true,
-      markers: true,
       start: "top center+=400",
       end: "top center+=400",
       toggleActions: "restart none none none"
@@ -129,7 +128,6 @@ export class MySkillsComponent {
     return {
       trigger: trigger,
       once: true,
-      markers: true,
       start: "top bottom-=100",
       end: "top bottom-=100",
       toggleActions: "restart none none none"
@@ -201,7 +199,6 @@ export class MySkillsComponent {
     return {
       trigger: trigger,
       once: true,
-      markers: true,
       start: "top center+=400",
       end: "top center+=400",
       toggleActions: "restart none reverse none"
@@ -223,7 +220,6 @@ export class MySkillsComponent {
     return {
       trigger: trigger,
       once: true,
-      markers: true,
       start: "top center+=400",
       end: "top center+=400",
       toggleActions: "restart none reverse none"
@@ -321,7 +317,6 @@ export class MySkillsComponent {
     return {
       trigger: trigger,
       once: true,
-      markers: true,
       start: "top bottom-=100",
       end: "top bottom-=100",
       toggleActions: "restart none none none",

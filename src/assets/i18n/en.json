@@ -4,7 +4,7 @@
     "quote": "\"[...]Every solution for every problem does allready exist. We just have to find it.[...]\"",
     "description": "Hi! I´m René Heller, a Frontend Developer and the quote above is literally my mindset. Now I´m 34 years old, based near Berlin, Germany, and learned a profession which matches my passion. I´m looking forward to help you to create the design as well as the logic you desire for your website!"
   },
-  "light-box":  "Every new idea for tackling a task motivates me in my work. I find great joy in overcoming challenges and ultimately delivering the desired results. Working in a team and the associated responsibility motivates me even more.",
+  "light-box": "Every new idea for tackling a task motivates me in my work. I find great joy in overcoming challenges and ultimately delivering the desired results. Working in a team and the associated responsibility motivates me even more.",
   "puzzle-box": "No idea? No problem! Reading documentation and developing new approaches are part of my personal commitment to improve daily. If I can also exchange ideas with a team, even better.",
   "left-contact-section": {
     "title": "Contact",
@@ -19,9 +19,9 @@
     "checkbox-text-end": " and agree to the processing of my data as outlined.",
     "checkbox-text-link": "Privacy Policy",
     "send-button": "Send message",
-    "name-error":"Please enter your name or the name of your company.",
-    "email-error":"Please use a valid email-format.",
-    "message-error":"Please briefly describe your request."
+    "name-error": "Please enter your name or the name of your company.",
+    "email-error": "Please use a valid email-format.",
+    "message-error": "Please briefly describe your request."
   },
   "footer-flex-container": {
     "footer-name": "René",
@@ -60,5 +60,64 @@
   "project-examples": {
     "join-description": "A Kanban-like taskmanager to create and manage your tasks. You may add users and assign tasks to them and organize the tasks, using drag and drop functionalities.",
     "game-description": "Object-oriented approach meets jump-and-run. Pepe is collecting coins and Salza bottles, just to throw the latter at vicious chickens."
-  }
+  },
+  "privacy-policy": {
+    "title": "Privacy-Policy",
+    "controller": "The controller within the meaning of the data protection laws, in particular the EU General Data Protection Regulation (GDPR), is:",
+    "controller-name": "René Torsten Heller"
+  },
+  "rights-as-data-subject": {
+    "title": "Your Rights as a Data Subject",
+    "explain": "You can exercise the following rights at any time using the contact details provided for our data protection officer:",
+    "one": "Information about your stored data and their processing (Art. 15 GDPR)",
+    "two": "Correction of incorrect personal data (Art. 16 GDPR)",
+    "three": "Deletion of your stored data (Art. 17 GDPR)",
+    "four": "Restriction of data processing if we are not yet allowed to delete your data due to legal obligations (Art. 18 GDPR)",
+    "five": "Objection to the processing of your data by us (Art. 21 GDPR)",
+    "six": "Data portability, if you have consented to data processing or have concluded a contract with us (Art. 20 GDPR)",
+    "consent-revocation": "If you have given us consent, you can revoke it at any time with effect for the future.",
+    "complaint": "You can lodge a complaint with a supervisory authority at any time, for example with the competent supervisory authority in the federal state of your residence or with the authority responsible for us as the responsible entity.",
+    "supervisory-authority-list": "For a list of supervisory authorities (for the non-public sector) with addresses, please visit: "
+  },
+  "contact-form": {
+    "title": "Contact Form",
+    "subtitle": {
+      "nature-and-purpose-of-processing": "Nature and purpose of processing",
+      "legal-basis": "Legal-basis",
+      "recipient": "Recipient",
+      "storage-duration": "Storage-duration",
+      "provision-mandatory-or-required": "Provision required"
+    },
+    "nature-and-purpose-of-processing": "The data you enter will be stored for the purpose of individual communication with you. For this purpose, providing a valid email address and your name is necessary. This serves to allocate the inquiry and subsequently respond to it. Providing additional data is optional.",
+    "legal-basis": {
+      "one":"The processing of data entered into the contact form is based on legitimate interest (Art. 6 para. 1 lit. f GDPR). ",
+      "two":"By providing the contact form, we aim to facilitate uncomplicated contact. The information you provide will be stored for the purpose of processing the inquiry and for any follow-up questions. ",
+      "three":"If you contact us to request an offer, the processing of the data entered into the contact form will be carried out to perform pre-contractual measures (Art. 6 para. 1 lit. b GDPR)."
+    },
+    "recipient": "Recipients of the data may include processors.",
+    "storage-duration": {
+      "one":"Data will be deleted no later than 6 months after processing the inquiry. ",
+      "two":"If a contractual relationship is established, we are subject to the statutory retention periods under the German Commercial Code (HGB) and will delete your data upon expiry of these periods."
+    },
+    "provision-mandatory-or-required": "Providing your personal data is voluntary. However, we can only process your inquiry if you provide us with your name, email address, and the reason for the inquiry."
+  },
+  "ssl-title": "SSL encryption",
+  "ssl-encryption": "To protect the security of your data during transmission, we use encryption methods corresponding to the current state of the art (e.g., SSL) via HTTPS.",
+  "right-to-object": {
+    "title": "Information about Your Right to Object under Art. 21 GDPR",
+    "subtitle": {
+      "one":"Individual Right to Object",
+      "two":"Recipient of an Objection"
+    },
+    "individual-right-to-object": "You have the right to object, on grounds relating to your particular situation, at any time to processing of personal data concerning you which is based on Article 6(1)(f) GDPR (processing of data based on legitimate interests); this also applies to profiling based on that provision as defined in Article 4(4) GDPR.",
+    "objection-case": "If you object, we will no longer process your personal data unless we can demonstrate compelling legitimate grounds for the processing which override your interests, rights, and freedoms, or the processing serves the establishment, exercise, or defense of legal claims.",
+    "objection-recipient": "Rene Torsten Heller"
+  },
+  "changes-title": "Changes to our Privacy Policy",
+  "changes-to-privacy-policy": "We reserve the right to amend this privacy policy to ensure that it complies with current legal requirements or to implement changes to our services in the privacy policy, such as the introduction of new services. The new privacy policy will apply for your subsequent visits.",
+  "questions": "Questions to the proteciton officer",
+  "questions-to-data-protection-officer": "If you have any questions about privacy, please email us or contact the person responsible for data protection in our organization directly.",
+  "provided-by": "The privacy policy was created with the assistance of activeMind AG, the experts in ",
+  "provided-link": "external data protection",
+  "provided-end": " (Version #2020-09-30)."
 }

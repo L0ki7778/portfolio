@@ -5,7 +5,6 @@
 </div>
 
 <div id="right-contact-section">
-  <!-- app.component.html -->
   <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" >
     <mat-form-field appearance="outline" [color]="contactForm.get('name')?.valid && contactForm.get('name')?.dirty ? 'accent' : 'primary'">
       <mat-label>{{"right-contact-section.name-label"|translate}}</mat-label>
@@ -33,7 +32,7 @@
           }
     </mat-form-field>
     <mat-checkbox formControlName="checkbox" disableRipple name="checkbox" id="check-box">
-      <div id="checkbox-text">{{"right-contact-section.checkbox-text-start"|translate}}<a href="#"
+      <div id="checkbox-text">{{"right-contact-section.checkbox-text-start"|translate}}<a routerLink="/privacy" target="_blank"
           id="privacy">{{"right-contact-section.checkbox-text-link"|translate}}</a>{{"right-contact-section.checkbox-text-end"|translate}}
       </div>
     </mat-checkbox>
@@ -44,4 +43,3 @@
 
 </div>
 
-<app-footer></app-footer>

@@ -1,64 +1,123 @@
-  {
+{
+  "about-me": "Über mich",
+  "introduction-text": {
+    "quote": "\"[...]Für jedes Problem gibt es bereits eine Lösung. Wir müssen sie nur finden.[...]\"",
+    "description": "Hallo! Ich bin René Heller, ein Frontend-Entwickler, und das obige Zitat ist buchstäblich meine Denkweise. Jetzt bin ich 34 Jahre alt, lebe in der Nähe von Berlin, Deutschland, und habe einen Beruf erlernt, der meiner Leidenschaft entspricht. Ich freue mich darauf, Ihnen dabei zu helfen, das Design sowie die Logik zu erstellen, die Sie für Ihre Website wünschen!"
+  },
+  "light-box": "Jede neue Idee zum Umsetzen einer Aufgabe motiviert mich bei meiner Arbeit. Es bereitet mir sehr viel Spaß, Herausforderung zu bewältigen und letztendlich das gewünschte Ergebnis zu liefern. Die Arbeit in einem Team und damit einhergehende Verantwortung motiviert mich umso mehr.",
+  "puzzle-box": "Keine Idee? Auch kein Problem! Das Lesen von Dokumentationen und Erarbeiten neuer Ansätze gehören zu meinem eigenen Anspruch, mich täglich zu verbessern. Wenn ich mich auch noch mit einem Team austauschen kann, umso besser.",
+  "left-contact-section": {
+    "title": "Kontakt",
+    "subtitle": "Stehen Sie vor einer Herausforderung oder haben eine Idee für ein Projekt?",
+    "description": "Nehmen Sie gern Kontakt zu mir auf. Ich freue mich darauf, Ich freue mich darauf, Ihre Ideen zu besprechen und Sie dabei zu unterstützen."
+  },
+  "right-contact-section": {
+    "name-label": "Name/Firma",
+    "email-label": "E-Mail",
+    "message-label": "Nachricht",
+    "checkbox-text-start": "Ich habe die ",
+    "checkbox-text-end": " gelesen und stimme der Verarbeitung meiner Daten gemäß den Bestimmungen zu.",
+    "checkbox-text-link": "Datenschutzbestimmungen",
+    "send-button": "Senden",
+    "name-error": "Dieses Feld darf nicht leer sein.",
+    "email-error": "Bitte nutzen Sie ein gültiges E-Mail-Format.",
+    "message-error": "Bitte beschreiben sie kurz Ihre Anfrage."
+  },
+  "footer-flex-container": {
+    "footer-name": "René",
+    "imprint": "Impressum",
+    "copy-rights": "©  René Heller 2022"
+  },
+  "header": {
     "about-me": "Über mich",
-    "introduction-text": {
-      "quote": "\"[...]Für jedes Problem gibt es bereits eine Lösung. Wir müssen sie nur finden.[...]\"",
-      "description": "Hallo! Ich bin René Heller, ein Frontend-Entwickler, und das obige Zitat ist buchstäblich meine Denkweise. Jetzt bin ich 34 Jahre alt, lebe in der Nähe von Berlin, Deutschland, und habe einen Beruf erlernt, der meiner Leidenschaft entspricht. Ich freue mich darauf, Ihnen dabei zu helfen, das Design sowie die Logik zu erstellen, die Sie für Ihre Website wünschen!"
+    "skills": "Technologien",
+    "portfolio": "Portfolio"
+  },
+  "start-page-container": {
+    "headline": {
+      "i-am": "Ich bin",
+      "my-name": "René Heller",
+      "my-profession": "FRONTEND-ENTWICKLER"
     },
-    "light-box": "Jede neue Idee zum Umsetzen einer Aufgabe motiviert mich bei meiner Arbeit. Es bereitet mir sehr viel Spaß, Herausforderung zu bewältigen und letztendlich das gewünschte Ergebnis zu liefern. Die Arbeit in einem Team und damit einhergehende Verantwortung motiviert mich umso mehr.",
-    "puzzle-box": "Keine Idee? Auch kein Problem! Das Lesen von Dokumentationen und Erarbeiten neuer Ansätze gehören zu meinem eigenen Anspruch, mich täglich zu verbessern. Wenn ich mich auch noch mit einem Team austauschen kann, umso besser.",
-    "left-contact-section": {
-      "title": "Kontakt",
-      "subtitle": "Stehen Sie vor einer Herausforderung oder haben eine Idee für ein Projekt?",
-      "description": "Nehmen Sie gern Kontakt zu mir auf. Ich freue mich darauf, Ich freue mich darauf, Ihre Ideen zu besprechen und Sie dabei zu unterstützen."
+    "lets-talk-button": "Lass uns reden"
+  },
+  "menu-system": {
+    "about-me": "Über mich",
+    "skills": "Technologien",
+    "portfolio": "Portfolio",
+    "contact": "Kontakt"
+  },
+  "skill-title": "Technologien",
+  "boxed-skill-title": "Meine Fähigkeiten",
+  "skill-text": "Beim Bau mehrerer Projekte habe ich mich mit den folgenden Technologien vertraut gemacht.",
+  "skill-button": "Kontakt",
+  "used-skills": "Verwendete Technologien für diese Website.",
+  "portfolio-title": "Portfolio",
+  "purple-line-box": {
+    "title": "Portfolio",
+    "subtitle": "Hier eine kleine Auswahl meiner aktuellsten Projekte."
+  },
+  "project-examples": {
+    "join-description": "Ein Kanban-ähnlicher Task-Manager zum Erstellen und Verwalten Ihrer Aufgaben. Sie können Benutzer hinzufügen und ihnen Aufgaben zuweisen und die Aufgaben mit Drag-and-Drop-Funktionen organisieren.",
+    "game-description": "Objektorientierter Ansatz trifft auf Jump-and-Run. Pepe sammelt Münzen und Salza-Flaschen, nur um letztere auf bösartige Hühner zu werfen."
+  },
+  "privacy-policy": {
+    "title": "Datenschutzerklärung",
+    "controller": "Verantwortlicher im Sinne der Datenschutzgesetze, insbesondere der EU-Datenschutzgrundverordnung (DSGVO), ist:",
+    "controller-name": "René Torsten Heller"
+  },
+  "rights-as-data-subject": {
+    "title": "Ihre Betroffenenrechte",
+    "explain": "Unter den angegebenen Kontaktdaten unseres Datenschutzbeauftragten können Sie jederzeit folgende Rechte ausüben:",
+    "one": "Auskunft über Ihre bei uns gespeicherten Daten und deren Verarbeitung (Art. 15 DSGVO),",
+    "two": "Berichtigung unrichtiger personenbezogener Daten (Art. 16 DSGVO),",
+    "three": "Löschung Ihrer bei uns gespeicherten Daten (Art. 17 DSGVO),",
+    "four": "Einschränkung der Datenverarbeitung, sofern wir Ihre Daten aufgrund gesetzlicher Pflichten noch nicht löschen dürfen (Art. 18 DSGVO),",
+    "five": "Widerspruch gegen die Verarbeitung Ihrer Daten bei uns (Art. 21 DSGVO) und",
+    "six": "Datenübertragbarkeit, sofern Sie in die Datenverarbeitung eingewilligt haben oder einen Vertrag mit uns abgeschlossen haben (Art. 20 DSGVO).",
+    "consent-revocation": "Sofern Sie uns eine Einwilligung erteilt haben, können Sie diese jederzeit mit Wirkung für die Zukunft widerrufen.",
+    "complaint": "Sie können sich jederzeit mit einer Beschwerde an eine Aufsichtsbehörde wenden, z. B. an die zuständige Aufsichtsbehörde des Bundeslands Ihres Wohnsitzes oder an die für uns als verantwortliche Stelle zuständige Behörde.",
+    "supervisory-authority-list": "Eine Liste der Aufsichtsbehörden (für den nichtöffentlichen Bereich) mit Anschrift finden Sie unter: "
+  },
+  "contact-form": {
+    "title": "Kontaktformular",
+    "subtitle": {
+      "nature-and-purpose-of-processing": "Art und Zweck der Verarbeitung:",
+      "legal-basis": "Rechtsgrundlage:",
+      "recipient": "Empfänger:",
+      "storage-duration": "Speicherdauer:",
+      "provision-mandatory-or-required": "Bereitstellung vorgeschrieben oder erforderlich:"
     },
-    "right-contact-section": {
-      "name-label": "Name/Firma",
-      "email-label": "E-Mail",
-      "message-label": "Nachricht",
-      "checkbox-text-start": "Ich habe die ",
-      "checkbox-text-end": " gelesen und stimme der Verarbeitung meiner Daten gemäß den Bestimmungen zu.",
-      "checkbox-text-link": "Datenschutzbestimmungen",
-      "send-button": "Senden",
-      "name-error":"Dieses Feld darf nicht leer sein.",
-      "email-error":"Bitte nutzen Sie ein gültiges E-Mail-Format.",
-      "message-error":"Bitte beschreiben sie kurz Ihre Anfrage."
+    "nature-and-purpose-of-processing": "Die von Ihnen eingegebenen Daten werden zum Zweck der individuellen Kommunikation mit Ihnen gespeichert. Hierfür ist die Angabe einer validen E-Mail-Adresse sowie Ihres Namens erforderlich. Diese dient der Zuordnung der Anfrage und der anschließenden Beantwortung derselben. Die Angabe weiterer Daten ist optional.",
+    "legal-basis": {
+      "one": "Die Verarbeitung der in das Kontaktformular eingegebenen Daten erfolgt auf der Grundlage eines berechtigten Interesses (Art. 6 Abs. 1 lit. f DSGVO).",
+      "two": "Durch Bereitstellung des Kontaktformulars möchten wir Ihnen eine unkomplizierte Kontaktaufnahme ermöglichen. Ihre gemachten Angaben werden zum Zwecke der Bearbeitung der Anfrage sowie für mögliche Anschlussfragen gespeichert.",
+      "three": "Sofern Sie mit uns Kontakt aufnehmen, um ein Angebot zu erfragen, erfolgt die Verarbeitung der in das Kontaktformular eingegebenen Daten zur Durchführung vorvertraglicher Maßnahmen (Art. 6 Abs. 1 lit. b DSGVO)."
     },
-    "footer-flex-container": {
-      "footer-name": "René",
-      "imprint": "Impressum",
-      "copy-rights": "©  René Heller 2022"
+    "recipient": "Empfänger der Daten sind ggf. Auftragsverarbeiter.",
+    "storage-duration": {
+      "one": "Daten werden spätestens 6 Monate nach Bearbeitung der Anfrage gelöscht.",
+      "two": "Sofern es zu einem Vertragsverhältnis kommt, unterliegen wir den gesetzlichen Aufbewahrungsfristen nach HGB und löschen Ihre Daten nach Ablauf dieser Fristen."
     },
-    "header": {
-      "about-me": "Über mich",
-      "skills": "Technologien",
-      "portfolio": "Portfolio"
+    "provision-mandatory-or-required": "Die Bereitstellung Ihrer personenbezogenen Daten erfolgt freiwillig. Wir können Ihre Anfrage jedoch nur bearbeiten, sofern Sie uns Ihren Namen, Ihre E-Mail-Adresse und den Grund der Anfrage mitteilen."
+  },
+  "ssl-title": "SSL-Verschlüsselung",
+  "ssl-encryption": "Um die Sicherheit Ihrer Daten bei der Übertragung zu schützen, verwenden wir dem aktuellen Stand der Technik entsprechende Verschlüsselungsverfahren (z. B. SSL) über HTTPS.",
+  "right-to-object": {
+    "title": "Information über Ihr Widerspruchsrecht nach Art. 21 DSGVO",
+    "subtitle": {
+      "one": "Einzelfallbezogenes Widerspruchsrecht",
+      "two": "Empfänger eines Widerspruchs"
     },
-    "start-page-container": {
-      "headline": {
-        "i-am": "Ich bin",
-        "my-name": "René Heller",
-        "my-profession": "FRONTEND-ENTWICKLER"
-      },
-      "lets-talk-button": "Lass uns reden"
-    },
-    "menu-system": {
-      "about-me": "Über mich",
-      "skills": "Technologien",
-      "portfolio": "Portfolio",
-      "contact": "Kontakt"
-    },
-    "skill-title": "Technologien",
-    "boxed-skill-title": "Meine Fähigkeiten",
-    "skill-text": "Beim Bau mehrerer Projekte habe ich mich mit den folgenden Technologien vertraut gemacht.",
-    "skill-button": "Kontakt",
-    "used-skills": "Verwendete Technologien für diese Website.",
-    "portfolio-title": "Portfolio",
-    "purple-line-box": {
-      "title": "Portfolio",
-      "subtitle": "Hier eine kleine Auswahl meiner aktuellsten Projekte."
-    },
-    "project-examples": {
-      "join-description": "Ein Kanban-ähnlicher Task-Manager zum Erstellen und Verwalten Ihrer Aufgaben. Sie können Benutzer hinzufügen und ihnen Aufgaben zuweisen und die Aufgaben mit Drag-and-Drop-Funktionen organisieren.",
-      "game-description": "Objektorientierter Ansatz trifft auf Jump-and-Run. Pepe sammelt Münzen und Salza-Flaschen, nur um letztere auf bösartige Hühner zu werfen."
-    }
-  }
+    "individual-right-to-object": "Sie haben das Recht, aus Gründen, die sich aus Ihrer besonderen Situation ergeben, jederzeit gegen die Verarbeitung Sie betreffender personenbezogener Daten, die aufgrund Art. 6 Abs. 1 lit. f DSGVO (Datenverarbeitung auf der Grundlage einer Interessenabwägung) erfolgt, Widerspruch einzulegen; dies gilt auch für ein auf diese Bestimmung gestütztes Profiling im Sinne von Art. 4 Nr. 4 DSGVO.",
+    "objection-case": "Legen Sie Widerspruch ein, werden wir Ihre personenbezogenen Daten nicht mehr verarbeiten, es sei denn, wir können zwingende schutzwürdige Gründe für die Verarbeitung nachweisen, die Ihre Interessen, Rechte und Freiheiten überwiegen, oder die Verarbeitung dient der Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen.",
+    "objection-recipient": "René Torsten Heller"
+  },
+  "changes-title": "Änderung unserer Datenschutzbestimmungen",
+  "changes-to-privacy-policy": "Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen entspricht oder um Änderungen unserer Leistungen in der Datenschutzerklärung umzusetzen, z.B. bei der Einführung neuer Services. Für Ihren erneuten Besuch gilt dann die neue Datenschutzerklärung.",
+  "questions": "Fragen an den Datenschutzbeauftragten",
+  "questions-to-data-protection-officer": "Wenn Sie Fragen zum Datenschutz haben, schreiben Sie uns bitte eine E-Mail oder wenden Sie sich direkt an die für den Datenschutz verantwortliche Person in unserer Organisation:",
+  "provided-by": "Die Datenschutzerklärung wurde mithilfe der activeMind AG erstellt, den Experten für ",
+  "provided-link": "externe Datenschutzbeauftragte",
+  "provided-end": " (Version #2020-09-30)."
+}

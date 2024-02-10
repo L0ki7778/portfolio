@@ -1,10 +1,55 @@
 @import "./../mixin.scss";
 
+body {
+    animation: open-main-page 0.5s ease forwards 9.5s;
+}
+
+app-intro{
+    position: absolute;
+    top: 0;
+    z-index: 5;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.9) 70%, rgba(0, 0, 0, 0.85) 100%);
+    transition: all ease 0.2s;
+    animation: fold-out 0.5s ease forwards 6.5s, shorten 0.5s ease forwards 8s;
+}
+
+
+
+@keyframes fold-out {
+    0%{
+        clip-path: ellipse( 100% 60% at 50% 50%);
+
+    }
+
+    100%{
+        clip-path: ellipse( 0% 60% at 50% 50%);
+
+    }
+}
+
+@keyframes shorten {
+    100%{
+        height: 0vh;
+    }
+}
+
+
+app-menu-system {
+    clip-path: ellipse(100% 60% at 50% 50%);
+
+}
+
 app-main-page-start {
     position: relative;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 3;
     width: 100%;
     height: 100vh;
     clip-path: ellipse(0% 60% at 50% 50%);
@@ -94,6 +139,21 @@ app-portfolio {
     overflow-x: hidden;
 }
 
+app-footer {
+    color: white;
+    background-color: #141D2F;
+    position: relative;
+    width: 100%;
+    height: 20vh;
+    max-height: 15rem;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 3;
+  }
+
+
 .hide-overlay {
     animation: close-overlay-animation .125s ease forwards;
 }
@@ -102,6 +162,13 @@ app-portfolio {
     display: flex;
     animation: open-overlay-animation .125s ease forwards;
 }
+
+@keyframes open-main-page {
+    to {
+      overflow: visible;
+    }
+  
+  }
 
 @keyframes open-overlay-animation {
     from {
@@ -143,7 +210,7 @@ app-portfolio {
     app-contact {
         height: 70rem;
     }
-    
+
 }
 
 @media screen and (max-width: 2399px) {
@@ -159,7 +226,7 @@ app-portfolio {
         flex-direction: column;
         padding-bottom: 25vh;
         height: 64vh;
-        gap:5rem
+        gap: 5rem
     }
 }
 
@@ -202,10 +269,11 @@ app-portfolio {
         @include dFlex(center, center);
         flex-direction: column;
         padding-bottom: 25vh;
-        gap:3rem;
+        gap: 3rem;
         height: 48rem;
     }
 }
+
 @media screen and (min-width: 820px) and (max-width: 1024px) {
 
 
@@ -213,11 +281,12 @@ app-portfolio {
         @include dFlex(center, center);
         flex-direction: column;
         padding-bottom: 25vh;
-        gap:3rem;
+        gap: 3rem;
         height: 55rem;
     }
 }
-@media screen and (max-width: 580px){
+
+@media screen and (max-width: 580px) {
     app-contact {
         height: 55rem;
     }
@@ -233,7 +302,7 @@ app-portfolio {
 
 @media screen and (min-width: 1024px) and (max-width: 1279px) {
     app-about-me {
-        height: 50rem;
+        height: 55rem;
     }
 }
 
@@ -246,8 +315,7 @@ app-portfolio {
 
 @media screen and (min-width: 1920px) and (max-width: 2400px) {
     app-portfolio {
-        margin-bottom:-5rem
-
+        margin-bottom: -5rem
     }
 }
 
@@ -265,7 +333,7 @@ app-portfolio {
     app-about-me {
         height: 97rem;
     }
-    
+
 }
 
 // (min-width:920px) and (max-width: 1024)
