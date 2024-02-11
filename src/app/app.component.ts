@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { IntroComponent } from './intro/intro.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
@@ -23,7 +23,9 @@ import { PrivacyComponent } from './main-page/privacy/privacy.component';
     HttpClientModule,
     MatIconModule,
     TranslateModule,
-    PrivacyComponent
+    PrivacyComponent,
+    RouterLink,
+    RouterLinkActive
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

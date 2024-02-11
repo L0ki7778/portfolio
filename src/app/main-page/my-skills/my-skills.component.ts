@@ -33,13 +33,18 @@ export class MySkillsComponent {
 
 
   ngAfterViewInit() {
-    if (this.svgContainer && this.boxedSkillTitle) {
-      const scrollTrigger = this.boxedSkillTitle.nativeElement;
-      const container = this.svgContainer.nativeElement;
-      gsap.to(container, { autoAlpha: 1, duration: 1 });
-      this.setGsapItems(scrollTrigger, container);
-    }
+    setTimeout(() => {
+      if (this.svgContainer && this.boxedSkillTitle) {
+        const scrollTrigger = this.boxedSkillTitle.nativeElement;
+        const container = this.svgContainer.nativeElement;
+        gsap.to(container, { autoAlpha: 1, duration: 1 });
+        this.setGsapItems(scrollTrigger, container);
+      }
+
+    }, 10000);
   };
+
+
 
 
   setGsapItems(scrollTrigger: HTMLElement, mobileScrollTrigger: HTMLElement) {

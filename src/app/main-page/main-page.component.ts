@@ -8,6 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import { MenuSystemComponent } from './menu-system/menu-system.component';
 import { HeaderComponent } from './header/header.component';
 import { IntroComponent } from '../intro/intro.component';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-main-page',
@@ -21,7 +22,10 @@ import { IntroComponent } from '../intro/intro.component';
     PortfolioComponent,
     ContactComponent,
     FooterComponent,
-    IntroComponent],
+    IntroComponent,
+    RouterLink,
+    RouterOutlet,
+    RouterLinkActive],
   templateUrl: './main-page.component.html',
   styleUrl: './main-page.component.scss'
 })
