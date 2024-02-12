@@ -35,9 +35,9 @@ import { HttpClient } from '@angular/common/http';
 export class ContactComponent {
   contactForm: FormGroup = new FormGroup({});
   http= inject(HttpClient);
-  success : boolean = false;
 
   constructor(private snackBar: MatSnackBar) { }
+
 
   ngOnInit() {
     this.contactForm= new FormGroup({
@@ -48,7 +48,18 @@ export class ContactComponent {
     });
   }
 
-  mailTest = true;
+
+  public removeValidators() {
+    this.contactForm.get('name')?.clearValidators();
+    this.contactForm.get('email')?.clearValidators();
+    this.contactForm.get('message')?.clearValidators();
+    this.contactForm.get('agreedToPrivacyTerms')?.clearValidators();
+    this.contactForm.get('name')?.updateValueAndValidity();
+    this.contactForm.get('email')?.updateValueAndValidity();
+    this.contactForm.get('message')?.updateValueAndValidity();
+    this.contactForm.get('agreedToPrivacyTerms')?.updateValueAndValidity();
+  }
+
 
   post = {
     endPoint: 'https://rene-heller.de/sendMail.php',
@@ -61,6 +72,7 @@ export class ContactComponent {
     },
   };
 
+
   onSubmit(): void {
     if (this.contactForm.valid) {
       const contactData = this.contactForm.value;
@@ -68,30 +80,35 @@ export class ContactComponent {
       this.http.post(this.post.endPoint, this.post.body(contactData))
         .subscribe({
           next: (response) => {
-            this.success = true;
             this.contactForm.reset();
-            this.snackBar.open('Message sent successfully!', 'Close', {
-              duration: 3000,
-              horizontalPosition: 'center',
-              verticalPosition: 'top'
-            });
+            this.removeValidators();
+            this.successSnackBar();
           },
           error: (error) => {
             console.error(error);
-            this.snackBar.open('Failed to send message. Please try again later.', 'Close', {
-              duration: 3000,
-              horizontalPosition: 'center',
-              verticalPosition: 'top'
-            });
+            this.errorSnackBar()
           }
         });
-    } else {
-      // Form is invalid, do something (optional)
-    }
+    } 
   }
   
-// onSubmit(){
-//   console.log(this.contactForm)
-// }
-// if(this.contactForm.valid)
+
+  successSnackBar(){
+    return this.snackBar.open('Message sent successfully!', 'Close', {
+      duration: 3000,
+      panelClass:'green-snackbar',
+      horizontalPosition: 'center',
+      verticalPosition: 'top'
+    });
+  }
+
+
+  errorSnackBar(){
+    return this.snackBar.open('Failed to send message. Please try again later.', 'Close', {
+      duration: 3000,
+      panelClass:'red-snackbar',
+      horizontalPosition: 'center',
+      verticalPosition: 'top'
+    });
+  }
 }

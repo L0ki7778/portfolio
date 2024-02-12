@@ -13,8 +13,26 @@ html{
   }
 
   ::-webkit-scrollbar-thumb {
-    background-color: #70E61C;
+    background-color: $green;
     border-radius: 12px;
+  }
+}
+
+.mat-mdc-snack-bar-container .mdc-snackbar__surface{
+  background-color: #1F2B40!important;
+}
+
+.mat-mdc-snack-bar-container .mdc-snackbar__label{
+  color: $green!important;
+  font-size: 16px!important;
+  font-weight: 600!important;
+}
+
+
+.green-snackbar{
+  button{
+    background: $green!important;
+    color: black!important;
   }
 }
 
@@ -65,11 +83,6 @@ app-imprint{
 h1 {
   font-size: 4vw;
 }
-
-
-
-
-
 
 @include mat.core();
 

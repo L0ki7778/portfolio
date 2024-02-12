@@ -11,14 +11,12 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 })
 export class HeaderComponent {
 @Output() dialogEvent = new EventEmitter<string>();
-currentLanguage:string="";
 
 constructor(private translateService: TranslateService){
-  this.currentLanguage = "EN"
 }
 
 switchLanguage() {
-  if(this.currentLanguage=="DE"){
+  if(this.translateService.currentLang=="de"){
     this.translateService.use('en'); 
   }else{
     this.translateService.use('de'); 

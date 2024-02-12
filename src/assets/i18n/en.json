@@ -2,10 +2,10 @@
   "about-me": "About me",
   "introduction-text": {
     "quote": "\"[...]Every solution for every problem does allready exist. We just have to find it.[...]\"",
-    "description": "Hi! I´m René Heller, a Frontend Developer and the quote above is literally my mindset. Now I´m 34 years old, based near Berlin, Germany, and learned a profession which matches my passion. I´m looking forward to help you to create the design as well as the logic you desire for your website!"
+    "description": "Hi! I´m René Heller, a Frontend Developer and the quote above is literally my mindset. I´m 34 years old and based near Berlin, Germany. I´m looking forward to help you to create the design as well as the logic you desire for your website!"
   },
-  "light-box": "Every new idea for tackling a task motivates me in my work. I find great joy in overcoming challenges and ultimately delivering the desired results. Working in a team and the associated responsibility motivates me even more.",
-  "puzzle-box": "No idea? No problem! Reading documentation and developing new approaches are part of my personal commitment to improve daily. If I can also exchange ideas with a team, even better.",
+  "light-box": "Every new idea for tackling a task motivates me in my work. I find joy in overcoming challenges and delivering the desired results.",
+  "puzzle-box": "Reading documentation and developing new approaches are part of my commitment to improve daily. If I can also exchange ideas with a team, even better!",
   "left-contact-section": {
     "title": "Contact",
     "subtitle": "Facing a challenge or have a project in mind?",
@@ -32,7 +32,7 @@
     "about-me": "About me",
     "skills": "Skills",
     "portfolio": "Portfolio",
-    "currentLanguage":"EN"
+    "currentLanguage": "EN"
   },
   "start-page-container": {
     "headline": {
@@ -91,14 +91,14 @@
     },
     "nature-and-purpose-of-processing": "The data you enter will be stored for the purpose of individual communication with you. For this purpose, providing a valid email address and your name is necessary. This serves to allocate the inquiry and subsequently respond to it. Providing additional data is optional.",
     "legal-basis": {
-      "one":"The processing of data entered into the contact form is based on legitimate interest (Art. 6 para. 1 lit. f GDPR). ",
-      "two":"By providing the contact form, we aim to facilitate uncomplicated contact. The information you provide will be stored for the purpose of processing the inquiry and for any follow-up questions. ",
-      "three":"If you contact us to request an offer, the processing of the data entered into the contact form will be carried out to perform pre-contractual measures (Art. 6 para. 1 lit. b GDPR)."
+      "one": "The processing of data entered into the contact form is based on legitimate interest (Art. 6 para. 1 lit. f GDPR). ",
+      "two": "By providing the contact form, we aim to facilitate uncomplicated contact. The information you provide will be stored for the purpose of processing the inquiry and for any follow-up questions. ",
+      "three": "If you contact us to request an offer, the processing of the data entered into the contact form will be carried out to perform pre-contractual measures (Art. 6 para. 1 lit. b GDPR)."
     },
     "recipient": "Recipients of the data may include processors.",
     "storage-duration": {
-      "one":"Data will be deleted no later than 6 months after processing the inquiry. ",
-      "two":"If a contractual relationship is established, we are subject to the statutory retention periods under the German Commercial Code (HGB) and will delete your data upon expiry of these periods."
+      "one": "Data will be deleted no later than 6 months after processing the inquiry. ",
+      "two": "If a contractual relationship is established, we are subject to the statutory retention periods under the German Commercial Code (HGB) and will delete your data upon expiry of these periods."
     },
     "provision-mandatory-or-required": "Providing your personal data is voluntary. However, we can only process your inquiry if you provide us with your name, email address, and the reason for the inquiry."
   },
@@ -107,8 +107,8 @@
   "right-to-object": {
     "title": "Information about Your Right to Object under Art. 21 GDPR",
     "subtitle": {
-      "one":"Individual Right to Object",
-      "two":"Recipient of an Objection"
+      "one": "Individual Right to Object",
+      "two": "Recipient of an Objection"
     },
     "individual-right-to-object": "You have the right to object, on grounds relating to your particular situation, at any time to processing of personal data concerning you which is based on Article 6(1)(f) GDPR (processing of data based on legitimate interests); this also applies to profiling based on that provision as defined in Article 4(4) GDPR.",
     "objection-case": "If you object, we will no longer process your personal data unless we can demonstrate compelling legitimate grounds for the processing which override your interests, rights, and freedoms, or the processing serves the establishment, exercise, or defense of legal claims.",
@@ -124,18 +124,37 @@
   "imprint": {
     "title": "Imprint",
     "section1_title": "Information according to § 5 TMG:",
-    "section1_content": "<p><br>Frontend Developer<br>René Heller</p>",
-    "address_title": "Postal Address:",
-    "address_content": "<p>Am Kolonieweg 11<br>Havelsee OT Tieckkw<br></p>",
+    "section1_content": "Frontend Developer",
+    "address_title": "Mailing Address:",
+    "address_content": "Am Kolonieweg 11<br>14798 Havelsee OT Tieckkw",
     "contact_title": "Contact:",
-    "contact_content": "<p>Phone: 01792952151<br>Email: terra7778@googlemail.com</p>"
-  },
-  "hints": {
-    "title": "Website Notes"
+    "contact_tel": "Phone:",
+    "contact_mail": "Contact us via"
   },
   "information": {
     "title": "Information according to § 36 VSBG",
-    "content1": "<p>According to § 36 VSBG (Consumer Dispute Settlement Act – Law on alternative dispute resolution in consumer matters), the operator of this website declares:</p>",
-    "content2": "<p>We are neither willing nor obliged to participate in dispute settlement proceedings before a consumer arbitration board.</p>"
+    "content1": "According to § 36 VSBG (Consumer Dispute Resolution Act – Act on Alternative Dispute Resolution in Consumer Matters), the operator of this website declares:",
+    "content2": "We are neither willing nor obliged to participate in dispute resolution proceedings before a consumer arbitration board."
+  },
+  "imprint-content": {
+    "title": "Imprint",
+    "section1_title": "Information according to § 5 TMG:",
+    "section1_content": "Frontend Developer",
+    "name": "René Heller",
+    "address_title": "Mailing Address:",
+    "address_street": "Am Kolonieweg 11",
+    "address_zip": "14798 Havelsee OT Tieckkw",
+    "contact_title": "Contact: ",
+    "contact_phone": "Phone: ",
+    "contact_us": "Or via: ",
+    "contact_mail": "Email"
+  },
+  "imprint-user-information": {
+    "title": "Information according to § 36 VSBG",
+    "content1": "According to § 36 VSBG (Consumer Dispute Resolution Act – Act on Alternative Dispute Resolution in Consumer Matters), the operator of this website declares:",
+    "content2": "We are neither willing nor obliged to participate in dispute resolution proceedings before a consumer arbitration board.",
+    "imprint": "The imprint was created with the ",
+    "imprint-link": "Imprint Generator of the AG",
+    "imprint-end": "."
   }
 }

@@ -4,6 +4,23 @@
     padding: 0 7%;
 }
 
+#current-language{
+    font-size: 1.2rem;
+    font-weight: bold;
+    position: absolute;
+    align-self: center;
+    color:white;
+    z-index: 4;
+    top:3%;
+    right: 3%;
+    width: fit-content;
+    @include poppins();
+
+    &:hover{
+        cursor: pointer;
+    }
+}
+
 #privacy-policy-route{
     @include dFlex(flex-start, flex-start);
     flex-direction: column;

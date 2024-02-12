@@ -2,14 +2,14 @@
   "about-me": "Über mich",
   "introduction-text": {
     "quote": "\"[...]Für jedes Problem gibt es bereits eine Lösung. Wir müssen sie nur finden.[...]\"",
-    "description": "Hallo! Ich bin René Heller, ein Frontend-Entwickler, und das obige Zitat ist buchstäblich meine Denkweise. Jetzt bin ich 34 Jahre alt, lebe in der Nähe von Berlin, Deutschland, und habe einen Beruf erlernt, der meiner Leidenschaft entspricht. Ich freue mich darauf, Ihnen dabei zu helfen, das Design sowie die Logik zu erstellen, die Sie für Ihre Website wünschen!"
+    "description": "Hallo! Ich bin René Heller, ein Frontend-Entwickler, und das obige Zitat ist buchstäblich meine Denkweise. Ich bin 34 Jahre alt und lebe in der Nähe von Berlin!"
   },
-  "light-box": "Jede neue Idee zum Umsetzen einer Aufgabe motiviert mich bei meiner Arbeit. Es bereitet mir sehr viel Spaß, Herausforderung zu bewältigen und letztendlich das gewünschte Ergebnis zu liefern. Die Arbeit in einem Team und damit einhergehende Verantwortung motiviert mich umso mehr.",
-  "puzzle-box": "Keine Idee? Auch kein Problem! Das Lesen von Dokumentationen und Erarbeiten neuer Ansätze gehören zu meinem eigenen Anspruch, mich täglich zu verbessern. Wenn ich mich auch noch mit einem Team austauschen kann, umso besser.",
+  "light-box": "Eine neue Idee umzusetzen motiviert mich bei meiner Arbeit! Es bereitet mir viel Spaß, Herausforderung zu bewältigen und das gewünschte Ergebnis zu liefern.",
+  "puzzle-box": "Das Lesen von Dokumentationen und Erarbeiten neuer Ansätze gehören zu meinem Anspruch, mich täglich zu verbessern. Wenn ich mich auch noch mit einem Team austauschen kann, umso besser!",
   "left-contact-section": {
     "title": "Kontakt",
     "subtitle": "Stehen Sie vor einer Herausforderung oder haben eine Idee für ein Projekt?",
-    "description": "Nehmen Sie gern Kontakt zu mir auf. Ich freue mich darauf, Ich freue mich darauf, Ihre Ideen zu besprechen und Sie dabei zu unterstützen."
+    "description": "Nehmen Sie gern Kontakt zu mir auf. Ich freue mich darauf, Ihre Ideen zu besprechen und Sie mit Ihnen umzusetzen."
   },
   "right-contact-section": {
     "name-label": "Name/Firma",
@@ -32,7 +32,7 @@
     "about-me": "Über mich",
     "skills": "Technologien",
     "portfolio": "Portfolio",
-    "currentLanguage":"DE"
+    "currentLanguage": "DE"
   },
   "start-page-container": {
     "headline": {
@@ -50,7 +50,7 @@
   },
   "skill-title": "Technologien",
   "boxed-skill-title": "Meine Fähigkeiten",
-  "skill-text": "Beim Bau mehrerer Projekte habe ich mich mit den folgenden Technologien vertraut gemacht.",
+  "skill-text": "Bisher habe ich mich mit den folgenden Technologien vertraut gemacht.",
   "skill-button": "Kontakt",
   "used-skills": "Verwendete Technologien für diese Website.",
   "portfolio-title": "Portfolio",
@@ -124,18 +124,37 @@
   "imprint": {
     "title": "Impressum",
     "section1_title": "Angaben gemäß § 5 TMG:",
-    "section1_content": "<p><br>Frontend-Entwickler<br>René Heller</p>",
+    "section1_content": "Frontend-Entwickler",
     "address_title": "Postanschrift:",
-    "address_content": "<p>Am Kolonieweg 11<br>Havelsee OT Tieckkw<br></p>",
+    "address_content": "Am Kolonieweg 11<br>Havelsee OT Tieckow",
     "contact_title": "Kontakt:",
-    "contact_content": "<p>Telefon: 01792952151<br>E-Mail: terra7778@googlemail.com</p>"
+    "contact_tel": "Telefon:",
+    "contact_mail":"Kontaktieren Sie uns per"
   },
-  "hints": {
-    "title": "Hinweise zur Website"
-  },
-  "information": {
+    "information": {
     "title": "Information gemäß § 36 VSBG",
-    "content1": "<p>Gemäß § 36 VSBG (Verbraucherstreitbeilegungsgesetz – Gesetz über die alternative Streitbeilegung in Verbrauchersachen) erklärt der Betreiber dieser Website:</p>",
-    "content2": "<p>Wir sind weder bereit noch verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>"
+    "content1": "Gemäß § 36 VSBG (Verbraucherstreitbeilegungsgesetz – Gesetz über die alternative Streitbeilegung in Verbrauchersachen) erklärt der Betreiber dieser Website:",
+    "content2": "Wir sind weder bereit noch verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen."
+  },
+  "imprint-content": {
+    "title": "Impressum",
+    "section1_title": "Angaben gemäß § 5 TMG:",
+    "section1_content": "Frontend-Entwickler",
+    "name": "René Heller",
+    "address_title": "Postanschrift:",
+    "address_street": "Am Kolonieweg 11",
+    "address_zip":"14798 Havelsee OT Tieckkw",
+    "contact_title": "Kontakt: ",
+    "contact_phone": "Telefon: ",
+    "contact_us": "Oder per: ",
+    "contact_mail": "E-Mail"
+  },
+  "imprint-user-information": {
+    "title": "Information gemäß § 36 VSBG",
+    "content1": "Gemäß § 36 VSBG (Verbraucherstreitbeilegungsgesetz – Gesetz über die alternative Streitbeilegung in Verbrauchersachen) erklärt der Betreiber dieser Website:",
+    "content2": "Wir sind weder bereit noch verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.",
+    "imprint": "Das Impressum wurde mit dem ",
+    "imprint-link": "Impressums-Generator der activeMind AG",
+    "imprint-end": "erstellt."
   }
 }

@@ -29,10 +29,6 @@ export class MySkillsComponent {
   @HostListener('window:resize', ['$event'])
   onResize(event: Event) {
     this.isMobileView = window.innerWidth <= 1024 && window.innerHeight >= 1200 || window.innerWidth < 1024;
-    setTimeout(()=>{
-      this.setUpAnimaion()
-    },1000)
-
   };
 
 
@@ -42,7 +38,10 @@ export class MySkillsComponent {
     }, 10000);
   };
   
-  
+
+    /**
+   * Set up animation for the SVG container and secondary skill title.
+   */
   setUpAnimaion(){
     if (this.svgContainer && this.boxedSkillTitle) {
       const scrollTrigger = this.boxedSkillTitle.nativeElement;
@@ -53,6 +52,12 @@ export class MySkillsComponent {
   }
 
 
+  /**
+   * Sets the GSAP items for the given scroll triggers.
+   *
+   * @param {HTMLElement} scrollTrigger - The scroll trigger for desktop view
+   * @param {HTMLElement} mobileScrollTrigger - The scroll trigger for mobile view
+   */
   setGsapItems(scrollTrigger: HTMLElement, mobileScrollTrigger: HTMLElement) {
     this.setGsapGrid(scrollTrigger, mobileScrollTrigger);
     this.setGsapTopHeadline(scrollTrigger);
@@ -61,6 +66,14 @@ export class MySkillsComponent {
     this.setGsapUsedSkills(scrollTrigger);
   };
 
+
+    /**
+   * Set up GSAP grid-item animation for scroll triggers.
+   *
+   * @param {HTMLElement} scrollTrigger - the scroll trigger element
+   * @param {HTMLElement} mobileScrollTrigger - the mobile scroll trigger element
+   * @return {void} 
+   */
   setGsapGrid(scrollTrigger: HTMLElement, mobileScrollTrigger: HTMLElement) {
     if (this.svgContainer) {
       const container = this.svgContainer.nativeElement;
@@ -78,6 +91,15 @@ export class MySkillsComponent {
     };
   };
 
+
+    /**
+   * Differ between viewscreens and set goal of animation.
+   *
+   * @param {HTMLElement} trigger - The element that triggers the animation.
+   * @param {HTMLElement} mobileScrollTrigger - The mobile scroll trigger element.
+   * @param {NodeListOf<Element>} item - The list of elements to animate.
+   * @return {void} 
+   */
   toGsapGrid(trigger: HTMLElement, mobileScrollTrigger: HTMLElement, item: NodeListOf<Element>) {
     if (this.isMobileView) {
       return this.mobileIconAnimation(mobileScrollTrigger, item);
@@ -103,6 +125,12 @@ export class MySkillsComponent {
   };
 
 
+    /**
+   * A function that takes an HTMLElement as a trigger and returns an object with scroll trigger properties.
+   *
+   * @param {HTMLElement} trigger - the element that triggers the scroll
+   * @return {object} an object with trigger, once, start, end, and toggleActions properties
+   */
   gridScrollTrigger(trigger:HTMLElement){
     return{
       trigger: trigger,
@@ -114,6 +142,12 @@ export class MySkillsComponent {
   };
 
 
+    /**
+   * Animate the mobile icon with the given trigger and item list.
+   *
+   * @param {HTMLElement} trigger - the trigger element for the animation
+   * @param {NodeListOf<Element>} item - the list of elements to be animated
+   */
   mobileIconAnimation(trigger: HTMLElement, item: NodeListOf<Element>) {
     gsap.to(item, {
       scrollTrigger: this.mobileIconAnimationScrollTrigger(trigger),
@@ -135,6 +169,12 @@ export class MySkillsComponent {
   };
 
 
+    /**
+   * A function that generates the scroll-trigger position/animation-counts.
+   *
+   * @param {HTMLElement} trigger - the HTML element that triggers the animation
+   * @return {Object} the scroll trigger configuration object
+   */
   mobileIconAnimationScrollTrigger(trigger: HTMLElement) {
     return {
       trigger: trigger,
@@ -146,6 +186,11 @@ export class MySkillsComponent {
   };
   
 
+    /**
+   * Set the top headline using GreenSock Animation Platform (GSAP) based on the scroll trigger and skill title element.
+   *
+   * @param {HTMLElement} scrollTrigger - The scroll trigger element
+   */
   setGsapTopHeadline(scrollTrigger: HTMLElement) {
     if (this.skillTitle && !this.isMobileView) {
       const topHeadline = this.skillTitle.nativeElement;
@@ -158,6 +203,12 @@ export class MySkillsComponent {
   };
 
 
+    /**
+   * animation-end-properties
+   *
+   * @param {HTMLElement} trigger - the element that triggers the animation
+   * @param {HTMLElement} item - the element to be animated
+   */
   toGsapTopHeadline(trigger: HTMLElement, item: HTMLElement) {
     gsap.to(item, {
       scrollTrigger: this.topHeadlineScrollTrigger(trigger),
@@ -167,7 +218,13 @@ export class MySkillsComponent {
     });
   };
 
-
+  /**
+   * Following functions each serve the same purposes as previous gsap-functions abouve but 
+   * for individual elements.
+   *
+   * @param {HTMLElement} trigger - the HTML element to use as the trigger
+   * @return {object} an object containing the trigger, start, end, and toggleActions properties
+   */
   topHeadlineScrollTrigger(trigger: HTMLElement) {
     return {
       trigger: trigger,
@@ -216,6 +273,7 @@ export class MySkillsComponent {
     }
   };
 
+
   mobileUsedSkills(trigger: HTMLElement, item: HTMLElement) {
     gsap.to(item, {
       scrollTrigger: this.mobileUsedSkillsScrollTrigger(trigger),
@@ -236,7 +294,6 @@ export class MySkillsComponent {
       toggleActions: "restart none reverse none"
     }
   };
-
 
 
   setGsapBoxHeadline(scrollTrigger: HTMLElement) {
