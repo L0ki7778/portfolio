@@ -31,7 +31,8 @@
   "header": {
     "about-me": "Über mich",
     "skills": "Technologien",
-    "portfolio": "Portfolio"
+    "portfolio": "Portfolio",
+    "currentLanguage":"DE"
   },
   "start-page-container": {
     "headline": {
@@ -119,5 +120,22 @@
   "questions-to-data-protection-officer": "Wenn Sie Fragen zum Datenschutz haben, schreiben Sie uns bitte eine E-Mail oder wenden Sie sich direkt an die für den Datenschutz verantwortliche Person in unserer Organisation:",
   "provided-by": "Die Datenschutzerklärung wurde mithilfe der activeMind AG erstellt, den Experten für ",
   "provided-link": "externe Datenschutzbeauftragte",
-  "provided-end": " (Version #2020-09-30)."
+  "provided-end": " (Version #2020-09-30).",
+  "imprint": {
+    "title": "Impressum",
+    "section1_title": "Angaben gemäß § 5 TMG:",
+    "section1_content": "<p><br>Frontend-Entwickler<br>René Heller</p>",
+    "address_title": "Postanschrift:",
+    "address_content": "<p>Am Kolonieweg 11<br>Havelsee OT Tieckkw<br></p>",
+    "contact_title": "Kontakt:",
+    "contact_content": "<p>Telefon: 01792952151<br>E-Mail: terra7778@googlemail.com</p>"
+  },
+  "hints": {
+    "title": "Hinweise zur Website"
+  },
+  "information": {
+    "title": "Information gemäß § 36 VSBG",
+    "content1": "<p>Gemäß § 36 VSBG (Verbraucherstreitbeilegungsgesetz – Gesetz über die alternative Streitbeilegung in Verbrauchersachen) erklärt der Betreiber dieser Website:</p>",
+    "content2": "<p>Wir sind weder bereit noch verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>"
+  }
 }

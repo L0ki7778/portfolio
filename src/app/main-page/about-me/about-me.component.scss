@@ -4,10 +4,16 @@ app-about-me-text {
     width: 100%;
     padding: 0 7%;
     max-width: 2400px;
-    margin: 0 auto;
-    height: fit-content;
-    top: -1px;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-bottom: 5rem;
     background-color: transparent;
+}
+
+#skill-scrolltrigger {
+    position: absolute;
+    bottom: 8vh
 }
 
 @media screen and (max-width: 900px) {
@@ -15,5 +21,11 @@ app-about-me-text {
         display: none;
     }
 
-}
+    app-about-me-text{
+        display: flex;
+        flex-direction: column;
+        gap:3rem;
+        margin-bottom: 4rem;
+    }
 
+}

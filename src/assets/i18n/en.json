@@ -31,7 +31,8 @@
   "header": {
     "about-me": "About me",
     "skills": "Skills",
-    "portfolio": "Portfolio"
+    "portfolio": "Portfolio",
+    "currentLanguage":"EN"
   },
   "start-page-container": {
     "headline": {
@@ -119,5 +120,22 @@
   "questions-to-data-protection-officer": "If you have any questions about privacy, please email us or contact the person responsible for data protection in our organization directly.",
   "provided-by": "The privacy policy was created with the assistance of activeMind AG, the experts in ",
   "provided-link": "external data protection",
-  "provided-end": " (Version #2020-09-30)."
+  "provided-end": " (Version #2020-09-30).",
+  "imprint": {
+    "title": "Imprint",
+    "section1_title": "Information according to § 5 TMG:",
+    "section1_content": "<p><br>Frontend Developer<br>René Heller</p>",
+    "address_title": "Postal Address:",
+    "address_content": "<p>Am Kolonieweg 11<br>Havelsee OT Tieckkw<br></p>",
+    "contact_title": "Contact:",
+    "contact_content": "<p>Phone: 01792952151<br>Email: terra7778@googlemail.com</p>"
+  },
+  "hints": {
+    "title": "Website Notes"
+  },
+  "information": {
+    "title": "Information according to § 36 VSBG",
+    "content1": "<p>According to § 36 VSBG (Consumer Dispute Settlement Act – Law on alternative dispute resolution in consumer matters), the operator of this website declares:</p>",
+    "content2": "<p>We are neither willing nor obliged to participate in dispute settlement proceedings before a consumer arbitration board.</p>"
+  }
 }

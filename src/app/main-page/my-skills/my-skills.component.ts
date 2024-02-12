@@ -29,22 +29,28 @@ export class MySkillsComponent {
   @HostListener('window:resize', ['$event'])
   onResize(event: Event) {
     this.isMobileView = window.innerWidth <= 1024 && window.innerHeight >= 1200 || window.innerWidth < 1024;
+    setTimeout(()=>{
+      this.setUpAnimaion()
+    },1000)
+
   };
 
 
   ngAfterViewInit() {
     setTimeout(() => {
-      if (this.svgContainer && this.boxedSkillTitle) {
-        const scrollTrigger = this.boxedSkillTitle.nativeElement;
-        const container = this.svgContainer.nativeElement;
-        gsap.to(container, { autoAlpha: 1, duration: 1 });
-        this.setGsapItems(scrollTrigger, container);
-      }
-
+      this.setUpAnimaion()
     }, 10000);
   };
-
-
+  
+  
+  setUpAnimaion(){
+    if (this.svgContainer && this.boxedSkillTitle) {
+      const scrollTrigger = this.boxedSkillTitle.nativeElement;
+      const container = this.svgContainer.nativeElement;
+      gsap.to(container, { autoAlpha: 1, duration: 1 });
+      this.setGsapItems(scrollTrigger, container);
+    }
+  }
 
 
   setGsapItems(scrollTrigger: HTMLElement, mobileScrollTrigger: HTMLElement) {
@@ -195,7 +201,7 @@ export class MySkillsComponent {
       scale: 1,
       skewX: 0,
       autoAlpha: 1,
-      duration: 2
+      duration: 1.2
     });
   };
 
@@ -216,7 +222,7 @@ export class MySkillsComponent {
       scale: 1,
       skewX: 0,
       autoAlpha: 1,
-      duration: 2
+      duration: 1.2
     });
   };
 

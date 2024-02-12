@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, Output } from '@angular/core';
 import {MatIconModule} from '@angular/material/icon';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatButtonModule} from '@angular/material/button';
@@ -13,4 +13,14 @@ import {MatButtonModule} from '@angular/material/button';
 })
 export class ButtonComponent {
   @Input() text:string = "";
+  
+  @Output() refEvent = new EventEmitter<void>();
+
+  constructor() { }
+
+  triggerRef() {
+    this.refEvent.emit();
+  }
+
+
 }

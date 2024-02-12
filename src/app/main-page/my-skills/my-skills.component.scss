@@ -51,6 +51,11 @@
 
 }
 
+#pf-scrolltrigger{
+    position: absolute;
+    bottom:8vh;
+}
+
 .glow {
     filter: drop-shadow(0px 0px 12px #1CDAE6);
 }
@@ -190,7 +195,6 @@ h1 {
 
 @media screen and (min-width: 1680px) {
     #used-skills {
-        // width: calc(100% + 20%);
         left: 15%;
         top: -10rem;
 
@@ -205,6 +209,10 @@ h1 {
         grid-template-rows: repeat(2, 1fr);
         width: unset;
         grid-gap: 3rem;
+    }
+
+    #boxed-skill-title{
+        color:transparent!important
     }
 
     #used-skills {
@@ -225,6 +233,10 @@ h1 {
         grid-template-rows: repeat(3, 1fr);
         width: 80%;
         left: unset;
+    }
+
+    #boxed-skill-title{
+        color:transparent!important
     }
 }
 

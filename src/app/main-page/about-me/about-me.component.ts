@@ -24,16 +24,6 @@ export class AboutMeComponent {
   }
   
 
-  ngAfterViewInit(){
-    if(this.pSvg){
-      const svg = this.pSvg.nativeElement.querySelectorAll('.path'); //für angular ist das nativeElement wichtig, um zugriff für gsap zu erhalten
-      console.log(this.pSvg.nativeElement.nodeName);
-      for(let i = 0; i < svg.length; i++){
-        console.log(`Letter ${i} totalLength: ${svg[i].getTotalLength()}`);
-      }
-    }
-  }
-
 
 
 }

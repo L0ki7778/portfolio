@@ -28,17 +28,17 @@
 .animated{
 
     svg {
-        animation: first-x-translation .25s ease forwards 0.8s, second-x-translation .5s ease-in-out forwards 2s;
+        animation: first-x-translation .25s ease forwards 0.3s, second-x-translation .5s ease-in-out forwards 1.5s;
         circle {
-            animation: dash-circle .25s linear forwards 1s;
+            animation: dash-circle .25s linear forwards .5s;
         }
 
         line {
-            animation: dash .5s linear forwards 1.3s;
+            animation: dash .5s linear forwards .8s;
         }
 
         #svg-circle-img{
-            animation: scale-down 0.25s ease forwards 0.8s;
+            animation: scale-down 0.25s ease forwards 0.3s;
         }
     }
 }

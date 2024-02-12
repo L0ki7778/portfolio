@@ -2,11 +2,11 @@
     <nav>
         <div id="name" #name><span id="e-letter">R</span>ené</div>
         <div id="header-left">
-            <a href="#app-about">{{"header.about-me"|translate}}</a>
-            <a href="#app-skill">{{"header.skills"|translate}}</a>
-            <a href="#portfolio">Portfolio</a>
+            <a href="#social-buttons">{{"header.about-me"|translate}}</a>
+            <a href="#skill-scrolltrigger">{{"header.skills"|translate}}</a>
+            <a href="#pf-scrolltrigger">Portfolio</a>
         </div>
-        <div id="current-language" (click)="switchLanguage()">{{currentLanguage}}</div>
+        <div id="current-language" (click)="switchLanguage()">{{"header.currentLanguage"|translate}}</div>
         <app-burger-cross-animation (dialogEvent)="manageOverlay($event)"></app-burger-cross-animation>
     </nav>
 </header>

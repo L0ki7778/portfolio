@@ -1,0 +1,94 @@
+@import '../mixin.scss';
+
+.imprint-container{
+    padding: 0 7%;
+}
+
+#imprint-route{
+    @include dFlex(flex-start, flex-start);
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+    max-width: 2400px;
+    background: linear-gradient(to right, #141D2F, #202C42, #141D2F);
+    color:white;
+    font-family: 'Poppins', sans-serif;
+
+    a{
+        color: #1CDAE6;
+        &:visited{
+            color: $purple;
+        }
+    }
+}
+
+@media screen and (min-width:2800px) {
+
+    .imprint-container{
+        #imprint-route{
+            p,li{
+                font-size: 1.5rem;
+            }
+        
+            h1{
+                font-size: 4rem;
+            }
+        
+            h2{
+                font-size: 3rem;
+            }
+            h3{
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width:720px) {
+
+    .imprint-container{
+        padding: 0 2%;
+        #imprint-route{
+            p,li{
+                font-size: 1rem;
+            }
+        
+            h1{
+                font-size: 2.2rem!important;
+            }
+        
+            h2{
+                font-size: 1.8rem;
+            }
+            h3{
+                font-size: 1.4rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:480px) {
+
+    .imprint-container{
+        padding: 0 2%;
+        #imprint-route{
+            p,li{
+                font-size: 1rem;
+            }
+        
+            h1{
+                font-size: 1.6rem!important;
+            }
+        
+            h2{
+                font-size: 1.2rem;
+            }
+            h3{
+                font-size: 1.1rem;
+            }
+        }
+    }
+}

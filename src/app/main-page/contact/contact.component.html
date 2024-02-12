@@ -6,32 +6,32 @@
 
 <div id="right-contact-section">
   <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" >
-    <mat-form-field appearance="outline" [color]="contactForm.get('name')?.valid && contactForm.get('name')?.dirty ? 'accent' : 'primary'">
+    <mat-form-field appearance="outline" [color]="success ? 'accent' : contactForm.get('name')?.valid && contactForm.get('name')?.dirty ? 'accent' : 'primary'">
       <mat-label>{{"right-contact-section.name-label"|translate}}</mat-label>
       <input class="input-field" id="name-input" matInput formControlName="name" name="name" required>
-      @if(this.contactForm.get('name')?.invalid && this.contactForm.get('name')?.touched) {
+      @if(this.contactForm.get('name')?.invalid && this.contactForm.get('name')?.touched && !this.success) {
       <mat-error>{{"right-contact-section.name-error"|translate}}</mat-error>
       }
     </mat-form-field>
 
-    <mat-form-field appearance="outline" [color]="contactForm.get('email')?.valid && contactForm.get('email')?.dirty ? 'accent' : 'primary'">
+    <mat-form-field appearance="outline" [color]="success ? 'accent' : contactForm.get('email')?.valid && contactForm.get('email')?.dirty ? 'accent' : 'primary'">
       <mat-label>{{"right-contact-section.email-label"|translate}}</mat-label>
       <input class="input-field" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,})$" id="email-input"
         matInput formControlName="email" name="email" required>
-        @if(this.contactForm.get('email')?.invalid && this.contactForm.get('name')?.touched) {
+        @if(this.contactForm.get('email')?.invalid && this.contactForm.get('name')?.touched && !this.success) {
           <mat-error>{{"right-contact-section.email-error"|translate}}</mat-error>
           }
     </mat-form-field>
 
-    <mat-form-field appearance="outline" [color]="contactForm.get('message')?.valid && contactForm.get('message')?.dirty ? 'accent' : 'primary'">
+    <mat-form-field appearance="outline" [color]="success ? 'accent' : contactForm.get('message')?.valid && contactForm.get('message')?.dirty ? 'accent' : 'primary'">
       <mat-label>{{"right-contact-section.message-label"|translate}}</mat-label>
       <textarea class="input-field" cdkTextareaAutosize cdkAutosizeMinRows="10" cdkAutosizeMaxRows="20" minlength="10" matInput
         formControlName="message" name="message" required></textarea>
-        @if(this.contactForm.get('message')?.invalid && this.contactForm.get('name')?.touched) {
+        @if(this.contactForm.get('message')?.invalid && this.contactForm.get('name')?.touched && !this.success) {
           <mat-error>{{"right-contact-section.message-error"|translate}}</mat-error>
           }
     </mat-form-field>
-    <mat-checkbox formControlName="checkbox" disableRipple name="checkbox" id="check-box">
+    <mat-checkbox formControlName="agreedToPrivacyTerms" disableRipple name="checkbox" id="check-box">
       <div id="checkbox-text">{{"right-contact-section.checkbox-text-start"|translate}}<a routerLink="/privacy" target="_blank"
           id="privacy">{{"right-contact-section.checkbox-text-link"|translate}}</a>{{"right-contact-section.checkbox-text-end"|translate}}
       </div>

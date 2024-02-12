@@ -18,11 +18,9 @@ constructor(private translateService: TranslateService){
 }
 
 switchLanguage() {
-  if(this.currentLanguage=="EN"){
+  if(this.currentLanguage=="DE"){
     this.translateService.use('en'); 
-    this.currentLanguage="DE"
   }else{
-    this.currentLanguage="EN";
     this.translateService.use('de'); 
   }
 }

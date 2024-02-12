@@ -12,12 +12,12 @@ h1 {
 #introduction {
     @include dFlex(center, center);
     flex-direction: column;
-    position: absolute;
-    top: 1rem;
-    bottom: 0;
-    margin: auto;
+    // position: absolute;
+//     top: 1rem;
+    // bottom: 0;
+    // margin: auto;
     gap: 2rem;
-    left: 7%;
+    // left: 7%;
     width: 40%;
     height: 100%;
 
@@ -81,6 +81,7 @@ h1 {
 @media screen and (max-width: 900px) {
     #introduction {
         width: 75%;
+        margin: auto;
     }
     #light-box {
         width: calc(100% - 7%);
@@ -129,10 +130,10 @@ h1 {
     #introduction {
         @include dFlex(center, center);
         flex-direction: column;
-        position: absolute;
-        top: 15%;
-        bottom: 20%;
-        height: 100%;
+        // position: absolute;
+        // top: 15%;
+        // bottom: 20%;
+        // height: 100%;
         gap: .5rem;
         left: 7%;
         width: 700px;

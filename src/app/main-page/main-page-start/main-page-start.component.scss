@@ -1,9 +1,9 @@
 @import "../../mixin.scss";
 
 app-selfie {
-    position: relative;
+    position: absolute;
     display: flex;
-    margin-top:8vh;
+    bottom:0;
     height: 92vh;
     width: 100%;
     justify-content: center;
@@ -66,6 +66,19 @@ svg {
     }
 }
 
+@media screen and (min-width:640px) and (max-width: 920px) and (min-height:900px) {
+    #responsive-overlay {
+        height: 26%;
+        display: block;
+    }
+
+    svg {
+        height: 75%;
+        bottom: 0;
+        z-index: 1;
+    }
+}
+
 @media screen and (max-width: 640px) {
     #responsive-overlay {
         height: 30%;
@@ -103,6 +116,16 @@ svg {
     }
 }
 
-
+@media screen and  (max-width: 460px) and (max-height:800px) {
+    #responsive-overlay {
+        height: 33%;
+        display: block;
+    }
+    svg {
+        height: 83%;
+        bottom: 0;
+        z-index: 1;
+    }
+}
 
 

@@ -8,7 +8,6 @@ import { HttpClient, HttpClientModule, provideHttpClient } from '@angular/common
 
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
-  console.log("load json")
   return  new  TranslateHttpLoader(httpClient, './assets/i18n/', '.json');
 }
 

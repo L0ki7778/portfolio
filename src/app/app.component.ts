@@ -7,7 +7,7 @@ import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
-import AOS from 'aos';
+import Aos from 'aos';
 import { PrivacyComponent } from './main-page/privacy/privacy.component';
 
 
@@ -45,7 +45,7 @@ export class AppComponent {
     translate.use(browserLanguage?.match(/en|de/) ? browserLanguage : 'en');
     this.matIconRegistry.addSvgIcon('git',
     this.domSanitizer.bypassSecurityTrustResourceUrl("/assets/svg/git.svg"));
-    AOS.init();
+    Aos.init();
   }
 
 }

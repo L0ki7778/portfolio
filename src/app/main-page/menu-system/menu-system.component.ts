@@ -11,16 +11,14 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 })
 export class MenuSystemComponent {
   @Input() overlayStatus: string = 'hide-overlay'
-  currentLanguage: string = 'EN';
 
-  constructor(private manageOverlay: OverlayService, private translateService: TranslateService) {   }
+  constructor(private manageOverlay: OverlayService, private translateService: TranslateService) {  
+   }
   changeLanguage() {
     if (this.translateService.currentLang == 'en') {
       this.translateService.use('de');
-      this.currentLanguage = 'EN'
     } else {
       this.translateService.use('en');
-      this.currentLanguage = 'DE';
     }
   }
 
