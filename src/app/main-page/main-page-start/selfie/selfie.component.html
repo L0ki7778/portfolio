@@ -1,21 +1,45 @@
+@if(firstTime){
 <div id="start-page-container">
     <div id="left-section">
         <img src="/assets/img/placeholderPF.png" alt="">
     </div>
     <div id="right-section">
         <div id="headline">
-            <div id="i-am">I am</div>
-            <div id="my-name">René Heller</div>
-            <div id="my-profession">FRONTEND DEVELOPER</div>
+            <div id="i-am" class="i-am-animation">I am</div>
+            <div id="my-name" class="my-name-animation">René Heller</div>
+            <div id="my-profession" class="my-profession-animation">FRONTEND DEVELOPER</div>
+        </div>
+        <app-button (click)="ref()" id="lets-talk" class="button-animation">Let´s talk</app-button>
+    </div>
+</div>
+<div id="start-bottom">
+
+    <app-scroll-down class="scroller-animation"></app-scroll-down>
+    <div id="button-container">
+        <div id="purple-line" class="purple-line-animation"></div>
+        <app-social-buttons></app-social-buttons>
+    </div>
+</div>
+}@else{
+<div id="start-page-container">
+    <div id="left-section">
+        <img src="/assets/img/placeholderPF.png" alt="">
+    </div>
+    <div id="right-section">
+        <div id="headline">
+            <div id="i-am" class="i-am-fast">I am</div>
+            <div id="my-name" class="my-name-fast">René Heller</div>
+            <div id="my-profession" class="my-profession-fast">FRONTEND DEVELOPER</div>
         </div>
         <app-button (click)="ref()" id="lets-talk">Let´s talk</app-button>
     </div>
 </div>
 <div id="start-bottom">
-    
+
     <app-scroll-down></app-scroll-down>
     <div id="button-container">
         <div id="purple-line"></div>
-        <app-social-buttons ></app-social-buttons>
+        <app-social-buttons></app-social-buttons>
     </div>
 </div>
+}

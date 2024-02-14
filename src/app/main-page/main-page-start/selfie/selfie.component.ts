@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ButtonComponent } from '../../button/button.component';
 import { ScrollDownComponent } from '../../../scroll-down/scroll-down.component';
 import { SocialButtonsComponent } from '../../social-buttons/social-buttons.component';
+import { OverlayService } from '../../../overlay.service';
 
 @Component({
   selector: 'app-selfie',
@@ -15,8 +16,9 @@ import { SocialButtonsComponent } from '../../social-buttons/social-buttons.comp
   styleUrl: './selfie.component.scss'
 })
 export class SelfieComponent {
-
-  constructor(){
+firstTime: boolean;
+  constructor(overlayService : OverlayService) {
+    this.firstTime = overlayService.firstTime
   }
 ref(){
   document.getElementById('input-field')?.focus()

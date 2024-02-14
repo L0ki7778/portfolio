@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { FooterComponent } from '../footer/footer.component';
+import { HeaderComponent } from '../header/header.component';
 
 
 @Component({
@@ -11,7 +13,9 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
     TranslateModule,
     RouterLink,
     RouterOutlet,
-    RouterLinkActive
+    RouterLinkActive,
+    FooterComponent,
+    HeaderComponent
   ],
   templateUrl: './privacy.component.html',
   styleUrl: './privacy.component.scss'

@@ -9,6 +9,7 @@ import { MenuSystemComponent } from './menu-system/menu-system.component';
 import { HeaderComponent } from './header/header.component';
 import { IntroComponent } from '../intro/intro.component';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { OverlayService } from '../overlay.service';
 
 @Component({
   selector: 'app-main-page',
@@ -25,12 +26,22 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
     IntroComponent,
     RouterLink,
     RouterOutlet,
-    RouterLinkActive],
+    RouterLinkActive,
+  ],
   templateUrl: './main-page.component.html',
   styleUrl: './main-page.component.scss'
 })
 export class MainPageComponent {
   overlayStatus: string = 'hide-overlay';
+  firstTime: boolean;
+
+  constructor(overlayService : OverlayService) {
+    this.firstTime= overlayService.firstTime
+    setTimeout(()=>{
+      overlayService.firstTime = false
+    },8000)
+  }
+  
 
 
   handleOverlay(value: string) {

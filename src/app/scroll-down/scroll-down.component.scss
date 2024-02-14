@@ -23,7 +23,20 @@
         border-right: 2px solid white;
         transform: rotate(45deg);
         margin: -10px;
-        animation: animate 1.5s infinite 10s;
+        animation: animate 1.5s infinite 7s;
+    }
+}
+
+.box-fast {
+    span {
+        display: block;
+        width: 20px;
+        height: 20px;
+        border-bottom: 2px solid white;
+        border-right: 2px solid white;
+        transform: rotate(45deg);
+        margin: -10px;
+        animation: animate 1.5s infinite .1s;
     }
 }
 
@@ -50,7 +63,7 @@
         font-size: 1rem;
         transform: rotate(90deg) translate(-4rem, 2rem);
     }
-    .box {
+    .box, .box-fast {
         span {
             width: 14px;
             height: 14px;

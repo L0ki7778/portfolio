@@ -1,9 +1,18 @@
 <div class="scroll-arrow-container">
     <div id="scroll">Scroll down</div>
 
+    @if(firstTime){
     <div class="box">
         <span></span>
         <span></span>
         <span></span>
     </div>
+    }
+    @else {
+    <div class="box-fast">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    }
 </div>

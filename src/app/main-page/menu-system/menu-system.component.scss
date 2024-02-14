@@ -42,3 +42,13 @@
     }
 }
 
+@media screen and (min-width:640px) and (max-width: 920px) and (max-height:510px) {
+    #menu-system{
+     #language-change{
+      left:unset;
+      right:1rem;
+      top:30%;
+     }
+    }
+}
+

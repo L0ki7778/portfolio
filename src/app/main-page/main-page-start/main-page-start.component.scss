@@ -18,7 +18,7 @@ svg {
     margin: 0 auto;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: -5px;
     z-index: 1;
     filter: drop-shadow(0px -20px 8px rgba(0, 0, 0, 0.2));
 }
@@ -28,6 +28,7 @@ svg {
     position: absolute;
     bottom: 0;
     width: 100%;
+    transform: translate(0,6px);
     height: 18%;
     display: none;
 }
@@ -38,6 +39,14 @@ svg {
         display: none;
     }
     
+}
+
+
+@media screen and (max-width: 1280px) and (min-width:1180px) and (max-height: 800px) {
+
+    svg {
+        bottom: -3px;
+    }
 }
 
 
@@ -66,10 +75,49 @@ svg {
     }
 }
 
+@media screen and (min-width:640px) and (max-width: 940px) and (max-height:540px) {
+    #responsive-overlay {
+        height: 24%;
+        transform: translate(0px, 20px);
+        display: block;
+    }
+
+    svg {
+        height: 75%;
+        bottom: -10px;
+        z-index: 1;
+    }
+}
+
+
+@media screen and (min-width:640px) and (max-width: 940px) and (max-height:510px) {
+    #responsive-overlay {
+       display: none;
+    }
+
+    svg {
+        height: 75%;
+        bottom: -10px;
+        z-index: 1;
+    }
+}
+
+
+@media screen and (min-width:640px) and (max-width: 940px) and (max-height:390px) {
+    #responsive-overlay {
+       display: block;
+       height:8%;
+       transform: translate(0, 10px);
+    }
+
+}
+
+
 @media screen and (min-width:640px) and (max-width: 920px) and (min-height:900px) {
     #responsive-overlay {
         height: 28%;
         display: block;
+        transform: translate(0px, 10px);
     }
 
     svg {

@@ -3,6 +3,7 @@ import { ButtonComponent } from '../button/button.component';
 import gsap from 'gsap';
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { TranslateModule } from '@ngx-translate/core';
+import { OverlayService } from '../../overlay.service';
 
 
 @Component({
@@ -19,8 +20,11 @@ export class MySkillsComponent {
   @ViewChild('skillTextContainer') skillTextContainer: ElementRef<HTMLDivElement> | undefined;
   @ViewChild('usedSkills') usedSkills: ElementRef<HTMLDivElement> | undefined;
   isMobileView: boolean = false;
+  firstTime: boolean;
 
-  constructor() {
+
+  constructor(overlayService: OverlayService) {
+    this.firstTime = overlayService.firstTime
     this.isMobileView = window.innerWidth <= 1024 && window.innerHeight >= 1200 || window.innerWidth < 1024;
     gsap.registerPlugin(ScrollTrigger);
   }
@@ -33,9 +37,15 @@ export class MySkillsComponent {
 
 
   ngAfterViewInit() {
-    setTimeout(() => {
-      this.setUpAnimaion()
-    }, 10000);
+    if(this.firstTime){
+      setTimeout(() => {
+        this.setUpAnimaion()
+      }, 10000);
+    }else{
+      setTimeout(() => {
+        this.setUpAnimaion()
+      }, 500);
+    }
   };
   
 

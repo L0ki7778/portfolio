@@ -23,22 +23,7 @@ app-intro {
     animation: fold-out 0.5s ease forwards 6.5s, shorten 0.5s ease forwards 8s;
 }
 
-app-footer{
-    opacity: 0;
-    animation: show-footer 0.1s ease forwards 10s;
-}
 
-@keyframes show-footer {
-    to{
-        opacity: 1;
-    }
-}
-
-@-webkit-keyframes show-footer {
-    to{
-        opacity: 1;
-    }
-}
 
 @keyframes fold-out {
     0% {
@@ -79,21 +64,8 @@ app-menu-system {
     opacity: 1;
     clip-path: ellipse(100% 60% at 50% 50%);
     -webkit-clip-path: ellipse(100% 60% at 50% 50%);
-
 }
 
-
-
-// app-main-page-start {
-//     position: relative;
-//     top: 0;
-//     left: 0;
-//     z-index: 3;
-//     width: 100%;
-//     height: 100vh;
-//     clip-path: ellipse(0% 60% at 50% 50%);
-//     animation: unfold .5s ease forwards 7.05s;
-// }
 
 app-main-page-start {
     position: relative;
@@ -104,9 +76,19 @@ app-main-page-start {
     z-index: 3;
     width: 100%;
     height: 92vh;
+}
+
+.start-animation {
     clip-path: ellipse(0% 60% at 50% 50%);
     -webkit-clip-path: ellipse(0% 60% at 50% 50%);
     animation: unfold .5s ease forwards 7.05s;
+}
+
+
+@keyframes to-flex {
+    to {
+        display: flex;
+    }
 }
 
 app-about-me {
@@ -118,12 +100,20 @@ app-about-me {
     left: 0;
     overflow-y: hidden;
     right: 0;
+    top:2px;
     z-index: 2;
-    top: -2px;
     background: linear-gradient(to right, #141D2F, #202C42, #141D2F);
     filter: drop-shadow(0px 20px 8px rgba(0, 0, 0, 0.2));
     margin: auto;
     overflow-x: hidden;
+}
+
+.about-init{
+    display: none;
+    animation: to-flex .5s ease forwards 9s;
+}
+.about-flex{
+    display: flex;
 }
 
 app-my-skills {
@@ -134,14 +124,27 @@ app-my-skills {
     left: 0;
     right: 0;
     z-index: 2;
-    top: -2px;
     overflow: hidden;
     height: 60rem;
     background: linear-gradient(to right, #141D2F, #202C42, #141D2F);
     filter: drop-shadow(0px 20px 8px rgba(0, 0, 0, 0.2));
-
     margin: auto;
     overflow-x: hidden;
+}
+
+@keyframes skill-include {
+    to {
+        @include dFlex(space-around, center);
+    }
+}
+
+.skills-init-include{
+    display: none;
+    animation: skill-include .5s ease forwards 9s;
+}
+
+.skills-include{
+    @include dFlex(space-around, center);
 }
 
 app-menu-system {
@@ -166,8 +169,16 @@ app-contact {
     height: 45rem;
     background: linear-gradient(to right, #141D2F, #202C42, #141D2F);
     filter: drop-shadow(0px 20px 8px rgba(0, 0, 0, 0.2));
-
     margin: auto;
+}
+
+.contact-init-include{
+    display: none;
+    animation: include-flex .5s ease forwards 9s;
+}
+
+.contact-include{
+    @include dFlex(space-between, center);
 }
 
 
@@ -180,13 +191,20 @@ app-portfolio {
     left: 0;
     right: 0;
     z-index: 2;
-    top: -2px;
     height: fit-content;
     background: linear-gradient(to right, #141D2F, #202C42, #141D2F);
     filter: drop-shadow(0px 20px 8px rgba(0, 0, 0, 0.2));
-
     margin: auto;
     overflow-x: hidden;
+}
+
+.portfolio-init{
+    display: none;
+    animation: to-flex .5s ease forwards 9s;
+}
+
+.portfolio-flex{
+    display: flex;
 }
 
 app-footer {
@@ -201,6 +219,15 @@ app-footer {
     left: 0;
     margin: auto;
     z-index: 3;
+}
+
+.footer-init{
+    display: none;
+    animation: to-flex .5s ease forwards 9s;
+}
+
+.footer-flex{
+    display: flex;
 }
 
 
@@ -329,6 +356,8 @@ app-footer {
 
 }
 
+
+
 @media screen and (max-width: 1024px) and (min-height: 1200px) {
     app-contact {
         @include dFlex(center, center);
@@ -337,24 +366,17 @@ app-footer {
         height: 64vh;
         gap: 5rem
     }
+    app-my-skills {
+        flex-direction: column;
+        height: 45rem;
+    }
 }
+
 
 @media screen and (min-width: 1024px) and (max-width: 1200px) {
     app-my-skills {
         height: 55rem;
         padding-bottom: 10rem;
-    }
-}
-
-
-@media screen and (max-width: 1024px) and (min-height: 1200px) {
-    app-my-skills {
-        flex-direction: column;
-        height: 45rem;
-    }
-
-    app-about-me {
-        height: 65vh;
     }
 }
 
@@ -382,8 +404,6 @@ app-footer {
 }
 
 @media screen and (min-width: 820px) and (max-width: 1024px) {
-
-
     app-contact {
         @include dFlex(center, center);
         flex-direction: column;
@@ -396,13 +416,6 @@ app-footer {
 @media screen and (max-width: 580px) {
     app-contact {
         height: 50rem;
-    }
-}
-
-
-@media screen and (min-width: 1024px) and (max-width: 1279px) {
-    app-about-me {
-        height: 55rem;
     }
 }
 
@@ -420,8 +433,9 @@ app-footer {
 }
 
 @media screen and (min-width: 2400px) {
+
     app-about-me {
-        height: 90rem;
+        height: 70rem;
     }
 
     app-my-skills {
@@ -429,11 +443,3 @@ app-footer {
     }
 }
 
-@media screen and (min-width: 2500px) {
-    app-about-me {
-        height: 97rem;
-    }
-
-}
-
-// (min-width:920px) and (max-width: 1024)
