@@ -3,6 +3,7 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 import { MatButton, MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import gsap from 'gsap';
+import { OverlayService } from '../../overlay.service';
 
 
 @Component({
@@ -20,15 +21,18 @@ import gsap from 'gsap';
 export class SocialButtonsComponent {
   @ViewChild('socialButtons') socialButtons: ElementRef<HTMLDivElement> | undefined;
   tl: gsap.core.Timeline;
+  firstTime: boolean = true;
+  delay : number;
 
   
-  constructor() {
-
+  constructor(overlayService: OverlayService) {
+    this.firstTime= overlayService.firstTime;
+    this.firstTime? this.delay = 9 : this.delay = 0;
     this.tl = gsap.timeline({
       defaults: {
         ease: 'rough',
         duration: 2,
-        delay: 9
+        delay: this.delay
       }
     })
   };
@@ -38,7 +42,7 @@ export class SocialButtonsComponent {
     if (this.socialButtons) {
       const container = this.socialButtons.nativeElement;
       const buttons = this.socialButtons.nativeElement.querySelectorAll('.social-btn');
-      gsap.to(container, { autoAlpha: 1, delay: 9 });
+      gsap.to(container, { autoAlpha: 1, delay: this.delay });
       this.tl.from(buttons, {
         autoAlpha: 0,
         scale: .5,

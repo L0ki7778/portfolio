@@ -13,6 +13,7 @@ import { OverlayService } from '../../overlay.service';
 })
 export class HeaderComponent {
   firstTime: boolean;
+  @Input() imprint:string = "";
   @Output() dialogEvent = new EventEmitter<string>();
 
 
@@ -23,10 +24,11 @@ export class HeaderComponent {
 
   scrollToFragment(fragment: string): void {
     const element = document.querySelector(fragment);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
   }
+  
 
   switchLanguage() {
     if (this.translateService.currentLang == "de") {

@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
 import Aos from 'aos';
 import { PrivacyComponent } from './main-page/privacy/privacy.component';
+import { OverlayService } from './overlay.service';
 
 
 
@@ -34,18 +35,21 @@ export class AppComponent {
   title = 'portfolio';
 
 
-  constructor(
+  constructor(overlayService:OverlayService,
     public translate: TranslateService,
     private matIconRegistry: MatIconRegistry,
     private domSanitizer: DomSanitizer
   ) {
+    setTimeout(()=>{
+      overlayService.firstTime = false
+    },8000);
     translate.addLangs(['en', 'de']);
     translate.setDefaultLang('en');
     const browserLanguage = translate.getBrowserLang();
     translate.use(browserLanguage?.match(/en|de/) ? browserLanguage : 'en');
-    this.matIconRegistry.addSvgIcon('git',
-    this.domSanitizer.bypassSecurityTrustResourceUrl("/assets/svg/git.svg"));
-    Aos.init();
+    // this.matIconRegistry.addSvgIcon('git',
+    // this.domSanitizer.bypassSecurityTrustResourceUrl("/assets/svg/git.svg"));
+    // Aos.init();
   }
 
 }

@@ -1,6 +1,7 @@
 import { Component, HostListener, Input } from '@angular/core';
 import { MatButton, MatButtonModule } from '@angular/material/button';
 import Aos from 'aos';
+import { OverlayService } from '../overlay.service';
 
 @Component({
   selector: 'app-project-example',
@@ -25,11 +26,16 @@ export class ProjectExampleComponent {
     this.isMobileView = window.innerWidth < 800;
   }
 
-  constructor() {
+  constructor(overlayService: OverlayService) {
     this.isMobileView = window.innerWidth < 800;
-    Aos.init()
+    if(overlayService.firstTime){
+      setTimeout(()=>{
+        Aos.init()
+      },9000)
+    }else{
+      Aos.init()
+    }
   }
-
-  
+ 
 
 }

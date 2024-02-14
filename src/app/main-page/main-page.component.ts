@@ -36,7 +36,8 @@ export class MainPageComponent {
   firstTime: boolean;
 
   constructor(overlayService : OverlayService) {
-    this.firstTime= overlayService.firstTime
+    this.firstTime= overlayService.firstTime;
+    console.log(this.firstTime);
     setTimeout(()=>{
       overlayService.firstTime = false
     },8000)

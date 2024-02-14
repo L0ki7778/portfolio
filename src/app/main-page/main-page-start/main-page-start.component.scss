@@ -49,6 +49,19 @@ svg {
     }
 }
 
+@media screen and (min-width: 820px) and (max-width: 1024px) and (max-height: 1400px) and (min-height: 1100px) {
+    #responsive-overlay {
+        height: 33%;
+        display: block;
+    }
+    svg {
+        height: 90%;
+        bottom: 0;
+        z-index: 1;
+    }
+}
+
+
 
 @media screen and (max-width: 1024px) and (min-height: 1200px) {
     #responsive-overlay {
@@ -115,7 +128,7 @@ svg {
 
 @media screen and (min-width:640px) and (max-width: 920px) and (min-height:900px) {
     #responsive-overlay {
-        height: 28%;
+        height: 30%;
         display: block;
         transform: translate(0px, 10px);
     }

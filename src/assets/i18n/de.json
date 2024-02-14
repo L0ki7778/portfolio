@@ -30,7 +30,7 @@
   },
   "header": {
     "about-me": "Über mich",
-    "skills": "Technologien",
+    "skills": "Skills",
     "portfolio": "Portfolio",
     "currentLanguage": "DE"
   },
@@ -44,15 +44,15 @@
   },
   "menu-system": {
     "about-me": "Über mich",
-    "skills": "Technologien",
+    "skills": "Skills",
     "portfolio": "Portfolio",
     "contact": "Kontakt"
   },
-  "skill-title": "Technologien",
+  "skill-title": "Skills",
   "boxed-skill-title": "Meine Fähigkeiten",
-  "skill-text": "Bisher habe ich mich mit den folgenden Technologien vertraut gemacht.",
+  "skill-text": "Bisher habe ich mich mit den folgenden Skills vertraut gemacht.",
   "skill-button": "Kontakt",
-  "used-skills": "Verwendete Technologien für diese Website.",
+  "used-skills": "Verwendete Skills für diese Website.",
   "portfolio-title": "Portfolio",
   "purple-line-box": {
     "title": "Portfolio",

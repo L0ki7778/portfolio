@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { FooterComponent } from '../footer/footer.component';
 import { HeaderComponent } from '../header/header.component';
+import { MenuSystemComponent } from '../menu-system/menu-system.component';
 
 @Component({
   selector: 'app-imprint',
@@ -9,17 +10,17 @@ import { HeaderComponent } from '../header/header.component';
   imports: [
     TranslateModule,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    MenuSystemComponent
   ],
   templateUrl: './imprint.component.html',
   styleUrl: './imprint.component.scss'
 })
 export class ImprintComponent {
+  overlayStatus: string = 'hide-overlay';
 
-  constructor(private translateService: TranslateService) {
-
-  }
-
+  constructor(private translateService: TranslateService) { }
+  
   switchLanguage() {
     if (this.translateService.currentLang == "de") {
       this.translateService.use('en');
@@ -27,6 +28,12 @@ export class ImprintComponent {
       this.translateService.use('de');
     }
   }
+  
+
+  handleOverlay(value: string) {
+    this.overlayStatus = value;
+  }
+
 
   ngOnInit() {
     if (this.translateService.currentLang == "de") {

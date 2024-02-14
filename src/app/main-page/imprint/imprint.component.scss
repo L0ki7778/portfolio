@@ -73,6 +73,23 @@
     }
 }
 
+.hide-overlay {
+    animation: close-overlay-animation .125s ease forwards;
+}
+
+.display-overlay {
+    display: flex;
+    animation: open-overlay-animation .125s ease forwards;
+}
+
+app-menu-system {
+    height: calc(100% - 8vh);
+    width: 100%;
+    position: fixed;
+    top: 8vh;
+    z-index: -1;
+}
+
 app-header {
     position: absolute;
     min-height: 8dvh;
@@ -88,6 +105,7 @@ app-header {
     }
 }
 
+
 app-footer {
     color: white;
     background-color: #141D2F;
@@ -98,6 +116,77 @@ app-footer {
     right: 0;
     left: 0;
     z-index: 3;
+}
+
+
+@-webkit-keyframes open-overlay-animation {
+    from {
+        opacity: 0;
+        -webkit-clip-path: ellipse(0% 0% at 100% 0%);
+        clip-path: ellipse(0% 0% at 100% 0%);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-clip-path: ellipse(75% 75% at 50% 50%);
+        clip-path: ellipse(75% 75% at 50% 50%);
+        z-index: 4;
+    }
+}
+
+@keyframes open-overlay-animation {
+    from {
+        opacity: 0;
+        -webkit-clip-path: ellipse(0% 0% at 100% 0%);
+        clip-path: ellipse(0% 0% at 100% 0%);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-clip-path: ellipse(75% 75% at 50% 50%);
+        clip-path: ellipse(75% 75% at 50% 50%);
+        z-index: 4;
+    }
+}
+
+@-webkit-keyframes close-overlay-animation {
+    0% {
+        opacity: 1;
+        -webkit-clip-path: ellipse(75% 75% at 50% 50%);
+        clip-path: ellipse(75% 75% at 50% 50%);
+    }
+
+    99% {
+        opacity: 1;
+        -webkit-clip-path: ellipse(0% 0% at 100% 0%);
+        clip-path: ellipse(0% 0% at 100% 0%);
+    }
+
+    100% {
+        opacity: 0;
+        display: none;
+        z-index: -1;
+    }
+}
+
+@keyframes close-overlay-animation {
+    0% {
+        opacity: 1;
+        -webkit-clip-path: ellipse(75% 75% at 50% 50%);
+        clip-path: ellipse(75% 75% at 50% 50%);
+    }
+
+    99% {
+        opacity: 1;
+        -webkit-clip-path: ellipse(0% 0% at 100% 0%);
+        clip-path: ellipse(0% 0% at 100% 0%);
+    }
+
+    100% {
+        opacity: 0;
+        display: none;
+        z-index: -1;
+    }
 }
 
 @media screen and (min-width:2800px) {

@@ -34,7 +34,7 @@ header {
 }
 
 .e-letter {
-    color:$green;
+    color: $green;
 }
 
 .name-animation {
@@ -46,25 +46,26 @@ header {
     animation: name-into-header 0.5s ease forwards 8s;
 }
 
-.letter-animation{
-        animation: color-letter 0.5s ease forwards 8s;
+.letter-animation {
+    animation: color-letter 0.5s ease forwards 8s;
 }
 
 
-#current-language{
+#current-language {
     font-size: 1.2rem;
     font-weight: bold;
     position: absolute;
     align-self: center;
-    color:white;
+    color: white;
     z-index: 4;
     right: 3%;
     width: fit-content;
 
-    &:hover{
+    &:hover {
         cursor: pointer;
     }
 }
+
 #header-left {
     display: flex;
     gap: 2rem;
@@ -73,22 +74,26 @@ header {
         color: white;
         font-size: 1.5rem;
         text-decoration: none;
-        
+
         &:hover {
             color: $purple
         }
     }
 }
 
-.a-animation{
-    a{
+.a-animation {
+    a {
         opacity: 0;
         animation: fade-in 0.5s ease forwards 8s;
     }
 }
 
+.secondary-header {
+    display: none;
+}
 
-app-burger-cross-animation{
+
+app-burger-cross-animation {
     height: 30px;
     position: absolute;
     right: 7%;
@@ -107,10 +112,18 @@ app-burger-cross-animation{
 
 }
 
-@keyframes name-into-heade-mq-variant {
+@keyframes name-into-header-viewport-variant {
     to {
         transform: translate(0, 0);
         font-size: 5rem;
+        opacity: 1;
+    }
+}
+
+@keyframes name-into-header-mq-variant {
+    to {
+        transform: translate(0, 0);
+        font-size: 2rem;
         opacity: 1;
     }
 
@@ -133,8 +146,28 @@ app-burger-cross-animation{
 
 }
 
-@media  screen and (min-width:2400px) {
-    #current-language{
+@media screen and (max-width:420px) {
+    .name-animation {
+        font-size: 6vw;
+        color: white;
+        font-weight: bold;
+        transform: translate(35vw, 48vh);
+        opacity: 0;
+        animation: name-into-header-mq-variant 0.5s ease forwards .1s;
+    }
+
+    header{
+        nav{
+            #header-name{
+                font-size: 2rem;
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width:2400px) {
+    #current-language {
         font-size: 2.2rem;
     }
 }
@@ -144,16 +177,7 @@ app-burger-cross-animation{
     header {
         background-color: #111620;
 
-        nav {
-            #name {
-                animation: name-into-header 0.5s ease forwards 1s;
-
-                #e-letter {
-                    animation: color-letter 0.5s ease forwards 1s;
-                }
-            }
-        }
-        #current-language{
+        #current-language {
             display: none;
         }
     }
@@ -171,12 +195,13 @@ app-burger-cross-animation{
         margin: auto;
     }
 
-    app-burger-cross-animation{
+    app-burger-cross-animation {
         display: block;
     }
 }
+
 @media screen and (min-width:640px) and (max-width: 940px) and (max-height:510px) {
-    header{
+    header {
         height: 12dvh;
     }
 }
@@ -212,16 +237,19 @@ app-burger-cross-animation{
 
 @media screen and (min-width: 2400px) {
     header {
-        nav {
-            #name {
-                animation: name-into-heade-mq-variant 0.5s ease forwards 8s;
-            }
-        }
-
         #header-left {
             a {
                 font-size: 2rem;
             }
         }
+    }
+
+    .name-animation {
+        font-size: 6vw;
+        color: white;
+        font-weight: bold;
+        transform: translate(35vw, 48vh);
+        opacity: 0;
+        animation: name-into-header-viewport-variant 0.5s ease forwards 8s;
     }
 }

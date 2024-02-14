@@ -29,7 +29,7 @@
     @include dFlex(space-between, center);
     position: relative;
     width: 100%;
-    max-width: calc(2400px - 2400px / 100 * 14);
+    max-width: 2400px;
     height: 100%;
     background-color: #141D2F;
     font-family: 'Poppins', sans-serif;

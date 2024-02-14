@@ -1,16 +1,17 @@
 <header>
     <nav>
-        <div id="header-name" #name><span class="e-letter">R</span>ené <span class="e-letter">H</span>eller</div>
         @if(firstTime){
+        <div id="header-name" class="name-animation" #name><span class="e-letter">R</span>ené <span class="e-letter">H</span>eller</div>
             <div id="header-left" class="a-animation">
-                <a routerLink="/home" (click)="scrollToFragment('#social-buttons')">{{"header.about-me"|translate}}</a>
-                <a routerLink="/home" (click)="scrollToFragment('#skill-scrolltrigger')">{{"header.skills"|translate}}</a>
+                <a routerLink="/home" [class]="imprint" (click)="scrollToFragment('#social-buttons')">{{"header.about-me"|translate}}</a>
+                <a routerLink="/home" [class]="imprint" (click)="scrollToFragment('#skill-scrolltrigger')">{{"header.skills"|translate}}</a>
                 <a routerLink="/home" (click)="scrollToFragment('#pf-scrolltrigger')">Portfolio</a>
             </div>
         }@else {
+            <div id="header-name" #name><span class="e-letter">R</span>ené <span class="e-letter">H</span>eller</div>
             <div id="header-left">
-                <a routerLink="/home" (click)="scrollToFragment('#social-buttons')">{{"header.about-me"|translate}}</a>
-                <a routerLink="/home" (click)="scrollToFragment('#skill-scrolltrigger')">{{"header.skills"|translate}}</a>
+                <a routerLink="/home" [class]="imprint" (click)="scrollToFragment('#social-buttons')">{{"header.about-me"|translate}}</a>
+                <a routerLink="/home" [class]="imprint" (click)="scrollToFragment('#skill-scrolltrigger')">{{"header.skills"|translate}}</a>
                 <a routerLink="/home" (click)="scrollToFragment('#pf-scrolltrigger')">Portfolio</a>
             </div>
         }

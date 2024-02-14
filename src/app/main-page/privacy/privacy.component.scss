@@ -1,8 +1,17 @@
 @import '../../mixin.scss';
 
 .priv-container{
-    padding: 0 7%;
-}
+    position: absolute;
+    top: 8dvh;
+    left: 0;
+    right: 0;
+    bottom: 8dvh;
+    width: 86%;
+    margin: auto;
+    max-width: 2400px;
+    @include dFlex(space-between, center);
+    flex-direction: column;
+    background: linear-gradient(to right, #141D2F, #202C42, #141D2F);}
 
 #current-language{
     font-size: 1.2rem;
@@ -23,8 +32,9 @@
 
 #privacy-policy-route{
     @include dFlex(flex-start, flex-start);
+    z-index: 1;
     flex-direction: column;
-    flex-wrap: wrap;
+    overflow: scroll;
     height: 100%;
     width: 100%;
     max-width: 2400px;
@@ -37,6 +47,121 @@
         &:visited{
             color: $purple;
         }
+    }
+}
+
+.hide-overlay {
+    animation: close-overlay-animation .125s ease forwards;
+}
+
+.display-overlay {
+    display: flex;
+    animation: open-overlay-animation .125s ease forwards;
+}
+
+app-menu-system {
+    height: calc(100% - 8vh);
+    width: 100%;
+    position: fixed;
+    top: 8vh;
+    z-index: -1;
+}
+
+app-header {
+    position: absolute;
+    min-height: 8dvh;
+    top: 0;
+    left: 0;
+    width: 100%;
+    header{
+        nav{
+            #name{
+                animation: unset;
+            }
+        }
+    }
+}
+
+app-footer {
+    color: white;
+    background-color: #141D2F;
+    position: absolute;
+    width: 100%;
+    height: 10dvh;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 3;
+}
+
+
+@-webkit-keyframes open-overlay-animation {
+    from {
+        opacity: 0;
+        -webkit-clip-path: ellipse(0% 0% at 100% 0%);
+        clip-path: ellipse(0% 0% at 100% 0%);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-clip-path: ellipse(75% 75% at 50% 50%);
+        clip-path: ellipse(75% 75% at 50% 50%);
+        z-index: 4;
+    }
+}
+
+@keyframes open-overlay-animation {
+    from {
+        opacity: 0;
+        -webkit-clip-path: ellipse(0% 0% at 100% 0%);
+        clip-path: ellipse(0% 0% at 100% 0%);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-clip-path: ellipse(75% 75% at 50% 50%);
+        clip-path: ellipse(75% 75% at 50% 50%);
+        z-index: 4;
+    }
+}
+
+@-webkit-keyframes close-overlay-animation {
+    0% {
+        opacity: 1;
+        -webkit-clip-path: ellipse(75% 75% at 50% 50%);
+        clip-path: ellipse(75% 75% at 50% 50%);
+    }
+
+    99% {
+        opacity: 1;
+        -webkit-clip-path: ellipse(0% 0% at 100% 0%);
+        clip-path: ellipse(0% 0% at 100% 0%);
+    }
+
+    100% {
+        opacity: 0;
+        display: none;
+        z-index: -1;
+    }
+}
+
+@keyframes close-overlay-animation {
+    0% {
+        opacity: 1;
+        -webkit-clip-path: ellipse(75% 75% at 50% 50%);
+        clip-path: ellipse(75% 75% at 50% 50%);
+    }
+
+    99% {
+        opacity: 1;
+        -webkit-clip-path: ellipse(0% 0% at 100% 0%);
+        clip-path: ellipse(0% 0% at 100% 0%);
+    }
+
+    100% {
+        opacity: 0;
+        display: none;
+        z-index: -1;
     }
 }
 

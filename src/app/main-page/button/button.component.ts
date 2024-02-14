@@ -22,5 +22,10 @@ export class ButtonComponent {
     this.refEvent.emit();
   }
 
-
+  scrollTo(fragment: string): void {
+    const element = document.querySelector(fragment);
+      if (element && element instanceof HTMLElement) {
+        element.focus();
+      }
+  }
 }
