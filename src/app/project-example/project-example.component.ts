@@ -20,22 +20,19 @@ export class ProjectExampleComponent {
   @Input() direction:string='';
 
   isMobileView: boolean = false;
+  firstTime:boolean;
 
   @HostListener('window:resize', ['$event'])
   onResize(event: Event) {
     this.isMobileView = window.innerWidth < 800;
   }
-
+  
   constructor(overlayService: OverlayService) {
+    this.firstTime=overlayService.firstTime;
     this.isMobileView = window.innerWidth < 800;
-    if(overlayService.firstTime){
-      setTimeout(()=>{
-        Aos.init()
-      },9000)
-    }else{
-      Aos.init()
-    }
+    Aos.init()
   }
- 
+
+  
 
 }

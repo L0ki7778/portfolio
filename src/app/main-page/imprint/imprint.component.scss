@@ -240,6 +240,7 @@ app-footer {
 
     .imprint-container{
         padding: 0 2%;
+        bottom:12dvh;
         #imprint-route{
             p,li{
                 font-size: 1rem;
@@ -256,5 +257,9 @@ app-footer {
                 font-size: 1.1rem;
             }
         }
+    }
+
+    app-footer{
+        height: 15dvh;
     }
 }

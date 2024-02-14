@@ -216,6 +216,7 @@ app-footer {
 
     .priv-container{
         padding: 0 2%;
+        bottom:14dvh;
         #privacy-policy-route{
             p,li{
                 font-size: 1rem;
@@ -232,5 +233,8 @@ app-footer {
                 font-size: 1.1rem;
             }
         }
+    }
+    app-footer{
+        height: 16dvh;
     }
 }

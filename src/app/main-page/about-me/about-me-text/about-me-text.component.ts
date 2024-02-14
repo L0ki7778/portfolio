@@ -11,6 +11,7 @@ import { TranslateModule } from '@ngx-translate/core';
 })
 export class AboutMeTextComponent {
 
+
   constructor() { 
     Aos.init();
   }

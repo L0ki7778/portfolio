@@ -1,37 +1,22 @@
-<!-- @if(firstTime){<app-intro></app-intro>}
-<app-header (dialogEvent)="handleOverlay($event)"></app-header>
-<app-menu-system [class]="overlayStatus"></app-menu-system>
 @if(firstTime){
-<app-main-page-start class="start-animation"></app-main-page-start>
+    <app-intro></app-intro>
+    <app-header (dialogEvent)="handleOverlay($event)"></app-header>
+    <app-menu-system [class]="overlayStatus"></app-menu-system>
+    <app-main-page-start class="start-animation"></app-main-page-start>
+    @defer {
+        <app-about-me id="app-about"></app-about-me>
+        <app-my-skills id="app-skill"></app-my-skills>
+        <app-portfolio id="portfolio"></app-portfolio>
+        <app-contact id="contact"></app-contact>
+        <app-footer></app-footer>
+    }@placeholder(minimum 10s) {}
 }@else {
-<app-main-page-start></app-main-page-start>
-}
-<app-about-me id="app-about"></app-about-me>
-<app-my-skills id="app-skill"></app-my-skills>
-<app-portfolio id="portfolio"></app-portfolio>
-<app-contact id="contact"></app-contact>
-@if(firstTime){<app-footer class="footer-fade-in"></app-footer>}
-@else {<app-footer></app-footer>} -->
-
-
-
-@if(firstTime){
-<app-intro></app-intro>
-<app-header (dialogEvent)="handleOverlay($event)"></app-header>
-<app-menu-system [class]="overlayStatus"></app-menu-system>
-<app-main-page-start class="start-animation"></app-main-page-start>
-<app-about-me class="about-init" id="app-about"></app-about-me>
-<app-my-skills class="skills-init-include" id="app-skill"></app-my-skills>
-<app-portfolio class="portfolio-init" id="portfolio"></app-portfolio>
-<app-contact class="contact-init-include" id="contact"></app-contact>
-<app-footer class="footer-init"></app-footer>
-}@else {
-<app-header (dialogEvent)="handleOverlay($event)"></app-header>
-<app-menu-system [class]="overlayStatus"></app-menu-system>
-<app-main-page-start></app-main-page-start>
-<app-about-me class="about-flex" id="app-about"></app-about-me>
-<app-my-skills class="skills-include" id="app-skill"></app-my-skills>
-<app-portfolio class="portfolio-flex" id="portfolio"></app-portfolio>
-<app-contact class="contact-include" id="contact"></app-contact>
-<app-footer class="footer-flex"></app-footer>
+    <app-header (dialogEvent)="handleOverlay($event)"></app-header>
+    <app-menu-system [class]="overlayStatus"></app-menu-system>
+    <app-main-page-start></app-main-page-start>
+    <app-about-me id="app-about"></app-about-me>
+    <app-my-skills id="app-skill"></app-my-skills>
+    <app-portfolio id="portfolio"></app-portfolio>
+    <app-contact id="contact"></app-contact>
+    <app-footer></app-footer>
 }

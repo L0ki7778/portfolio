@@ -71,7 +71,7 @@ app-button {
 }
 
 .i-am-fast {
-    animation: i-am-animation 0.5s ease forwards .1s;
+    animation: i-am-animation 0.1s ease forwards .1s;
 }
 
 .i-am-animation {
@@ -127,7 +127,7 @@ app-button {
 }
 
 .my-name-fast {
-    animation: name-animation 0.5s ease forwards .1s;
+    animation: name-animation 0.1s ease forwards .1s;
 }
 
 @keyframes name-animation {
@@ -148,7 +148,7 @@ app-button {
 }
 
 .my-profession-fast {
-    animation: profession-animation 0.5s ease forwards .1s;
+    animation: profession-animation 0.1s ease forwards .1s;
 }
 
 @keyframes profession-animation {
@@ -222,7 +222,7 @@ app-scroll-down {
     }
 
     .i-am-fast {
-        animation: i-am-viewport-variant 0.5s ease forwards .1s;
+        animation: i-am-viewport-variant 0.1s ease forwards .1s;
     }
 }
 
@@ -233,20 +233,20 @@ app-scroll-down {
     }
 
     #my-name {
-        animation: name-animation 0.5s ease forwards 1s;
+        animation: name-animation 0.1s ease forwards .1s;
         margin-bottom: -1rem;
     }
 
     #my-profession {
-        animation: profession-animation 0.5s ease forwards 1s;
+        animation: profession-animation 0.1s ease forwards .1s;
     }
 
     .i-am-animation {
-        animation: i-am-viewport-variant 0.5s ease forwards .1s;
+        animation: i-am-viewport-variant 0.1s ease forwards .1s;
     }
 
     .i-am-fast {
-        animation: i-am-viewport-variant 0.5s ease forwards .1s;
+        animation: i-am-viewport-variant 0.1s ease forwards .1s;
     }
 
     #start-bottom {
@@ -341,18 +341,18 @@ screen and (min-width: 820px) and (max-width: 1024px) and (max-height: 1400px) a
     }
 
     .my-name-animation {
-        animation: name-animation 0.5s ease forwards .1s;
+        animation: name-animation 0.1s ease forwards .1s;
     }
 
     .my-profession-animation {
-        animation: profession-animation 0.5s ease forwards .1s;
+        animation: profession-animation 0.1s ease forwards .1s;
     }
 
     .i-am-animation {
-        animation: i-am-viewport-variant 0.5s ease forwards .1s;
+        animation: i-am-viewport-variant 0.1s ease forwards .1s;
     }
     .i-am-fast{
-        animation: i-am-viewport-variant 0.5s ease forwards .1s;
+        animation: i-am-viewport-variant 0.1s ease forwards .1s;
     }
 
     #start-bottom {
@@ -514,6 +514,6 @@ screen and (min-width: 820px) and (max-width: 1024px) and (max-height: 1400px) a
         animation: rotate-mq-variant 0.5s ease forwards 8s;
     }
     .i-am-fast{
-        animation: rotate-mq-variant 0.5s ease forwards .1s;
+        animation: rotate-mq-variant 0.1s ease forwards .1s;
     }
 }

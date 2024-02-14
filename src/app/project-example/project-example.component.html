@@ -1,18 +1,43 @@
-<div [class]="direction" class="project-container">
-    <img [src]="imgSrc"  data-aos="fade-up-right" data-aos-offset="100" alt="">
-    <div  data-aos="fade-up-left" data-aos-offset="100" class="project-text">
-        <div class="project-title">
-            <h1 class="project-title">{{title}}</h1>
+@if(firstTime){
+    @defer{
+        <div [class]="direction" class="project-container">
+            <img [src]="imgSrc"  data-aos="fade-up-right" data-aos-offset="100" alt="">
+            <div  data-aos="fade-up-left" data-aos-offset="100" class="project-text">
+                <div class="project-title">
+                    <h1 class="project-title">{{title}}</h1>
+                </div>
+                <div class="skills">
+                    <p>{{skills}}</p>
+                </div>
+                <div class="project-description">
+                    <p>{{description}}</p>
+                </div>
+                <div class="buttons">
+                    <a mat-button mat-raised-button color="primary" [href]="html" target="_blank">Live test</a>
+                    <a class="stroked" mat-button mat-stroked-button color="accent" [href]="git" target="_blank">Github</a>
+                </div>
+            </div>
         </div>
-        <div class="skills">
-            <p>{{skills}}</p>
-        </div>
-        <div class="project-description">
-            <p>{{description}}</p>
-        </div>
-        <div class="buttons">
-            <a mat-button mat-raised-button color="primary" [href]="html" target="_blank">Live test</a>
-            <a class="stroked" mat-button mat-stroked-button color="accent" [href]="git" target="_blank">Github</a>
+    }@placeholder(minimum 10s) {
+        <div></div>
+    }
+}@else {
+    <div [class]="direction" class="project-container">
+        <img [src]="imgSrc"  data-aos="fade-up-right" data-aos-offset="100" alt="">
+        <div  data-aos="fade-up-left" data-aos-offset="100" class="project-text">
+            <div class="project-title">
+                <h1 class="project-title">{{title}}</h1>
+            </div>
+            <div class="skills">
+                <p>{{skills}}</p>
+            </div>
+            <div class="project-description">
+                <p>{{description}}</p>
+            </div>
+            <div class="buttons">
+                <a mat-button mat-raised-button color="primary" [href]="html" target="_blank">Live test</a>
+                <a class="stroked" mat-button mat-stroked-button color="accent" [href]="git" target="_blank">Github</a>
+            </div>
         </div>
     </div>
-</div>
+}
