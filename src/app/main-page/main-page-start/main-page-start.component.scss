@@ -3,8 +3,8 @@
 app-selfie {
     position: absolute;
     display: flex;
-    bottom:0;
-    height: 92vh;
+    bottom: 0;
+    height: 100%;
     width: 100%;
     justify-content: center;
     background-color: $darkBlue;
@@ -28,9 +28,19 @@ svg {
     position: absolute;
     bottom: 0;
     width: 100%;
-    transform: translate(0,6px);
+    transform: translate(0, 6px);
     height: 18%;
     display: none;
+}
+
+@media screen and (min-height: 1900px) {
+    #start-page-container {
+        #right-section {
+            top:40%;
+        }
+
+    }
+
 }
 
 
@@ -38,7 +48,7 @@ svg {
     #responsive-overlay {
         display: none;
     }
-    
+
 }
 
 
@@ -54,6 +64,7 @@ svg {
         height: 33%;
         display: block;
     }
+
     svg {
         height: 90%;
         bottom: 0;
@@ -68,6 +79,7 @@ svg {
         height: 28%;
         display: block;
     }
+
     svg {
         height: 75%;
         bottom: 0;
@@ -105,7 +117,7 @@ svg {
 
 @media screen and (min-width:640px) and (max-width: 940px) and (max-height:510px) {
     #responsive-overlay {
-       display: none;
+        display: none;
     }
 
     svg {
@@ -118,9 +130,9 @@ svg {
 
 @media screen and (min-width:640px) and (max-width: 940px) and (max-height:390px) {
     #responsive-overlay {
-       display: block;
-       height:8%;
-       transform: translate(0, 10px);
+        display: block;
+        height: 8%;
+        transform: translate(0, 10px);
     }
 
 }
@@ -153,40 +165,41 @@ svg {
     }
 }
 
-@media screen and  (max-width: 599px) {
-    #responsive-overlay {
-        height: 31%;
-        display: block;
-    }
-    svg {
-        height: 75%;
-        bottom: 0;
-        z-index: 1;
-    }
-}
-
-@media screen and  (max-width: 460px) {
+@media screen and (max-width: 599px) {
     #responsive-overlay {
         height: 33%;
         display: block;
     }
+
     svg {
-        height: 75%;
+        height: 77%;
         bottom: 0;
         z-index: 1;
     }
 }
 
-@media screen and  (max-width: 460px) and (max-height:800px) {
+@media screen and (max-width: 460px) {
     #responsive-overlay {
         height: 33%;
         display: block;
     }
+
     svg {
-        height: 83%;
+        height: 73%;
         bottom: 0;
         z-index: 1;
     }
 }
 
+@media screen and (max-width: 460px) and (max-height:800px) {
+    #responsive-overlay {
+        height: 33%;
+        display: block;
+    }
 
+    svg {
+        height: 80%;
+        bottom: 0;
+        z-index: 1;
+    }
+}

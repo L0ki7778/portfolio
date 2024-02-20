@@ -18,7 +18,7 @@ export class IntroComponent {
     this.tl= gsap.timeline({
       defaults: {
         ease: 'power4.out',
-        duration: 1.7
+        duration: 1
       }
     })
   }

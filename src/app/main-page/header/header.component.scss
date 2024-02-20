@@ -43,11 +43,11 @@ header {
     font-weight: bold;
     transform: translate(35vw, 48vh);
     opacity: 0;
-    animation: name-into-header 0.5s ease forwards 8s;
+    animation: name-into-header 0.5s ease forwards 5.5s;
 }
 
 .letter-animation {
-    animation: color-letter 0.5s ease forwards 8s;
+    animation: color-letter 0.5s ease forwards 5.5s;
 }
 
 
@@ -84,7 +84,7 @@ header {
 .a-animation {
     a {
         opacity: 0;
-        animation: fade-in 0.5s ease forwards 8s;
+        animation: fade-in 0.5s ease forwards 5.5s;
     }
 }
 
@@ -250,6 +250,6 @@ app-burger-cross-animation {
         font-weight: bold;
         transform: translate(35vw, 48vh);
         opacity: 0;
-        animation: name-into-header-viewport-variant 0.5s ease forwards 8s;
+        animation: name-into-header-viewport-variant 0.5s ease forwards 5.5s;
     }
 }

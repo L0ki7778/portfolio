@@ -6,70 +6,70 @@
     top:20dvh;
     margin: auto;
     fill: transparent;
-    animation: fill-letters 2s ease forwards 5s;
+    animation: fill-letters 1s ease forwards 3.4s;
 
    
         path {
-            animation: dash-animation 2s ease forwards 0s;
+            animation: dash-animation 1s ease forwards 0s;
         };
         path:nth-child(1) {
             stroke-dasharray:247.93092346191406;
             stroke-dashoffset:247.93092346191406;
-            animation-delay: 3.2s;
+            animation-delay: 2.2s;
         };
 
         path:nth-child(2) {
             stroke-dasharray:400.9051208496094;
             stroke-dashoffset:400.9051208496094;
-            animation-delay: 3.6s;
+            animation-delay: 2.6s;
         };
 
         path:nth-child(3) {
             stroke-dasharray:241.21600341796875;
             stroke-dashoffset:241.21600341796875;
-            animation-delay: 3.8s;
+            animation-delay: 2.8s;
         };
 
         path:nth-child(4) {
             stroke-dasharray:241.21600341796875;
             stroke-dashoffset:241.21600341796875;
-            animation-delay: 3.12s;
+            animation-delay: 2.12s;
         };
 
         path:nth-child(5) {
             stroke-dasharray:400.9053039550781;
             stroke-dashoffset:400.9053039550781;
-            animation-delay: 3.10s;
+            animation-delay: 2.10s;
         };
 
         path:nth-child(6) {
             stroke-dasharray:487.7440185546875;
             stroke-dashoffset:487.7440185546875;
-            animation-delay: 3.4s;
+            animation-delay: 2.4s;
         };
 
         path:nth-child(7) {
             stroke-dasharray:509.4919738769531;
             stroke-dashoffset:509.4919738769531;
-            animation-delay: 3.14s;
+            animation-delay: 2.14s;
         };
 
         path:nth-child(8) {
             stroke-dasharray:388.800537109375;
             stroke-dashoffset:388.800537109375;
-            animation-delay: 3.18s;
+            animation-delay: 2.18s;
         };
 
         path:nth-child(9) {
             stroke-dasharray:400.9043273925781;
             stroke-dashoffset:400.9043273925781;
-            animation-delay: 3.10s;
+            animation-delay: 2.10s;
         };
 
         path:nth-child(10) {
             stroke-dasharray:464.0771789550781;
             stroke-dashoffset:464.0771789550781;
-            animation-delay: 3.1s;
+            animation-delay: 2.1s;
         }
 };
 

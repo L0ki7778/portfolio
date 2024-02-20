@@ -32,9 +32,9 @@ export class WelcomeComponent {
             clearInterval(interval);
           }
           this.index++;
-        }, 50);
+        }, 35);
       }
-    }, 1500);
+    }, 1000);
     }
 }
 

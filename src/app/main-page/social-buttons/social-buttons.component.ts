@@ -27,7 +27,7 @@ export class SocialButtonsComponent {
   
   constructor(overlayService: OverlayService) {
     this.firstTime= overlayService.firstTime;
-    this.firstTime? this.delay = 9 : this.delay = 0;
+    this.firstTime? this.delay = 5.9 : this.delay = 0;
     this.tl = gsap.timeline({
       defaults: {
         ease: 'rough',
@@ -52,13 +52,8 @@ export class SocialButtonsComponent {
         duration: .5,
         rotation: 360, transformOrigin: "50% 50%"
       })
-
-
-
     }
   };
-
-
 }
 
 

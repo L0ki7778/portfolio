@@ -20,7 +20,7 @@ app-intro {
     align-items: center;
     background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(20, 20, 20, 1) 70%, rgb(40, 40, 40) 100%);
     transition: all ease 0.2s;
-    animation: fold-out 0.5s ease forwards 6.5s, shorten 0.5s ease forwards 8s;
+    animation: fold-out 0.5s ease forwards 4.5s, shorten 0.5s ease forwards 6s;
 }
 
 
@@ -81,7 +81,7 @@ app-main-page-start {
 .start-animation {
     clip-path: ellipse(0% 60% at 50% 50%);
     -webkit-clip-path: ellipse(0% 60% at 50% 50%);
-    animation: unfold .5s ease forwards 7.05s;
+    animation: unfold .5s ease forwards 5s;
 }
 
 

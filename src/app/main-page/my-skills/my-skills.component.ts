@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, ViewChild, inject } from '@angular/core';
 import { ButtonComponent } from '../button/button.component';
 import gsap from 'gsap';
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -19,12 +19,14 @@ export class MySkillsComponent {
   @ViewChild('boxedSkillTitle') boxedSkillTitle: ElementRef<HTMLHeadElement> | undefined;
   @ViewChild('skillTextContainer') skillTextContainer: ElementRef<HTMLDivElement> | undefined;
   @ViewChild('usedSkills') usedSkills: ElementRef<HTMLDivElement> | undefined;
+  overlayService = inject(OverlayService);
   isMobileView: boolean = false;
   firstTime: boolean;
 
 
-  constructor(overlayService: OverlayService) {
-    this.firstTime = overlayService.firstTime
+
+  constructor() {
+    this.firstTime = this.overlayService.firstTime
     this.isMobileView = window.innerWidth <= 1024 && window.innerHeight >= 1200 || window.innerWidth < 1024;
     gsap.registerPlugin(ScrollTrigger);
   }
@@ -120,7 +122,7 @@ export class MySkillsComponent {
         scale: 1,
         yPercent: 0,
         xPercent: 0,
-        duration: 1,
+        duration: .7,
         skewX: 0,
         skewY: 0,
         rotation: 0,
@@ -165,13 +167,13 @@ export class MySkillsComponent {
       scale: 1,
       yPercent: 0,
       xPercent: 0,
-      duration: 1,
+      duration: .4,
       skewX: 0,
       skewY: 0,
       rotation: 0,
       transformOrigin: '50% 50%',
       stagger: {
-        each: .1,
+        each: .07,
         from: "random",
         ease: "power1.in"
       }
@@ -268,7 +270,7 @@ export class MySkillsComponent {
       scale: 1,
       skewX: 0,
       autoAlpha: 1,
-      duration: 1.2
+      duration: 0.7
     });
   };
 
@@ -290,7 +292,7 @@ export class MySkillsComponent {
       scale: 1,
       skewX: 0,
       autoAlpha: 1,
-      duration: 1.2
+      duration: 0.7
     });
   };
 
@@ -364,7 +366,7 @@ export class MySkillsComponent {
       autoAlpha: 1,
       yPercent: 0,
       xPercent: 0,
-      duration: 1,
+      duration: .7,
     });
   };
 
@@ -386,7 +388,7 @@ export class MySkillsComponent {
       autoAlpha: 1,
       yPercent: 0,
       xPercent: 0,
-      duration: 1,
+      duration: .7,
     });
   };
 
