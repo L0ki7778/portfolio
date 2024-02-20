@@ -301,8 +301,8 @@ export class MySkillsComponent {
     return {
       trigger: trigger,
       once: true,
-      start: "top center+=400",
-      end: "top center+=400",
+      start: "top center+=700",
+      end: "top center+=700",
       toggleActions: "restart none reverse none"
     }
   };

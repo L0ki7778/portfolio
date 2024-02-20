@@ -1,11 +1,14 @@
+
 {
   "about-me": "About me",
   "introduction-text": {
-    "quote": "\"[...]Every solution for every problem does allready exist. We just have to find it.[...]\"",
-    "description": "Hi! I´m René Heller, a Frontend Developer and the quote above is literally my mindset. I´m 34 years old and based near Berlin, Germany. I´m looking forward to help you to create the design as well as the logic you desire for your website!"
+    "quote": "\"Every problem already has a solution. We just need to find it. [...]\"",
+    "description": "I'm 34 years old, based near Berlin, and I'm experienced at building web applications. I acquired my skills through the following training courses:"
   },
-  "light-box": "Every new idea for tackling a task motivates me in my work. I find joy in overcoming challenges and delivering the desired results.",
-  "puzzle-box": "Reading documentation and developing new approaches are part of my commitment to improve daily. If I can also exchange ideas with a team, even better!",
+  "light-box-before-link": "A frontend course at ",
+  "light-box-text-after-link": " and a multi-month training session for frontend development at the German Developer Akademie GmbH.",
+  "light-box-link": "freeCodeCamp",
+  "puzzle-box": "There, I was able to expand my tech stack with Angular and TypeScript by working on individual and group projects.",
   "left-contact-section": {
     "title": "Contact",
     "subtitle": "Facing a challenge or have a project in mind?",
@@ -32,7 +35,7 @@
     "about-me": "About me",
     "skills": "Skills",
     "portfolio": "Portfolio",
-    "currentLanguage": "EN"
+    "currentLanguage": "DE"
   },
   "start-page-container": {
     "headline": {

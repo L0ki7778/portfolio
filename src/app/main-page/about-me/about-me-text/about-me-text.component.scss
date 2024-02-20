@@ -15,6 +15,7 @@ h1 {
     gap: 2rem;
     width: 40%;
     height: 100%;
+    z-index: 2;
 
     #introduction-text {
         p {
@@ -34,7 +35,15 @@ h1 {
     }
 }
 
-;
+#freeCodeCamp{
+    color: $lightBlue;
+    font-family: 'Poppins';
+    text-decoration: none;
+
+    &:visited{
+        color: mediumpurple
+    }
+}
 
 #light-box,
 #puzzle-box {
@@ -53,7 +62,7 @@ h1 {
 
     #puzzle-svg {
         fill: $gray;
-        width: 16rem;
+        width: 11rem;
         animation: puzzle-animation 0.5s ease forwards 1s;
     }
 
@@ -78,17 +87,17 @@ h1 {
         width: 75%;
         margin: auto;
     }
+
     #light-box {
         width: calc(100% - 7%);
+
         #light-svg {
             width: 13rem;
         }
     }
+
     #puzzle-box {
         width: calc(100% - 7%);
-        #puzzle-svg {
-            width: 16rem;
-        }
     }
 }
 
@@ -148,6 +157,6 @@ h1 {
 
         }
     }
-
-    ;
 }
+
+

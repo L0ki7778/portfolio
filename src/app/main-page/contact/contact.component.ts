@@ -76,7 +76,6 @@ export class ContactComponent {
   onSubmit(): void {
     if (this.contactForm.valid) {
       const contactData = this.contactForm.value;
-      console.log(contactData)
       this.http.post(this.post.endPoint, this.post.body(contactData))
         .subscribe({
           next: (response) => {

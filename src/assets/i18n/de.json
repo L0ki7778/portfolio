@@ -2,14 +2,16 @@
   "about-me": "Über mich",
   "introduction-text": {
     "quote": "\"[...]Für jedes Problem gibt es bereits eine Lösung. Wir müssen sie nur finden.[...]\"",
-    "description": "Hallo! Ich bin René Heller, ein Frontend-Entwickler, und das obige Zitat ist buchstäblich meine Denkweise. Ich bin 34 Jahre alt und lebe in der Nähe von Berlin!"
+    "description": "Hallo! Ich bin René Heller, 34 Jahre alt und als Frontend Entwickler bringe ich Projekterfahrung im Bau von Web-Applikationen mit. Meine Fachkenntnisse habe ich durch zwei Weiterbildungen erworben:"
   },
-  "light-box": "Eine neue Idee umzusetzen motiviert mich bei meiner Arbeit! Es bereitet mir viel Spaß, Herausforderung zu bewältigen und das gewünschte Ergebnis zu liefern.",
-  "puzzle-box": "Das Lesen von Dokumentationen und Erarbeiten neuer Ansätze gehören zu meinem Anspruch, mich täglich zu verbessern. Wenn ich mich auch noch mit einem Team austauschen kann, umso besser!",
+  "light-box-before-link": "Ein Frontend Kurs beim ",
+  "light-box-text-after-link": " und bei einer mehrmontatigen Fortbildung zum Frontend Entwickler bei der Developer Akademie GmbH.",
+  "light-box-link": "freeCodeCamp",
+  "puzzle-box": "Dort konnte ich in Einzel- und Gruppenprojekten meinen Tech-Stack unter anderem durch Angular und TypeScript ergänzen.",
   "left-contact-section": {
     "title": "Kontakt",
     "subtitle": "Stehen Sie vor einer Herausforderung oder haben eine Idee für ein Projekt?",
-    "description": "Nehmen Sie gern Kontakt zu mir auf. Ich freue mich darauf, Ihre Ideen zu besprechen und Sie mit Ihnen umzusetzen."
+    "description": "Nehmen Sie gern Kontakt zu mir auf. Ich freue mich darauf, Ihre Ideen zu besprechen und mit Ihnen umzusetzen."
   },
   "right-contact-section": {
     "name-label": "Name/Firma",
@@ -32,7 +34,7 @@
     "about-me": "Über mich",
     "skills": "Skills",
     "portfolio": "Portfolio",
-    "currentLanguage": "DE"
+    "currentLanguage": "EN"
   },
   "start-page-container": {
     "headline": {
@@ -52,15 +54,15 @@
   "boxed-skill-title": "Meine Fähigkeiten",
   "skill-text": "Bisher habe ich mich mit den folgenden Skills vertraut gemacht.",
   "skill-button": "Kontakt",
-  "used-skills": "Verwendete Skills für diese Website.",
+  "used-skills": "Verwendete Skills für diese Website",
   "portfolio-title": "Portfolio",
   "purple-line-box": {
     "title": "Portfolio",
     "subtitle": "Hier eine kleine Auswahl meiner aktuellsten Projekte."
   },
   "project-examples": {
-    "join-description": "Ein Kanban-ähnlicher Task-Manager zum Erstellen und Verwalten Ihrer Aufgaben. Sie können Benutzer hinzufügen und ihnen Aufgaben zuweisen und die Aufgaben mit Drag-and-Drop-Funktionen organisieren.",
-    "game-description": "Objektorientierter Ansatz trifft auf Jump-and-Run. Pepe sammelt Münzen und Salza-Flaschen, nur um letztere auf bösartige Hühner zu werfen."
+    "join-description": "Ein Task-Manager nach Kanban zum Erstellen und Verwalten von Aufgaben. Diese können hinzugefügten Nutzern zugewiesen und durch Drag-and-Drop organisiert werden.",
+    "game-description": "Jump-and-Run durch Objektorientierung. Pepe sammelt Münzen und Salza-Flaschen, nur um letztere auf bösartige Hühner zu werfen."
   },
   "privacy-policy": {
     "title": "Datenschutzerklärung",

@@ -11,8 +11,9 @@
     height: 50%;
 
     svg {
-        transform: translate(10%,10%) scale(1.2);
+        transform: translate(10%, 10%) scale(1.2);
         overflow: visible;
+
         circle {
             stroke-dasharray: 3954.865966796875;
             stroke-dashoffset: 3954.865966796875;
@@ -25,32 +26,37 @@
     }
 }
 
-.animated{
+.animated {
 
     svg {
         animation: first-x-translation .25s ease forwards 0.3s, second-x-translation .5s ease-in-out forwards 1.5s;
+        -webkit-animation: first-x-translation .25s ease forwards 0.3s, second-x-translation .5s ease-in-out forwards 1.5s;
+
         circle {
             animation: dash-circle .25s linear forwards .5s;
+            -webkit-animation: dash-circle .25s linear forwards .5s;
         }
 
         line {
             animation: dash .5s linear forwards .8s;
+            -webkit-animation: dash .5s linear forwards .8s;
         }
 
-        #svg-circle-img{
-            animation: scale-down 0.25s ease forwards 0.3s;
+        #svg-circle-img {
+            animation: scale-down 0.25s ease forwards 0.3s, fade-first-img .5s ease forwards .5s;
+            -webkit-animation: scale-down 0.25s ease forwards 0.3s, fade-first-img .5s ease forwards .5s;
         }
     }
 }
 
-#animation-trigger{
+#animation-trigger {
     position: absolute;
-    top:1rem;
+    top: 1rem;
     height: 0;
     width: 100%;
     background-color: greenyellow;
-    right:0;
-    left:0;
+    right: 0;
+    left: 0;
     margin: auto;
 }
 
@@ -59,14 +65,64 @@
     transition: all ease 0.3s;
     transform: translate(-14%, -25%) scale(1.5);
     clip-path: ellipse(54% 71% at 50% 52%);
+    opacity: 1;
 }
 
+#svg-circle-second-img {
+    width: 24%;
+    transform: scale(1.4) translate(1%, 1%);
+    clip-path: ellipse(54% 38% at 53% 36%);
+    filter: contrast(1.05);
+    opacity: 0;
+    animation: fade-in-second-img .5s ease forwards .5s;
+    -webkit-animation: fade-in-second-img .5s ease forwards .5s;
+
+}
+
+
+@-webkit-keyframes fade-first-img {
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fade-first-img {
+    to {
+        opacity: 0;
+    }
+    
+}
+
+@-webkit-keyframes fade-in-second-img {
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade-in-second-img {
+    to {
+        opacity: 1
+    }
+    
+}
+
+@-webkit-keyframes dash {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
 
 @keyframes dash {
     to {
         stroke-dashoffset: 0;
     }
 
+}
+
+@-webkit-keyframes dash-circle {
+    to {
+        stroke-dashoffset: 0;
+    }
 }
 
 
@@ -76,25 +132,46 @@
     }
 }
 
+@-webkit-keyframes first-x-translation {
+    to {
+        transform: translate(11%, 10%) scale(1);
+    }
+}
+
 @keyframes first-x-translation {
     to {
-        transform: translate(11%,10%) scale(1);
+        transform: translate(11%, 10%) scale(1);
     }
-    
+
+}
+
+@-webkit-keyframes second-x-translation {
+    to {
+        transform: translate(35%, 10%) scale(1);
+    }
 }
 
 @keyframes second-x-translation {
     to {
-        transform: translate(35%,10%) scale(1);
+        transform: translate(35%, 10%) scale(1);
     }
-    
+
 }
 
 
-@keyframes scale-down {
-    to{
-        transform: translate(-5%, 0) scale(1);
-        clip-path: ellipse(40% 50% at 50% 52%);
+@-webkit-keyframes scale-down {
+    to {
+        transform: translate(4%, 0%) scale(.7);
+        clip-path: ellipse(57% 50% at 43% 48%);
     }
-    
+}
+
+
+
+@keyframes scale-down {
+    to {
+        transform: translate(4%, 0%) scale(.7);
+        clip-path: ellipse(57% 50% at 43% 48%);
+    }
+
 }

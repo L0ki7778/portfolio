@@ -335,10 +335,9 @@ app-footer {
     app-contact {
         @include dFlex(flex-start, center);
         flex-direction: column;
-        padding-bottom: 15vh;
+        padding-bottom: 4dvh;
         gap: 1.5rem;
-        height: 48rem;
-        top:-2px;
+        top:-3px;
     }
 
     app-portfolio {
@@ -357,9 +356,7 @@ app-footer {
 }
 
 @media screen and (max-width: 580px) {
-    app-contact {
-        height: 55rem;
-    }
+
 
     app-footer{
         height: 21dvh;

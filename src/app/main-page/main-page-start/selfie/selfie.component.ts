@@ -52,8 +52,6 @@ export class SelfieComponent {
 
 
   updateProfilePicture() {
-    console.log(window.innerWidth / window.innerHeight)
-    console.log(this.isMobileView, this.noLandscape)
     if (this.isMobileView && this.profilePicture && this.noLandscape) {
       this.profilePicture.nativeElement.srcset = "/assets/img/myself/showDown.png"
     } else {
