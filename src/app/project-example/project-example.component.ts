@@ -6,7 +6,7 @@ import { OverlayService } from '../overlay.service';
 @Component({
   selector: 'app-project-example',
   standalone: true,
-  imports: [MatButton, MatButtonModule],
+  imports: [ MatButtonModule],
   templateUrl: './project-example.component.html',
   styleUrl: './project-example.component.scss'
 })

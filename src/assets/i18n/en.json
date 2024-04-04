@@ -7,7 +7,7 @@
   },
   "light-box-before-link": "A frontend course at ",
   "light-box-text-after-link": " and a multi-month training session for frontend development at the German Developer Akademie GmbH.",
-  "light-box-link": "freeCodeCamp",
+  "light-box-link": "freeCodeCamp.org",
   "puzzle-box": "There, I was able to expand my tech stack with Angular and TypeScript by working on individual and group projects.",
   "left-contact-section": {
     "title": "Contact",
@@ -29,7 +29,7 @@
   "footer-flex-container": {
     "footer-name": "René",
     "imprint": "Imprint",
-    "copy-rights": "©  René Heller 2022"
+    "copy-rights": "©  René Heller 2024"
   },
   "header": {
     "about-me": "About me",

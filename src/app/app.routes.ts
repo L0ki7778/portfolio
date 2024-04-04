@@ -8,7 +8,7 @@ export const routes: Routes = [
     {path:'', component:MainPageComponent}, 
     {path:'home', component:MainPageComponent},
     {path:'privacy', component:PrivacyComponent},
-    {path:'imprint', component:ImprintComponent}
+    {path:'imprint', component:ImprintComponent},
 ];
 
 

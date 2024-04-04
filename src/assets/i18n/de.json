@@ -4,9 +4,9 @@
     "quote": "\"[...]Für jedes Problem gibt es bereits eine Lösung. Wir müssen sie nur finden.[...]\"",
     "description": "Hallo! Ich bin René Heller, 34 Jahre alt und als Frontend Entwickler bringe ich Projekterfahrung im Bau von Web-Applikationen mit. Meine Fachkenntnisse habe ich durch zwei Weiterbildungen erworben:"
   },
-  "light-box-before-link": "Ein Frontend Kurs beim ",
+  "light-box-before-link": "Ein Frontend Kurs bei ",
   "light-box-text-after-link": " und bei einer mehrmontatigen Fortbildung zum Frontend Entwickler bei der Developer Akademie GmbH.",
-  "light-box-link": "freeCodeCamp",
+  "light-box-link": "freeCodeCamp.org",
   "puzzle-box": "Dort konnte ich in Einzel- und Gruppenprojekten meinen Tech-Stack unter anderem durch Angular und TypeScript ergänzen.",
   "left-contact-section": {
     "title": "Kontakt",
@@ -28,7 +28,7 @@
   "footer-flex-container": {
     "footer-name": "René",
     "imprint": "Impressum",
-    "copy-rights": "©  René Heller 2022"
+    "copy-rights": "©  René Heller 2024"
   },
   "header": {
     "about-me": "Über mich",
